@@ -1,0 +1,82 @@
+.headerLink:hover {
+  color: var(--fandagoPink);
+}
+
+.headerLink {
+  transition: color 80ms ease-in-out 0ms;
+}
+
+.hireMeButton:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.hireMeButton {
+  transition: transform 50ms ease-out 0ms;
+}
+
+.seeMyWorkButton {
+  transition: transform 80ms ease-out 0ms;
+}
+
+.seeMyWorkButton:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.landing-blue-background {
+  position: absolute;
+  width: 100vw;
+  height: 50%;
+  left: 50%;
+  top: 0px;
+  background: var(--lightestBlue);
+  transform: skew(-15deg);
+}
+.landing-blue-background-two {
+  position: absolute;
+  width: 100vw;
+  height: 50%;
+  left: 50%;
+  bottom: 0px;
+  background: var(--lightestBlue);
+  transform: skew(15deg);
+}
+
+@media (max-width: 1024px) {
+  .landing-page-svg {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+/* Landing Page: On page load animation */
+
+.fade {
+  opacity: 0;
+  transition: 2s all ease;
+  animation: fade-up 1.5s ease-out;
+}
+
+.fade.active {
+  opacity: 1;
+}
+
+.fade-2 {
+  animation: fade-left 1.5s ease-out;
+}
+
+@keyframes fade-up {
+  0% {
+    padding-top: 150px;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    margin-right: 50px;
+  }
+}

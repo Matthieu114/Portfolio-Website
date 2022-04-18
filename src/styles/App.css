@@ -1,0 +1,39 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.App {
+  font-family: 'Inter';
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  user-select: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --darkBlue: #286fb4;
+  --lightBlue: #b0dde4;
+  --lightestBlue: #e2f0f9;
+  --lightestBlue1: rgb(172, 215, 242);
+  --lightestBlue2: rgba(212, 234, 248, 0.8);
+  --lightestBlue3: rgba(178, 221, 247, 0.24);
+  --fandagoPink: #df4c73;
+  --white: #ffffff;
+  --black: #000000;
+  --inv: #fff;
+}
+
+/* Landing page css */
