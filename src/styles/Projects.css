@@ -30,9 +30,10 @@
 
 .projects-outer-container {
   margin-top: 7rem;
+  padding: 0 6.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 150px;
   /* background-color: var(--lightestBlue3); */
 }
 
@@ -42,13 +43,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   padding: 3rem 2rem 3rem 2rem;
   width: 400px;
+  min-width: 400px;
   border-radius: 2px;
   transition: background-color 125ms ease-out 0ms;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; */
   max-height: 467px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
 .project-content-container:hover {
@@ -145,6 +148,7 @@
   height: 100%;
   position: absolute;
   animation: slide-in 1s ease-in-out;
+  overflow: scroll;
 }
 
 @keyframes slide-in {

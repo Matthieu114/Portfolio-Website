@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MobileProjects = () => {
-  return <div>MobileProjects</div>;
+  return <div class='project-modal-root'>MobileProjects</div>;
 };
 
 export default MobileProjects;
