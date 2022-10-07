@@ -1,14 +1,35 @@
 .headerLink:hover {
   color: var(--fandagoPink);
+  cursor: pointer;
 }
 
 .headerLink {
   transition: color 80ms ease-in-out 0ms;
 }
 
+.resumeButton {
+  transition: color 80ms ease-in-out 0ms;
+  color: var(--fandagoPink);
+}
+
+.resumeButton:hover {
+  cursor: pointer;
+  background-color: rgba(105, 25, 255, 0.2);
+  transition: background-color 150ms ease-in-out 0ms;
+}
+
 .hireMeButton:hover {
   transform: scale(1.02);
   cursor: pointer;
+}
+
+.description-link-ece {
+  color: var(--fandagoPink);
+  text-decoration: none;
+}
+
+.description-link-ece:hover {
+  text-decoration: underline;
 }
 
 .hireMeButton {
@@ -26,20 +47,11 @@
 
 .landing-blue-background {
   position: absolute;
-  width: 100vw;
-  height: 50%;
+  width: 50%;
+  height: 100%;
   left: 50%;
   top: 0px;
-  background: var(--lightestBlue);
-  transform: skew(-15deg);
-}
-.landing-blue-background-two {
-  position: absolute;
-  width: 100vw;
-  height: 50%;
-  left: 50%;
-  bottom: 0px;
-  background: var(--lightestBlue);
+  background: var(--darkBlue);
   transform: skew(15deg);
 }
 

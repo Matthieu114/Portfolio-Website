@@ -39,66 +39,6 @@ const Projects = [
     ),
     path: 'mobiledev'
   }
-  // {
-  //   id: 3,
-  //   src: mobile,
-  //   title: 'Mobile Development',
-  //   description: (
-  //     <p>
-  //       Mobile apps I made Programming languages used: <span style={descripStyle}>Javascript ES6 (React Native, Expo)</span>
-  //     </p>
-  //   )
-  // },
-  // {
-  //   id: 3,
-  //   src: mobile,
-  //   title: 'Mobile Development',
-  //   description: (
-  //     <p>
-  //       Mobile apps I made Programming languages used: <span style={descripStyle}>Javascript ES6 (React Native, Expo)</span>
-  //     </p>
-  //   )
-  // },
-  // {
-  //   id: 3,
-  //   src: mobile,
-  //   title: 'Mobile Development',
-  //   description: (
-  //     <p>
-  //       Mobile apps I made Programming languages used: <span style={descripStyle}>Javascript ES6 (React Native, Expo)</span>
-  //     </p>
-  //   )
-  // },
-  // {
-  //   id: 3,
-  //   src: mobile,
-  //   title: 'Mobile Development',
-  //   description: (
-  //     <p>
-  //       Mobile apps I made Programming languages used: <span style={descripStyle}>Javascript ES6 (React Native, Expo)</span>
-  //     </p>
-  //   )
-  // },
-  // {
-  //   id: 3,
-  //   src: mobile,
-  //   title: 'Mobile Development',
-  //   description: (
-  //     <p>
-  //       Mobile apps I made Programming languages used: <span style={descripStyle}>Javascript ES6 (React Native, Expo)</span>
-  //     </p>
-  //   )
-  // },
-  // {
-  //   id: 3,
-  //   src: mobile,
-  //   title: 'Mobile Development',
-  //   description: (
-  //     <p>
-  //       Mobile apps I made Programming languages used: <span style={descripStyle}>Javascript ES6 (React Native, Expo)</span>
-  //     </p>
-  //   )
-  // }
 ];
 
 export default Projects;

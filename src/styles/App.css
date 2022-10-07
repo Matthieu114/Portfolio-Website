@@ -21,17 +21,19 @@ html {
 
 body {
   margin: 0;
+  background-color: #fffefa;
 }
 
 :root {
-  --darkBlue: #286fb4;
-  --lightBlue: #b0dde4;
-  --lightestBlue: #e2f0f9;
+  --darkBlue: #0f1922;
+  --lightBlue: #0f192266;
+  --lightestBlue: #1f2731;
   --lightestBlue1: rgb(172, 215, 242);
   --lightestBlue2: rgba(212, 234, 248, 0.8);
   --lightestBlue3: rgba(178, 221, 247, 0.24);
-  --fandagoPink: #df4c73;
+  --fandagoPink: #6919ff;
   --white: #ffffff;
+  --cream: #fffefa;
   --black: #000000;
   --inv: #fff;
 }
