@@ -8,8 +8,8 @@ import Header from './components/Header';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
       <App />
+      <Header />
     </BrowserRouter>
   </React.StrictMode>,
 

@@ -12,23 +12,23 @@ const LandingPage = () => {
   }, 600);
 
   return (
-    <div style={styles.landingPageRoot} data-landing-intersect>
+    <div style={styles.landingPageRoot}>
       <div style={styles.mainContainer}>
         <div style={styles.textContainer} class={isLoaded ? 'fade active' : 'fade'}>
           <div>
             <h1 style={styles.mainText}>
               Hi! I am
               <p style={{ margin: 0, padding: 0, color: colors.fandagoPink }}>
-                Matthieu Denis <span style={{ color: colors.black }}>.</span>
+                Matthieu Denis <span style={{ color: colors.white }}>.</span>
               </p>
             </h1>
             <h3 style={styles.descriptionText}>
               I am a student passionate about <b>Web</b> and <b>Game Development</b>. <br />
-              <br /> Currently, I am in my last year of scool at{' '}
-              <a href='https://www.ece.fr/en/program/engineering-degree-bac4-big-data-analytics-major/' class='description-link-ece'>
+              <br /> Currently, I am in my last year of studies at{' '}
+              <a href='https://www.ece.fr/en/program/engineering-degree-bac4-big-data-analytics-major/' class='description-link-ece' target='_blank'>
                 ECE paris engineering school
               </a>{' '}
-              where I am studying data science and machine learning.
+              where I am learning about data science and machine learning.
             </h3>
           </div>
           <div style={styles.buttonsContainer}>
@@ -55,11 +55,7 @@ const styles = {
     width: '100%',
     height: '100vh',
     padding: '0 100px',
-    backgroundImage: `url(${img})`,
-    backgroundAttachment: 'fixed',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover'
+    backgroundColor: colors.darkBlue
   },
 
   mainContainer: {
@@ -72,7 +68,8 @@ const styles = {
   },
   textContainer: {
     marginBottom: '5rem',
-    zIndex: 50
+    zIndex: 50,
+    color: colors.white
   },
 
   mainText: {
@@ -81,7 +78,7 @@ const styles = {
   descriptionText: {
     fontSize: 20,
     fontWeight: '500',
-    color: colors.lightestBlue,
+    color: colors.white,
     maxWidth: '750px'
   },
 

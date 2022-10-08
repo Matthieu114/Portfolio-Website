@@ -1,31 +1,21 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react';
 import colors from '../config/colors';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const [navbar, setNavbar] = useState(false);
-  const playlistIntersect = document.querySelector('[data-landing-intersectt]');
+  const navigate = useNavigate();
 
-  const sectionOptions = {
-    rootMargin: '500px 0px 0px 0px'
+  const navigateTo = (path) => {
+    navigate(path);
   };
 
-  const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        setNavbar(true);
-      } else {
-        setNavbar(false);
-      }
-    });
-  }, sectionOptions);
-
-  if (playlistIntersect !== null) sectionObserver.observe(playlistIntersect);
-
   return (
-    <div style={navbar ? styles.root2 : styles.root} data-landing-intersectt>
+    <div style={styles.root}>
       <div style={styles.headerContent}>
-        <div style={styles.homeLogo}>Personal</div>
+        <div style={styles.homeLogo} onClick={() => navigateTo('/')}>
+          MD
+        </div>
+        <div></div>
         <div style={styles.headerLinks}>
           <div class='headerLink' style={styles.link}>
             <p style={styles.headerNumber}> 01. </p>About Me
@@ -49,22 +39,14 @@ const Header = () => {
 };
 
 const styles = {
+  //rgba(105,25,255,0.56)
   root: {
     width: '100%',
-    color: colors.black,
-    height: '92px',
-    display: 'flex',
-    alignItems: 'center',
-    zIndex: 100,
-    position: 'fixed',
-    left: 0,
-    top: 0
-  },
-  root2: {
-    backgroundOpacity: '90%',
-    width: '100%',
+    boxShadow: `3px -2px 44px 1px rgba(105,25,255,0.3)`,
+    backdropFilter: `blur(5px)`,
     color: colors.white,
-    height: '92px',
+    backgroundColor: 'rgba(15, 25, 34, 0.6)',
+    height: '72px',
     display: 'flex',
     alignItems: 'center',
     zIndex: 100,
@@ -90,7 +72,8 @@ const styles = {
     fontWeight: 'bold',
     ':hover': {
       backgroundColor: 'black'
-    }
+    },
+    cursor: 'pointer'
   },
   link: {
     display: 'flex',
@@ -108,7 +91,7 @@ const styles = {
   },
   resumeButton: {
     padding: '0.5rem 1rem',
-    borderRadius: '5px',
+    borderRadius: '2px',
     border: `2px solid ${colors.fandagoPink}`,
     fontSize: '0.9rem',
     fontWeight: 400

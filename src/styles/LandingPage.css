@@ -9,7 +9,7 @@
 
 .resumeButton {
   transition: color 80ms ease-in-out 0ms;
-  color: var(--fandagoPink);
+  color: var(--white);
 }
 
 .resumeButton:hover {
@@ -24,7 +24,7 @@
 }
 
 .description-link-ece {
-  color: var(--fandagoPink);
+  color: var(--softGrey);
   text-decoration: none;
 }
 

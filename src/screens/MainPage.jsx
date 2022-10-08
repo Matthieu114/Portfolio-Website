@@ -5,14 +5,18 @@ import AboutMe from './AboutMe';
 import PersonalProjects from './PersonalProjects';
 import Separator from '../components/Separator';
 
-const MainPage = ({ fullpageApi }) => {
+const MainPage = () => {
+  window.addEventListener('scroll', () => {
+    
+  });
   return (
     <div style={styles.root}>
       <LandingPage />
-
+      <Separator />
       <AboutMe />
       <Separator />
       <PersonalProjects />
+      <LandingPage />
     </div>
   );
 };

@@ -10,8 +10,12 @@ import MobileProjects from './screens/projects/MobileProjects';
 import GamingProjects from './screens/projects/GamingProjects';
 
 function App() {
+  const handleScroll = (event) => {
+    console.log('scrollTop: ', event.currentTarget.scrollTop);
+    console.log('offsetHeight: ', event.currentTarget.offsetHeight);
+  };
   return (
-    <div className='App'>
+    <div className='App' onScroll={handleScroll}>
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/gamedev' element={<GamingProjects />} />
