@@ -1,51 +1,46 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
 import colors from '../config/colors';
-import programmerImage from '../assets/undraw_Programming_re_kg9v.png';
-import svg from '../assets/svg.png';
+import img from '../assets/future-grid.webp';
 import { ReactComponent as YourSvg } from '../assets/undrawsvg.svg';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-const LandingPage = ({ fullpageApi }) => {
+const LandingPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   setTimeout(() => {
     setIsLoaded(true);
   }, 600);
 
-  const moveToSection = (sectionId) => {
-    fullpageApi.moveTo(sectionId);
-    fullpageApi.scrollOverflow(true);
-  };
-
   return (
     <div style={styles.landingPageRoot}>
-      <div class='landing-blue-background' />
-      <div class='landing-blue-background-two' />
-
-      <Header moveTo={moveToSection} />
       <div style={styles.mainContainer}>
         <div style={styles.textContainer} class={isLoaded ? 'fade active' : 'fade'}>
           <div>
             <h1 style={styles.mainText}>
               Hi! I am
               <p style={{ margin: 0, padding: 0, color: colors.fandagoPink }}>
-                Matthieu Denis <span style={{ color: colors.black }}>.</span>
+                Matthieu Denis <span style={{ color: colors.white }}>.</span>
               </p>
             </h1>
             <h3 style={styles.descriptionText}>
-              I am a computer science student passionate about <br /> Web and Game Development
+              I am a student passionate about <b>Web</b> and <b>Game Development</b>. <br />
+              <br /> Currently, I am in my last year of studies at{' '}
+              <a href='https://www.ece.fr/en/program/engineering-degree-bac4-big-data-analytics-major/' class='description-link-ece' target='_blank'>
+                ECE paris engineering school
+              </a>{' '}
+              where I am learning about data science and machine learning.
             </h3>
           </div>
           <div style={styles.buttonsContainer}>
-            <div class='hireMeButton' style={styles.hireMeButton} onClick={() => moveToSection(4)}>
+            <div class='hireMeButton from-left' style={styles.hireMeButton}>
               Hire me
             </div>
-            <div style={styles.seeMyWorkButton} class='seeMyWorkButton' onClick={() => moveToSection(2)}>
+            <div style={styles.seeMyWorkButton} class='seeMyWorkButton'>
               <AiOutlineSearch style={{ marginRight: '0.5rem', width: 25, height: 25 }} /> See my work
             </div>
           </div>
         </div>
+        <div></div>
         <div style={{ zIndex: 10 }}>
           <YourSvg style={styles.svgImage} class='landing-page-svg fade-2' />
         </div>
@@ -56,10 +51,11 @@ const LandingPage = ({ fullpageApi }) => {
 
 const styles = {
   landingPageRoot: {
-    padding: '0 100px',
     position: 'relative',
     width: '100%',
-    height: '100%'
+    height: '100vh',
+    padding: '0 100px',
+    backgroundColor: colors.darkBlue
   },
 
   mainContainer: {
@@ -72,15 +68,18 @@ const styles = {
   },
   textContainer: {
     marginBottom: '5rem',
-    zIndex: 50
+    zIndex: 50,
+    color: colors.white
   },
 
   mainText: {
-    fontSize: 54
+    fontSize: 80
   },
   descriptionText: {
-    fontSize: 22,
-    fontWeight: '600'
+    fontSize: 20,
+    fontWeight: '500',
+    color: colors.white,
+    maxWidth: '750px'
   },
 
   buttonsContainer: {

@@ -34,7 +34,6 @@
   display: flex;
   align-items: center;
   gap: 150px;
-  /* background-color: var(--lightestBlue3); */
 }
 
 .project-content-container {
@@ -55,7 +54,7 @@
 }
 
 .project-content-container:hover {
-  background-color: var(--lightestBlue3);
+  background-color: var(--cream);
 }
 
 .project-image {

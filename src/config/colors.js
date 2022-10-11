@@ -1,8 +1,9 @@
 export default {
-  darkBlue: '#286FB4',
-  lightBlue: '#B0DDE4',
-  lightestBlue: '#E2F0F9',
-  fandagoPink: '#DF4C73',
+  darkBlue: '#0F1922',
+  lightBlue: '#0F192266',
+  lightestBlue: '#1F2731',
+  fandagoPink: '#6919FF',
+  cream: '#FFFEFA',
   white: '#FFFFFF',
   black: '#000000'
 };
