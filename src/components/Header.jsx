@@ -76,11 +76,10 @@ const Header = () => {
 const styles = {
   root: {
     width: '100%',
-    boxShadow: !document.documentElement.scrollTop == 0 ? `3px -2px 44px 1px rgba(105,25,255,0.3)` : '',
     transition: 'all .3s ease',
     backdropFilter: `blur(5px)`,
     color: colors.white,
-    backgroundColor: 'rgba(15, 25, 34, 0.6)',
+    backgroundColor: 'rgba(15, 25, 34, 0.9)',
     height: '72px',
     display: 'flex',
     alignItems: 'center',
@@ -106,7 +105,7 @@ const styles = {
     top: 0
   },
   headerContent: {
-    margin: '0 100px',
+    margin: '0 150px',
     display: 'flex',
     width: '100%',
     justifyContent: 'space-between'

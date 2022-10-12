@@ -9,9 +9,9 @@ const MainPage = () => {
   return (
     <div style={styles.root}>
       <LandingPage />
-      <Separator />
+      {/* <Separator /> */}
       <AboutMe />
-      <Separator />
+      {/* <Separator /> */}
       <PersonalProjects />
       {/* <LandingPage /> */}
     </div>

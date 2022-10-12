@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import colors from '../config/colors';
-import img from '../assets/future-grid.webp';
-import { ReactComponent as YourSvg } from '../assets/undrawsvg.svg';
 import { AiOutlineSearch } from 'react-icons/ai';
+import Lottie from 'lottie-react';
+import codingAnimation from '../assets/animOrange.json';
 
 const LandingPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -33,16 +33,16 @@ const LandingPage = () => {
           </div>
           <div style={styles.buttonsContainer}>
             <div class='hireMeButton from-left' style={styles.hireMeButton}>
-              Hire me
+              See my work
             </div>
             <div style={styles.seeMyWorkButton} class='seeMyWorkButton'>
-              <AiOutlineSearch style={{ marginRight: '0.5rem', width: 25, height: 25 }} /> See my work
+              <AiOutlineSearch style={{ marginRight: '0.5rem', width: 25, height: 25 }} /> Hire me
             </div>
           </div>
         </div>
         <div></div>
-        <div style={{ zIndex: 10 }}>
-          <YourSvg style={styles.svgImage} class='landing-page-svg fade-2' />
+        <div>
+          <Lottie animationData={codingAnimation} style={styles.svgImage} class='landing-page-svg fade-2' />;
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ const styles = {
     position: 'relative',
     width: '100%',
     height: '100vh',
-    padding: '0 100px',
+    padding: '0 150px',
     backgroundColor: colors.darkBlue
   },
 
@@ -94,10 +94,9 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 2,
-    padding: '0.8rem 4rem',
+    padding: '0.8rem 3rem',
     fontSize: 20
   },
-
   seeMyWorkButton: {
     display: 'flex',
     alignItems: 'center',
@@ -109,9 +108,9 @@ const styles = {
   svgImage: {
     width: '100%',
     height: 'auto',
-    maxWidth: '35vw',
-    minHeight: '500px',
-    minWidth: '500px'
+    maxWidth: '30vw',
+    minHeight: '350px',
+    minWidth: '350px'
   }
 };
 
