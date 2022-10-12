@@ -1,0 +1,91 @@
+.root {
+  width: 100%;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  color: var(--white);
+  background-color: rgba(15, 25, 34, 0.9);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.hidden {
+  width: 100%;
+  transition: all 0.1s ease;
+  box-shadow: 3px -2px 44px 1px rgba(105, 25, 255, 0.3);
+  backdrop-filter: blur(5px);
+  color: var(--white);
+  background-color: rgba(15, 25, 34, 0.9);
+  height: 0px;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.home-logo {
+  color: var(--fandagoPink);
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.headerLink:hover {
+  color: var(--fandagoPink);
+  cursor: pointer;
+}
+
+.headerLink {
+  transition: color 80ms ease-in-out 0ms;
+  font-family: Consolas;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 450;
+  margin-right: 2.5rem;
+  text-decoration: none;
+  color: var(--cream);
+}
+
+.header-content {
+  margin: 0 150px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: '600';
+}
+
+.header-number {
+  padding-right: 0.5rem;
+  color: var(--fandagoPink);
+}
+.resumeButton {
+  transition: color 80ms ease-in-out 0ms;
+  color: var(--white);
+  font-family: Consolas;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  border: 2px solid var(--fandagoPink);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.resumeButton:hover {
+  cursor: pointer;
+  background-color: rgba(105, 25, 255, 0.2);
+  transition: background-color 150ms ease-in-out 0ms;
+}

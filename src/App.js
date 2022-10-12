@@ -1,22 +1,27 @@
 import './styles/App.css';
-import './styles/LandingPage.css';
-import './styles/Projects.css';
 import { Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import AnimatedCursor from 'react-animated-cursor';
 
 import MainPage from './screens/MainPage';
-import WebProjects from './screens/projects/WebProjects';
-import MobileProjects from './screens/projects/MobileProjects';
-import GamingProjects from './screens/projects/GamingProjects';
 
 function App() {
   return (
     <div className='App'>
+      <AnimatedCursor
+        color='105,25,255'
+        innerSize={6}
+        outerSize={30}
+        innerScale={1.5}
+        outerScale={1.5}
+        outerAlpha={0}
+        trailingSpeed={3}
+        outerStyle={{
+          border: '1px solid var(--fandagoPink)'
+        }}
+      />
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/gamedev' element={<GamingProjects />} />
-        <Route path='/mobiledev' element={<MobileProjects />} />
-        <Route path='/webdev' element={<WebProjects />} />
       </Routes>
     </div>
   );

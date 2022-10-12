@@ -9,11 +9,11 @@ const AboutMe = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Travel', 'Developer', 'Music', 'Problem Solver', 'Gamer'],
+      strings: ['Traveler', 'Developer', 'Musician', 'Problem Solver', 'Gamer'],
       startDelay: 300,
-      typeSpeed: 150,
-      backDelay: 120,
-      backSpeed: 150,
+      typeSpeed: 155,
+      backDelay: 150,
+      backSpeed: 100,
       showCursor: false,
       smartBackspace: true,
       loop: true
@@ -29,7 +29,7 @@ const AboutMe = () => {
   }, 3000);
 
   return (
-    <div style={styles.root}>
+    <div style={styles.root} id='about'>
       <div style={styles.leftContainer}>
         <div style={styles.heroImageBg}>
           <img src={img} style={styles.heroImage} />
@@ -38,16 +38,14 @@ const AboutMe = () => {
       <div style={styles.rightContainer}>
         <h1 style={styles.aboutMeHeader}>About Me</h1>
         <div>
-          <p style={styles.typedSection} ref={el}>
+          <p style={styles.typedSection} class='typed-section'>
             {'>'} <span ref={el}></span>
           </p>
         </div>
-        <div style={styles.description}>
+        <div style={styles.description} class='about-description'>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
           of type and scrambled it to make a type specimen book.
           <br />
-          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </div>
       </div>
     </div>
@@ -75,11 +73,11 @@ const styles = {
   },
   typedSection: {
     color: colors.cream,
-    fontSize: '3.5rem',
-    fontWeight: '600',
+    fontSize: '3rem',
+    fontWeight: '500',
     margin: '0',
     padding: 0,
-    height: '98px'
+    height: '90px'
   },
   rightContainer: {
     display: 'flex',
@@ -100,7 +98,10 @@ const styles = {
     borderRadius: '5px'
   },
   description: {
-    color: 'lightgray'
+    color: colors.softGray,
+    fontSize: '1.1rem',
+    fontWeight: '500',
+    maxWidth: '700px'
   }
 };
 

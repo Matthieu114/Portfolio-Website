@@ -1,21 +1,5 @@
-.headerLink:hover {
-  color: var(--fandagoPink);
-  cursor: pointer;
-}
-
-.headerLink {
-  transition: color 80ms ease-in-out 0ms;
-}
-
-.resumeButton {
-  transition: color 80ms ease-in-out 0ms;
-  color: var(--white);
-}
-
-.resumeButton:hover {
-  cursor: pointer;
-  background-color: rgba(105, 25, 255, 0.2);
-  transition: background-color 150ms ease-in-out 0ms;
+.description {
+  line-height: 1.8rem;
 }
 
 .hireMeButton:hover {
@@ -34,6 +18,7 @@
 
 .hireMeButton {
   transition: transform 50ms ease-out 0ms;
+  text-decoration: none;
 }
 
 .seeMyWorkButton {

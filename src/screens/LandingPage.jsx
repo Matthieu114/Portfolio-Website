@@ -12,7 +12,7 @@ const LandingPage = () => {
   }, 600);
 
   return (
-    <div style={styles.landingPageRoot}>
+    <div style={styles.landingPageRoot} id='home'>
       <div style={styles.mainContainer}>
         <div style={styles.textContainer} class={isLoaded ? 'fade active' : 'fade'}>
           <div>
@@ -22,9 +22,8 @@ const LandingPage = () => {
                 Matthieu Denis <span style={{ color: colors.white }}>.</span>
               </p>
             </h1>
-            <h3 style={styles.descriptionText}>
-              I am a student passionate about <b>Web</b> and <b>Game Development</b>. <br />
-              <br /> Currently, I am in my last year of studies at{' '}
+            <h3 style={styles.descriptionText} class='description'>
+              I am a student passionate about <b>Web</b> and <b>Game Development</b>. <br /> Currently, I am in my last year of studies at{' '}
               <a href='https://www.ece.fr/en/program/engineering-degree-bac4-big-data-analytics-major/' class='description-link-ece' target='_blank'>
                 ECE paris engineering school
               </a>{' '}
@@ -32,9 +31,9 @@ const LandingPage = () => {
             </h3>
           </div>
           <div style={styles.buttonsContainer}>
-            <div class='hireMeButton from-left' style={styles.hireMeButton}>
+            <a href='#my-work' class='hireMeButton' style={styles.hireMeButton}>
               See my work
-            </div>
+            </a>
             <div style={styles.seeMyWorkButton} class='seeMyWorkButton'>
               <AiOutlineSearch style={{ marginRight: '0.5rem', width: 25, height: 25 }} /> Hire me
             </div>
@@ -78,7 +77,7 @@ const styles = {
   descriptionText: {
     fontSize: 20,
     fontWeight: '500',
-    color: colors.white,
+    color: colors.cream,
     maxWidth: '750px'
   },
 

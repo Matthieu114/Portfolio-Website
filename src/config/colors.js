@@ -5,5 +5,6 @@ export default {
   fandagoPink: '#6919FF',
   cream: '#FFFEFA',
   white: '#FFFFFF',
-  black: '#000000'
+  black: '#000000',
+  softGray: '#fffefa99'
 };

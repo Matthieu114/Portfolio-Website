@@ -1,22 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import src from '../assets/IMG_3244.jpeg';
 
-const Project = ({ src, title, description, id, path }) => {
-  const navigate = useNavigate();
-
-  const navigateTo = (path) => {
-    navigate(path);
-  };
-
+const Project = () => {
   return (
-    <div class='project-content-container' id={id}>
-      <img src={src} class='project-image' />
-      <div class='project-title'>{title}</div>
-      <div class='project-description'>{description}</div>
-      <div class='see-more-button-container'>
-        <div class='project-see-more-button from-left' onClick={() => navigateTo(path)}>
-          See more
-        </div>
+    <div class='project-container'>
+      <img src={src} class='blur zoom'></img>
+      <div class='content fade'>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum blanditiis eum soluta non quidem officia iusto ex! Recusandae ducimus at modi doloribus delectus aliquid, dicta, sit aspernatur
+        laboriosam, vitae quam.
       </div>
     </div>
   );
