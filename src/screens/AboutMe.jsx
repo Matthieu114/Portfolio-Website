@@ -29,20 +29,20 @@ const AboutMe = () => {
   }, 3000);
 
   return (
-    <div style={styles.root} id='about'>
-      <div style={styles.leftContainer}>
-        <div style={styles.heroImageBg}>
-          <img src={img} style={styles.heroImage} />
+    <div class='about-root' id='about'>
+      <div class='about-left-ctn'>
+        <div class='hero-img-ctn'>
+          <img src={img} />
         </div>
       </div>
-      <div style={styles.rightContainer}>
-        <h1 style={styles.aboutMeHeader}>About Me</h1>
-        <div>
-          <p style={styles.typedSection} class='typed-section'>
+      <div class='about-right-ctn'>
+        <h1 class='about-me-header'>About Me</h1>
+        <div class='typed-container'>
+          <p class='typed-section'>
             {'>'} <span ref={el}></span>
           </p>
         </div>
-        <div style={styles.description} class='about-description'>
+        <div class='about-description'>
           Hi! I’m Matthieu , a French engineering student with a love of programming that enjoys creating functional web and mobile apps! Currently, I am having fun learning game development on the
           side of my data science and machine learning classes that I follow in school. <br />
           <br /> I grew up and studied in <span style={{ color: colors.fandagoPink, fontWeight: 500 }}> 5 different countries</span> ( USA, France, UK, Poland , Russia ) where I grew accustomed to
@@ -52,72 +52,20 @@ const AboutMe = () => {
           <br />
           <br />
           Here are some of the technologies I've worked with:
+          <ul class='skills-list'>
+            <li>Javascript (ES6+)</li>
+            <li>React </li>
+            <li>React Native </li>
+            <li>Ember.js</li>
+            <li>Node.Js</li>
+            <li>Git</li>
+            <li>C#</li>
+            <li>Cypress</li>
+          </ul>
         </div>
-        <ul class='skills-list'>
-          <li>Javascript (ES6+)</li>
-          <li>React </li>
-          <li>React Native </li>
-          <li>Ember.js</li>
-          <li>Node.Js</li>
-          <li>Git</li>
-          <li>C#</li>
-          <li>Cypress</li>
-        </ul>
       </div>
     </div>
   );
-};
-
-const styles = {
-  root: {
-    width: '100%',
-    heigth: '100vh',
-    display: 'flex',
-    position: 'relative',
-    backgroundColor: colors.lightestBlue,
-    color: colors.white,
-    alignItems: 'center',
-    padding: '100px 150px'
-  },
-  leftContainer: {
-    heigth: '100%',
-    width: '100%'
-  },
-  aboutMeHeader: {
-    color: colors.fandagoPink,
-    padding: 0,
-    margin: '0 0 1rem 0'
-  },
-  typedSection: {
-    color: colors.cream,
-    fontSize: '3rem',
-    fontWeight: '500',
-    margin: '0',
-    padding: 0,
-    height: '90px'
-  },
-  rightContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    heigth: '100%',
-    width: '100%'
-  },
-  heroImageBg: {
-    backgroundColor: colors.darkBlue,
-    borderRadius: '50%',
-    width: '25vw',
-    heigth: '25vh'
-  },
-  heroImage: {
-    width: '25vw',
-    heigth: '25vh',
-    borderRadius: '5px'
-  },
-  description: {
-    color: colors.softGray,
-    fontSize: '1.1rem',
-    maxWidth: '700px'
-  }
 };
 
 export default AboutMe;

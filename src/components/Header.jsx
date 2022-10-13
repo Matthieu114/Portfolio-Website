@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -49,6 +50,9 @@ const Header = () => {
         <a class='home-logo' href='#home' onClick={() => navigateTo('/')}>
           MD
         </a>
+        <div class='open-header'>
+          <GiHamburgerMenu />
+        </div>
         <div class='header-links'>
           <a href='#about' class='headerLink' onClick={() => navigateTo('/')}>
             <p class='header-number'> 01. </p>

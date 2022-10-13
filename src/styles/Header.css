@@ -30,6 +30,10 @@
   top: 0;
 }
 
+.open-header {
+  display: none;
+}
+
 .home-logo {
   color: var(--fandagoPink);
   font-size: 36px;
@@ -88,4 +92,18 @@
   cursor: pointer;
   background-color: rgba(105, 25, 255, 0.2);
   transition: background-color 150ms ease-in-out 0ms;
+}
+
+@media (max-width: 1024px) {
+  .open-header {
+    display: block;
+  }
+
+  .home-logo {
+    display: none;
+  }
+
+  .header-content {
+    display: none;
+  }
 }
