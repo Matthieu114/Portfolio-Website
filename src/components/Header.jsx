@@ -47,25 +47,25 @@ const Header = () => {
   return (
     <div class={showHeader ? 'root' : 'hidden'}>
       <div class='header-content'>
-        <a class='home-logo' href='#home' onClick={() => navigateTo('/portfolio-website')}>
+        <a class='home-logo' href='#home' onClick={() => navigateTo('/')}>
           MD
         </a>
         <div class='open-header'>
           <GiHamburgerMenu />
         </div>
         <div class='header-links'>
-          <a href='#about' class='headerLink' onClick={() => navigateTo('/portfolio-website')}>
+          <a href='#about' class='headerLink' onClick={() => navigateTo('/')}>
             <p class='header-number'> 01. </p>
             About Me
           </a>
-          <a class='headerLink' href='#experience' onClick={() => navigateTo('/portfolio-website')}>
+          <a class='headerLink' href='#experience' onClick={() => navigateTo('/')}>
             <p class='header-number'> 02. </p>
             Experience
           </a>
-          <a class='headerLink' href='#my-work' onClick={() => navigateTo('/portfolio-website')}>
+          <a class='headerLink' href='#my-work' onClick={() => navigateTo('/')}>
             <p class='header-number'> 03. </p> My Work
           </a>
-          <a class='headerLink' onClick={() => navigateTo('/portfolio-website')}>
+          <a class='headerLink' onClick={() => navigateTo('/')}>
             <p class='header-number'> 04. </p>
             Contact
           </a>
