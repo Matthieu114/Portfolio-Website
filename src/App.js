@@ -12,8 +12,8 @@ function App() {
         color='105,25,255'
         innerSize={6}
         outerSize={30}
-        innerScale={1.5}
-        outerScale={1.5}
+        innerScale={1.2}
+        outerScale={1.2}
         outerAlpha={0}
         trailingSpeed={3}
         outerStyle={{

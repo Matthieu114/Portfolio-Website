@@ -2,10 +2,39 @@
 
 .about-description {
   line-height: 1.8rem;
+  font-weight: 400;
+}
+
+.skills-list {
+  color: var(--cream);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 200px));
+  font-size: 0.9rem;
+  gap: 0px 10px;
+  padding: 0px;
+  margin: 20px 0px 0px;
+  overflow: hidden;
+  list-style: none;
+}
+
+.skills-list > li::before {
+  content: '▹ ';
+  position: absolute;
+  left: 0px;
+  color: var(--fandagoPink);
+  font-size: 1.2rem;
+  line-height: 12px;
+}
+
+.skills-list > li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  font-family: Consolas;
 }
 
 .typed-section {
-  /* font-family: 'Retro Gaming'; */
   font-family: Consolas;
-  /* font-family: 'Consolas,monaco,monospace; '; */
 }

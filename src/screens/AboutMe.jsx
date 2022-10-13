@@ -43,10 +43,26 @@ const AboutMe = () => {
           </p>
         </div>
         <div style={styles.description} class='about-description'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book.
+          Hi! I’m Matthieu , a French engineering student with a love of programming that enjoys creating functional web and mobile apps! Currently, I am having fun learning game development on the
+          side of my data science and machine learning classes that I follow in school. <br />
+          <br /> I grew up and studied in <span style={{ color: colors.fandagoPink, fontWeight: 500 }}> 5 different countries</span> ( USA, France, UK, Poland , Russia ) where I grew accustomed to
+          evolving in multicultural environments. <br />
           <br />
+          Well organised , independent , curious with high attention to detail I am avid to learn more about the tech domain in general and work on ambitious projects with positive people!
+          <br />
+          <br />
+          Here are some of the technologies I've worked with:
         </div>
+        <ul class='skills-list'>
+          <li>Javascript (ES6+)</li>
+          <li>React </li>
+          <li>React Native </li>
+          <li>Ember.js</li>
+          <li>Node.Js</li>
+          <li>Git</li>
+          <li>C#</li>
+          <li>Cypress</li>
+        </ul>
       </div>
     </div>
   );
@@ -60,11 +76,12 @@ const styles = {
     position: 'relative',
     backgroundColor: colors.lightestBlue,
     color: colors.white,
+    alignItems: 'center',
     padding: '100px 275px'
   },
   leftContainer: {
     heigth: '100%',
-    width: '50vw'
+    width: '100%'
   },
   aboutMeHeader: {
     color: colors.fandagoPink,
@@ -81,10 +98,9 @@ const styles = {
   },
   rightContainer: {
     display: 'flex',
-    alignItems: 'left',
     flexDirection: 'column',
     heigth: '100%',
-    width: '50vw'
+    width: '100%'
   },
   heroImageBg: {
     backgroundColor: colors.darkBlue,
@@ -100,7 +116,6 @@ const styles = {
   description: {
     color: colors.softGray,
     fontSize: '1.1rem',
-    fontWeight: '500',
     maxWidth: '700px'
   }
 };
