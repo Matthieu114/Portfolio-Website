@@ -21,7 +21,7 @@ function App() {
         }}
       />
       <Routes>
-        <Route path='/' element={<MainPage />} />
+        <Route path='/portfolio-website' element={<MainPage />} />
       </Routes>
     </div>
   );
