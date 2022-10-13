@@ -113,7 +113,7 @@
 }
 
 .project-container:hover > img.blur {
-  filter: blur(1px);
+  filter: blur(2px);
 }
 
 .project-container:hover > img.zoom {

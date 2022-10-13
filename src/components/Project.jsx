@@ -1,14 +1,19 @@
 import React from 'react';
-import src from '../assets/IMG_3244.jpeg';
+import { useNavigate } from 'react-router-dom';
 
-const Project = () => {
+const Project = ({ img, desc, path, name, categ }) => {
+  const navigate = useNavigate();
+
+  const navigateTo = (path) => {
+    navigate(path);
+  };
+
+  console.log(img);
+
   return (
-    <div class='project-container'>
-      <img src={src} class='blur zoom'></img>
-      <div class='content fade'>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum blanditiis eum soluta non quidem officia iusto ex! Recusandae ducimus at modi doloribus delectus aliquid, dicta, sit aspernatur
-        laboriosam, vitae quam.
-      </div>
+    <div class='project-container' onClick={() => navigateTo(path)}>
+      <img src={img} class='blur zoom'></img>
+      <div class='content fade'>{desc}</div>
     </div>
   );
 };

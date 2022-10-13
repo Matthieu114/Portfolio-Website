@@ -50,18 +50,18 @@ const Header = () => {
           MD
         </a>
         <div class='header-links'>
-          <a href='#about' class='headerLink'>
+          <a href='#about' class='headerLink' onClick={() => navigateTo('/')}>
             <p class='header-number'> 01. </p>
             About Me
           </a>
-          <a class='headerLink' href='#experience'>
+          <a class='headerLink' href='#experience' onClick={() => navigateTo('/')}>
             <p class='header-number'> 02. </p>
             Experience
           </a>
-          <a class='headerLink' href='#my-work'>
+          <a class='headerLink' href='#my-work' onClick={() => navigateTo('/')}>
             <p class='header-number'> 03. </p> My Work
           </a>
-          <a class='headerLink'>
+          <a class='headerLink' onClick={() => navigateTo('/')}>
             <p class='header-number'> 04. </p>
             Contact
           </a>

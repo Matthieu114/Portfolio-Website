@@ -77,7 +77,7 @@ const styles = {
     backgroundColor: colors.lightestBlue,
     color: colors.white,
     alignItems: 'center',
-    padding: '100px 275px'
+    padding: '100px 150px'
   },
   leftContainer: {
     heigth: '100%',

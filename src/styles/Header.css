@@ -78,7 +78,7 @@
   color: var(--white);
   font-family: Consolas;
   padding: 0.5rem 1rem;
-  border-radius: 2px;
+  border-radius: 5px;
   border: 2px solid var(--fandagoPink);
   font-size: 0.9rem;
   font-weight: 400;

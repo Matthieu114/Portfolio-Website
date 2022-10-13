@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Project from '../components/Project';
+import { projects } from '../data/projects';
 
 const PersonalProjects = ({ fullpageApi }) => {
   return (
@@ -48,12 +49,10 @@ const PersonalProjects = ({ fullpageApi }) => {
           </ul>
         </div>
         <div class='projects-container'>
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
+          {projects.map((project) => {
+            console.log(project);
+            return <Project img={project.img} desc={project.description} path={project.path} name={project.name} />;
+          })}
         </div>
       </div>
     </div>
