@@ -8,8 +8,6 @@ const Project = ({ img, desc, path, name, categ }) => {
     navigate(path);
   };
 
-  console.log(img);
-
   return (
     <div class='project-container' onClick={() => navigateTo(path)}>
       <img src={img} class='blur zoom'></img>

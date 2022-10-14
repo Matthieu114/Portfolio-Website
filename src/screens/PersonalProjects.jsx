@@ -50,7 +50,6 @@ const PersonalProjects = ({ fullpageApi }) => {
         </div>
         <div class='projects-container'>
           {projects.map((project) => {
-            console.log(project);
             return <Project img={project.img} desc={project.description} path={project.path} name={project.name} />;
           })}
         </div>

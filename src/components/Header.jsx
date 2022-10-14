@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { CgMenuRightAlt } from 'react-icons/cg';
+import { IoCloseOutline } from 'react-icons/io5';
+import colors from '../config/colors';
 
 const Header = () => {
-  const navigate = useNavigate();
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
+  const navigate = useNavigate();
   let doc = document.documentElement;
   let w = window;
 
@@ -44,32 +47,94 @@ const Header = () => {
     navigate(path);
   };
 
+  const openNav = () => {
+    document.getElementById('mobile-navbar').style.transform = 'translateX(0vw)';
+    document.getElementById('body').style.overflow = 'hidden';
+    document.getElementById('mobile-navbar').style.visibility = 'visible';
+    setMobileOpen(true);
+  };
+
+  const closeNav = () => {
+    setMobileOpen(false);
+    document.getElementById('mobile-navbar').style.visibility = 'hidden';
+    document.getElementById('mobile-navbar').style.transform = 'translateX(100vw)';
+    document.getElementById('body').style.overflow = 'scroll';
+  };
+
   return (
     <div class={showHeader ? 'root' : 'hidden'}>
       <div class='header-content'>
         <a class='home-logo' href='#home' onClick={() => navigateTo('/')}>
           MD
         </a>
-        <div class='open-header'>
-          <GiHamburgerMenu />
-        </div>
         <div class='header-links'>
-          <a href='#about' class='headerLink' onClick={() => navigateTo('/')}>
+          <a href='#about' class='header-link' onClick={() => navigateTo('/')}>
             <p class='header-number'> 01. </p>
             About Me
           </a>
-          <a class='headerLink' href='#experience' onClick={() => navigateTo('/')}>
+          <a class='header-link' href='#experience' onClick={() => navigateTo('/')}>
             <p class='header-number'> 02. </p>
             Experience
           </a>
-          <a class='headerLink' href='#my-work' onClick={() => navigateTo('/')}>
+          <a class='header-link' href='#my-work' onClick={() => navigateTo('/')}>
             <p class='header-number'> 03. </p> My Work
           </a>
-          <a class='headerLink' onClick={() => navigateTo('/')}>
+          <a class='header-link' onClick={() => navigateTo('/')}>
             <p class='header-number'> 04. </p>
             Contact
           </a>
-          <div class='resumeButton'>Resume</div>
+          <div class='resume-button'>Resume</div>
+        </div>
+        <div class='open-header'>
+          {!mobileOpen ? (
+            <CgMenuRightAlt class='hamburger-menu' onClick={openNav} color={colors.cream} height='25px' width={25} />
+          ) : (
+            <div>
+              <IoCloseOutline onClick={closeNav} class='close-mobile' color={colors.cream} />
+            </div>
+          )}
+          <aside class='mobile-navbar' id='mobile-navbar'>
+            <a
+              href='#about'
+              class='mobile-link'
+              onClick={() => {
+                navigateTo('/');
+                closeNav();
+              }}>
+              <p class='header-number'> 01. </p>
+              About Me
+            </a>
+            <a
+              class='mobile-link'
+              href='#experience'
+              onClick={() => {
+                navigateTo('/');
+                closeNav();
+              }}>
+              <p class='header-number'> 02. </p>
+              Experience
+            </a>
+            <a
+              class='mobile-link'
+              href='#my-work'
+              onClick={() => {
+                navigateTo('/');
+                closeNav();
+              }}>
+              <p class='header-number'> 03. </p>
+              My Work
+            </a>
+            <a
+              class='mobile-link'
+              onClick={() => {
+                navigateTo('/');
+                closeNav();
+              }}>
+              <p class='header-number'> 04. </p>
+              Contact
+            </a>
+            <div class='mobile-resume'>Resume</div>
+          </aside>
         </div>
       </div>
     </div>

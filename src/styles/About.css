@@ -40,7 +40,7 @@
 }
 
 .typed-section {
-  font-family: Consolas;
+  font-family: Consolas, monaco, monospace;
   color: var(--cream);
   font-size: clamp(20px, 2.5vw, 50px);
   font-weight: 500;
@@ -84,7 +84,7 @@
   position: relative;
   margin-bottom: 10px;
   padding-left: 25px;
-  font-family: Consolas;
+  font-family: Consolas, monaco, monospace;
 }
 
 /* MEDIA QUERIES RESPONSIVE */
@@ -135,9 +135,8 @@
 
   .typed-section {
     align-self: flex-start;
-    font-family: Consolas;
+    font-family: Consolas, monaco, monospace;
     color: var(--cream);
-    /* font-size: clamp(30px, 2.5vw, 50px); */
     font-size: 20px;
     font-weight: 500;
     margin: 0;
@@ -166,7 +165,7 @@
 @media (max-width: 640px) {
   .typed-section {
     align-self: flex-start;
-    font-family: Consolas;
+    font-family: Consolas, monaco, monospace;
     color: var(--cream);
     font-size: 17px;
     font-weight: 500;
@@ -179,7 +178,7 @@
     line-height: 1.8rem;
     font-weight: 400;
     color: var(--softGrey);
-    font-size: 13px;
+    font-size: 17px;
     width: 100%;
     max-width: 700px;
   }
