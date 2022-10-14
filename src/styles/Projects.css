@@ -21,7 +21,7 @@
   font-weight: 500;
   font-size: 18px;
   max-width: 750px;
-  line-height: 2rem;
+  line-height: 1.8rem;
   color: var(--cream);
 }
 
@@ -81,10 +81,10 @@
 
   .projects-about {
     margin: 0.5rem 0;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     max-width: 750px;
-    line-height: 2rem;
+    line-height: 1.8rem;
     color: var(--cream);
   }
 
@@ -118,10 +118,10 @@
 
   .projects-about {
     margin: 0.5rem 0;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     max-width: 750px;
-    line-height: 2rem;
+    line-height: 1.8rem;
     color: var(--cream);
   }
 
@@ -154,38 +154,59 @@
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
+  filter: brightness(0.6);
+}
+
+.project-container:hover > img {
+  filter: brightness(1);
+  transform: scale(1.1);
 }
 
 .project-container > .content {
-  color: var(--white);
+  color: var(--fandagoPink);
   position: absolute;
   inset: 0;
-  font-size: 1rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.4);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
   opacity: 0;
+}
+
+.project-container .about-button {
+  transform: translateY(200px);
+  color: var(--cream);
+  font-weight: 500;
+  font-family: Consolas, monaco, monospace;
+  font-size: 20px;
+  transition: 100ms ease-in-out 75ms;
+}
+
+.project-container .about-desc {
+  transform: translateY(200px);
+  color: var(--softGrey);
+  font-weight: 500;
+  font-size: 14px;
+  transition: 250ms ease-in-out 100ms;
+  text-align: center;
 }
 
 .project-container > img,
-.project-container > .content {
-  transition: 200ms ease-in-out;
+.project-container > .content,
+.project-container > .about-button {
+  transition: 150ms ease-in-out;
 }
 
-.project-container > .content.fade {
-  opacity: 0;
-}
-
-.project-container:hover > .content.fade {
+.project-container:hover > .content {
   opacity: 1;
 }
 
-.project-container:hover > img.blur {
-  filter: blur(2px);
+.content:hover > .about-button {
+  transform: translateY(115px);
 }
 
-.project-container:hover > img.zoom {
-  transform: scale(1.1);
+.content:hover > .about-desc {
+  transform: translateY(125px);
 }

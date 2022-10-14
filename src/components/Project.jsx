@@ -10,8 +10,11 @@ const Project = ({ img, desc, path, name, categ }) => {
 
   return (
     <div class='project-container' onClick={() => navigateTo(path)}>
-      <img src={img} class='blur zoom'></img>
-      <div class='content fade'>{desc}</div>
+      <img src={img} />
+      <div class='content'>
+        <div class='about-button'>{name}</div>
+        <div class='about-desc'>{desc}</div>
+      </div>
     </div>
   );
 };
