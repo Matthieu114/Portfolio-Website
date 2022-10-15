@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import colors from '../config/colors';
 import { AiOutlineSearch } from 'react-icons/ai';
+
 import Lottie from 'lottie-react';
 import codingAnimation from '../assets/animOrange.json';
 
