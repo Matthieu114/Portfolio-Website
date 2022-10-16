@@ -22,7 +22,6 @@ const AboutMe = () => {
 
   const descCbObserver = (entries) => {
     entries.forEach((entry) => {
-      console.log(entry);
       if (entry.isIntersecting) {
         setIsDescVisible(entry.isIntersecting);
       } else {
@@ -71,7 +70,6 @@ const AboutMe = () => {
     const descObserver = new IntersectionObserver(descCbObserver, options);
     const currentDescTarget = targetRefDesc.current;
 
-    console.log(currentDescTarget);
     if (currentDescTarget) descObserver.observe(currentDescTarget);
 
     return () => {

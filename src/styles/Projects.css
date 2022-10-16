@@ -94,6 +94,34 @@
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+.project-container:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.project-container:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+.project-container:nth-child(4) {
+  transition-delay: 400ms;
+}
+
+.project-container:nth-child(5) {
+  transition-delay: 500ms;
+}
+
+.project-container:nth-child(6) {
+  transition-delay: 600ms;
+}
+
+.project-fade-in {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: ease 1s;
 }
 
 .project-container > img {

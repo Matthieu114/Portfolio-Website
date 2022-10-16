@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import Project from '../components/Project';
 import { projects } from '../data/projects';
 
@@ -41,14 +41,54 @@ const filterOptions = [
 ];
 
 const PersonalProjects = () => {
+  const projectRef = useRef(null);
+  const refs = useRef([]);
+  const [isVisible, setIsVisible] = useState(null);
+
   const [projectsList, setProjectsList] = useState([]);
   const [selectedCategory, setCategory] = useState();
   const [activeItem, setActiveItem] = useState(filterOptions[0]);
   let filteredList = useMemo(getFilteredList, [selectedCategory, projectsList]);
 
+  const callbackFunction = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        refs.current.forEach((ref) => {
+          ref.classList.add('project-fade-in');
+        });
+        // setIsVisible(entry.isIntersecting);
+      } else {
+        refs.current.forEach((ref) => {
+          ref.classList.remove('project-fade-in');
+        });
+        // setIsVisible(entry.isIntersecting);
+      }
+    });
+  };
+  const options = useMemo(() => {
+    return {
+      root: null,
+      rootMargin: '0px 150px 0px 150px',
+      threshold: 0
+    };
+  }, []);
+
   useEffect(() => {
     setProjectsList(projects);
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction, options);
+    refs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      refs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, [projectRef.current, options, selectedCategory, refs.current.length]);
 
   const handleCategoryChange = (filter) => {
     setActiveItem(filter);
@@ -84,9 +124,9 @@ const PersonalProjects = () => {
             })}
           </ul>
         </div>
-        <div class='projects-container' id='project-container'>
-          {filteredList.map((project) => {
-            return <Project img={project.img} desc={project.description} path={project.path} name={project.name} />;
+        <div class='projects-container' id='project-container' ref={projectRef}>
+          {filteredList.map((project, index) => {
+            return <Project key={index} i={index} img={project.img} desc={project.description} path={project.path} name={project.name} refs={refs} isvisible={isVisible} />;
           })}
         </div>
       </div>
