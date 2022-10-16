@@ -6,6 +6,7 @@
   color: var(--white);
   align-items: center;
   padding: 100px 150px;
+  overflow-x: hidden;
 }
 
 .about-left-ctn {
@@ -85,6 +86,39 @@
   margin-bottom: 10px;
   padding-left: 25px;
   font-family: Consolas, monaco, monospace;
+}
+
+/* ANIMATIONS */
+.about-hidden {
+  opacity: 0;
+  filter: blur(10px);
+  transition: ease-in 0.2s;
+}
+
+@media (prefers-reduced-motion) {
+  .about-hidden {
+    transition: none;
+  }
+}
+
+.fade-in {
+  transition: ease-in 500ms;
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.about-slide {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(75%);
+  transition: all 200ms;
+}
+
+.slide-in {
+  transition: ease-out 500ms;
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
 }
 
 /* MEDIA QUERIES RESPONSIVE */

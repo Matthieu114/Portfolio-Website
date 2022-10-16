@@ -10,6 +10,7 @@ const MainPage = () => {
       <LandingPage />
       <AboutMe />
       <PersonalProjects />
+      {/* <AboutMe /> */}
     </div>
   );
 };
