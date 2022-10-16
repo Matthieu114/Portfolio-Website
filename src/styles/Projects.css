@@ -58,8 +58,9 @@
   margin-top: 3rem;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, 330px);
   gap: 1rem;
+  min-height: 330px;
 }
 
 @keyframes slide-in {
@@ -69,59 +70,6 @@
 }
 
 /* media queries */
-
-@media (max-width: 1024px) {
-  .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-  .projects-about {
-    font-weight: 400;
-    font-size: 18px;
-  }
-
-  .projects-title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .projects-title {
-    color: var(--fandagoPink);
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .root-container {
-    width: 100%;
-    height: max-content;
-    position: relative;
-    padding: 100px 50px;
-    background-color: var(--darkBlue);
-  }
-  .projects-container {
-    margin-top: 3rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-  }
-
-  .projects-about {
-    font-weight: 400;
-    font-size: 16px;
-  }
-
-  .filter-projects-list {
-    font-size: 10px;
-  }
-
-  .projects-title {
-    color: var(--fandagoPink);
-    font-size: 25px;
-  }
-}
 
 /* Project */
 
@@ -195,5 +143,71 @@
   transform: translateY(125px);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1280px) {
+  .root-container {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    padding: 100px 50px;
+    background-color: var(--darkBlue);
+  }
+  .projects-container {
+    margin-top: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 335px);
+    gap: 1rem;
+  }
+
+  .projects-about {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .filter-projects-list {
+    font-size: 15px;
+  }
+
+  .projects-title {
+    color: var(--fandagoPink);
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, 335px);
+  }
+
+  .projects-about {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .projects-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .projects-title {
+    color: var(--fandagoPink);
+    font-size: 20px;
+  }
+
+  .filter-projects-list {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 801px) {
+  .filter-projects-list {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 540px) {
+  .filter-projects-list {
+    font-size: 10px;
+  }
 }
