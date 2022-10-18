@@ -32,7 +32,7 @@
 
 .filter-projects-list {
   display: flex;
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
@@ -227,20 +227,48 @@
 }
 
 @media (max-width: 801px) {
+  .projects-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .filter-projects-list {
     font-size: 12px;
+  }
+
+  .project-container .about-button {
+    transform: translateY(95px);
+  }
+
+  .project-container .about-desc {
+    transform: translateY(100px);
+  }
+
+  .project-container > .content {
+    opacity: 1;
+  }
+
+  .content:hover > .about-button {
+    transform: translateY(95px);
+  }
+
+  .content:hover > .about-desc {
+    transform: translateY(100px);
   }
 }
 
 @media (max-width: 540px) {
+  .list-item {
+    margin-right: 0.5rem;
+    font-weight: 500;
+  }
   .filter-projects-list {
     font-size: 10px;
     list-style: none;
-    word-wrap: break-word;
-  }
-
-  .list-item {
-    display: inline-block;
   }
 
   .projects-container {

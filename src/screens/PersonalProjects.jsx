@@ -52,7 +52,6 @@ const PersonalProjects = () => {
 
   const callbackFunction = (entries) => {
     entries.forEach((entry) => {
-      console.log(entries);
       if (entry.isIntersecting) {
         entry.target.classList.add('project-fade-in');
       }
@@ -83,10 +82,13 @@ const PersonalProjects = () => {
     };
   }, [projectRef.current, options, refs.current.length, selectedCategory]);
 
-  const handleCategoryChange = (filter) => {
+  const handleCategoryChange = (filter, item) => {
+    if (item === filter) return;
+
     refs.current.forEach((ref) => {
       if (ref) ref.classList?.remove('project-fade-in');
     });
+
     setActiveItem(filter);
     setCategory(filter.category);
   };
@@ -102,14 +104,14 @@ const PersonalProjects = () => {
         <h1 class='projects-title'>A few things i've built</h1>
         <div class='projects-about'>These are the projects I have worked on in school and in my own free time. They range from video games to chat apps to music player clones</div>
       </div>
-      <div>
+      <section class='projects-section'>
         <div class='filter-projects-container'>
           <ul class='filter-projects-list'>
             <li class='list-item'>Filter By</li>
             {filterOptions.map((filter) => {
               return (
                 <li class='list-item'>
-                  <a class={`list-link  ${activeItem == filter && 'active'}`} id={filter.id} onClick={() => handleCategoryChange(filter)}>
+                  <a class={`list-link  ${activeItem == filter && 'active'}`} id={filter.id} onClick={() => handleCategoryChange(filter, activeItem)}>
                     {filter.name}
                     <span class={`filter-badge  ${activeItem == filter && 'active'}`}>{filter.quantity}</span>
                   </a>
@@ -125,7 +127,7 @@ const PersonalProjects = () => {
             return <Project key={index} i={index} img={project.img} desc={project.description} path={project.path} name={project.name} refs={refs} isvisible={isVisible} />;
           })}
         </div>
-      </div>
+      </section>
     </div>
   );
 };
