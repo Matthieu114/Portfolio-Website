@@ -3,6 +3,7 @@ import React from 'react';
 import LandingPage from './LandingPage';
 import AboutMe from './AboutMe';
 import PersonalProjects from './PersonalProjects';
+import MyExperiences from './MyExperiences';
 
 const MainPage = () => {
   return (
@@ -10,7 +11,7 @@ const MainPage = () => {
       <LandingPage />
       <AboutMe />
       <PersonalProjects />
-      {/* <AboutMe /> */}
+      <MyExperiences />
     </div>
   );
 };

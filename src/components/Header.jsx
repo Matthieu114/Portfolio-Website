@@ -62,7 +62,7 @@ const Header = () => {
   };
 
   return (
-    <div class={showHeader ? 'root' : 'hidden'}>
+    <div class={showHeader ? 'header-root' : 'hidden'}>
       <div class='header-content'>
         <a class='home-logo' href='#home' onClick={() => navigateTo('/')}>
           MD
@@ -72,18 +72,20 @@ const Header = () => {
             <p class='header-number'> 01. </p>
             About Me
           </a>
-          <a class='header-link' href='#experience' onClick={() => navigateTo('/')}>
-            <p class='header-number'> 02. </p>
-            Experience
-          </a>
           <a class='header-link' href='#my-work' onClick={() => navigateTo('/')}>
-            <p class='header-number'> 03. </p> My Work
+            <p class='header-number'> 02. </p> My Work
+          </a>
+          <a class='header-link' href='#experience' onClick={() => navigateTo('/')}>
+            <p class='header-number'> 03. </p>
+            Experience
           </a>
           <a class='header-link' onClick={() => navigateTo('/')}>
             <p class='header-number'> 04. </p>
             Contact
           </a>
-          <div class='resume-button'>Resume</div>
+          <a class='resume-button' href='/resume' target='_blank' rel='noopener noreferrer'>
+            Resume
+          </a>
         </div>
         <div class='open-header'>
           {!mobileOpen ? (
@@ -106,16 +108,6 @@ const Header = () => {
             </a>
             <a
               class='mobile-link'
-              href='#experience'
-              onClick={() => {
-                navigateTo('/');
-                closeNav();
-              }}>
-              <p class='header-number'> 02. </p>
-              Experience
-            </a>
-            <a
-              class='mobile-link'
               href='#my-work'
               onClick={() => {
                 navigateTo('/');
@@ -126,6 +118,16 @@ const Header = () => {
             </a>
             <a
               class='mobile-link'
+              href='#experience'
+              onClick={() => {
+                navigateTo('/');
+                closeNav();
+              }}>
+              <p class='header-number'> 02. </p>
+              Experience
+            </a>
+            <a
+              class='mobile-link'
               onClick={() => {
                 navigateTo('/');
                 closeNav();
@@ -133,7 +135,9 @@ const Header = () => {
               <p class='header-number'> 04. </p>
               Contact
             </a>
-            <div class='mobile-resume'>Resume</div>
+            <a class='mobile-resume' href='/resume' target='_blank' rel='noopener noreferrer'>
+              Resume
+            </a>
           </aside>
         </div>
       </div>
