@@ -32,7 +32,7 @@
 
 .filter-projects-list {
   display: flex;
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
@@ -95,33 +95,15 @@
   position: relative;
   overflow: hidden;
   opacity: 0;
+  filter: blur(5px);
   transform: translateX(-10%);
-}
-
-.project-container:nth-child(2) {
-  transition-delay: 200ms;
-}
-
-.project-container:nth-child(3) {
-  transition-delay: 300ms;
-}
-
-.project-container:nth-child(4) {
-  transition-delay: 400ms;
-}
-
-.project-container:nth-child(5) {
-  transition-delay: 500ms;
-}
-
-.project-container:nth-child(6) {
-  transition-delay: 600ms;
 }
 
 .project-fade-in {
   opacity: 1;
   transform: translateX(0%);
   transition: ease 1s;
+  filter: blur(0px);
 }
 
 .project-container > img {
@@ -253,6 +235,12 @@
 @media (max-width: 540px) {
   .filter-projects-list {
     font-size: 10px;
+    list-style: none;
+    word-wrap: break-word;
+  }
+
+  .list-item {
+    display: inline-block;
   }
 
   .projects-container {

@@ -9,12 +9,11 @@ const Project = ({ img, desc, path, name, categ, isvisible, refs, i }) => {
   };
 
   return (
-    //${isvisible && 'project-fade-in'}
     <div
       ref={(element) => {
         refs.current[i] = element;
       }}
-      class={`project-container`}
+      class='project-container'
       onClick={() => navigateTo(path)}>
       <img src={img} />
       <div class='content'>

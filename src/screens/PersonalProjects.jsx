@@ -17,13 +17,13 @@ const filterOptions = [
     slash: '\t/',
     quantity: 3
   },
-  {
-    id: 3,
-    name: 'Data Science',
-    category: 'data',
-    slash: '\t/',
-    quantity: 0
-  },
+  // {
+  //   id: 3,
+  //   name: 'Data Science',
+  //   category: 'data',
+  //   slash: '\t/',
+  //   quantity: 0
+  // },
   {
     id: 4,
     name: 'Games',
@@ -52,16 +52,9 @@ const PersonalProjects = () => {
 
   const callbackFunction = (entries) => {
     entries.forEach((entry) => {
+      console.log(entries);
       if (entry.isIntersecting) {
-        refs.current.forEach((ref) => {
-          ref.classList.add('project-fade-in');
-        });
-        // setIsVisible(entry.isIntersecting);
-      } else {
-        refs.current.forEach((ref) => {
-          ref.classList.remove('project-fade-in');
-        });
-        // setIsVisible(entry.isIntersecting);
+        entry.target.classList.add('project-fade-in');
       }
     });
   };
@@ -69,7 +62,7 @@ const PersonalProjects = () => {
     return {
       root: null,
       rootMargin: '0px 150px 0px 150px',
-      threshold: 0
+      threshold: 0.3
     };
   }, []);
 
@@ -88,9 +81,12 @@ const PersonalProjects = () => {
         if (ref) observer.unobserve(ref);
       });
     };
-  }, [projectRef.current, options, selectedCategory, refs.current.length]);
+  }, [projectRef.current, options, refs.current.length, selectedCategory]);
 
   const handleCategoryChange = (filter) => {
+    refs.current.forEach((ref) => {
+      if (ref) ref.classList?.remove('project-fade-in');
+    });
     setActiveItem(filter);
     setCategory(filter.category);
   };

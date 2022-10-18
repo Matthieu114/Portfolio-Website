@@ -14,8 +14,6 @@ const AboutMe = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setIsImgVisible(entry.isIntersecting);
-      } else {
-        setIsImgVisible(entry.isIntersecting);
       }
     });
   };
@@ -23,8 +21,6 @@ const AboutMe = () => {
   const descCbObserver = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setIsDescVisible(entry.isIntersecting);
-      } else {
         setIsDescVisible(entry.isIntersecting);
       }
     });
@@ -34,7 +30,7 @@ const AboutMe = () => {
     return {
       root: null,
       rootMargin: '0px 150px 0px 150px',
-      threshold: 0.2
+      threshold: 0.25
     };
   }, []);
 
