@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { MdLocationPin } from 'react-icons/md';
 
-const Experience = ({ name, company, desc, location, img, skills, dur }) => {
+const Experience = ({ name, company, desc, location, img, skills, dur, refs, i }) => {
   const myRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
 
@@ -15,7 +15,11 @@ const Experience = ({ name, company, desc, location, img, skills, dur }) => {
   };
 
   return (
-    <section class='exp-outer-ctn'>
+    <section
+      class='exp-outer-ctn'
+      ref={(element) => {
+        refs.current[i] = element;
+      }}>
       <div class={`exp-inner-ctn ${isActive && 'work-active'}`} onClick={toggleAccordion}>
         <div class='exp-title'>
           {' '}

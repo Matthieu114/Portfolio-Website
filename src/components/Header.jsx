@@ -135,7 +135,14 @@ const Header = () => {
               <p class='header-number'> 04. </p>
               Contact
             </a>
-            <a class='mobile-resume' href='/resume' target='_blank' rel='noopener noreferrer'>
+            <a
+              class='mobile-resume'
+              onClick={() => {
+                navigateTo('/resume');
+                closeNav();
+              }}
+              target='_blank'
+              rel='noopener noreferrer'>
               Resume
             </a>
           </aside>

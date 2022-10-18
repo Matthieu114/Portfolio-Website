@@ -1,5 +1,5 @@
 .work-root {
-  background-color: var(--darkBlue);
+  background-color: var(--blue1);
   padding: 150px 150px 200px 150px;
   text-align: center;
   height: max-content;
@@ -27,6 +27,28 @@
   min-width: 800px;
   text-align: left;
   color: var(--cream);
+  overflow: hidden;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-10%);
+}
+
+.exp-outer-ctn:nth-child(1) {
+  transition-delay: 100ms;
+}
+
+.exp-outer-ctn:nth-child(2) {
+  transition-delay: 300ms;
+}
+.exp-outer-ctn:nth-child(3) {
+  transition-delay: 500ms;
+}
+
+.exp-fade-in {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: ease 1s;
+  filter: blur(0px);
 }
 
 .exp-inner-ctn:hover {

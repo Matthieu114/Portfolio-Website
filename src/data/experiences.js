@@ -15,7 +15,7 @@ export const experiences = [
   },
   {
     id: 2,
-    name: 'Frontend Web Developer',
+    name: 'Frontend Web Developer Intern',
     company: 'MeDirect',
     location: 'Sliema, Malta',
     description: 'Helped develop and maintain the test flows of the website using Cypress for E2E testing and Jest / Vue test utils to write unit tests',
@@ -25,7 +25,7 @@ export const experiences = [
   },
   {
     id: 3,
-    name: 'IT department law firm internship',
+    name: 'IT department Law Firm Intern',
     company: 'Norton Rose Fulbright',
     location: 'Paris, France',
     description: 'Discovery of the IT support job , helped small team on their daily tasks',
