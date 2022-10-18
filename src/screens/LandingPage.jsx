@@ -18,13 +18,12 @@ const LandingPage = () => {
         <div class={isLoaded ? 'text-container fade active' : 'text-container fade'}>
           <div>
             <h1 class='main-text'>
-              Hi! I am
-              <p style={{ margin: 0, padding: 0, color: colors.fandagoPink }}>
-                Matthieu Denis <span style={{ color: colors.white }}>.</span>
-              </p>
+              <span class='text-hi'>Hi! I am</span>
+              <p class='landing-name'>Matthieu Denis</p>
             </h1>
             <h3 class='description'>
-              I am a student passionate about <b>Web</b> and <b>Game Development</b>. <br /> Currently, I am in my last year of studies at{' '}
+              <p class='description-text-me'> I am a student passionate about Web and Game Development.</p>
+              Currently, I am in my last year of studies at{' '}
               <a href='https://www.ece.fr/en/program/engineering-degree-bac4-big-data-analytics-major/' class='description-link-ece' target='_blank'>
                 ECE paris engineering school
               </a>{' '}

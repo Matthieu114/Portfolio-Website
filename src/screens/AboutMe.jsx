@@ -30,7 +30,7 @@ const AboutMe = () => {
     return {
       root: null,
       rootMargin: '0px 150px 0px 150px',
-      threshold: 0.25
+      threshold: 0.1
     };
   }, []);
 
