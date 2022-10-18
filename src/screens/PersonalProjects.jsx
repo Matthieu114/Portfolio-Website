@@ -17,13 +17,6 @@ const filterOptions = [
     slash: '\t/',
     quantity: 3
   },
-  // {
-  //   id: 3,
-  //   name: 'Data Science',
-  //   category: 'data',
-  //   slash: '\t/',
-  //   quantity: 0
-  // },
   {
     id: 4,
     name: 'Games',
@@ -44,7 +37,6 @@ const PersonalProjects = () => {
   const projectRef = useRef(null);
   const refs = useRef([]);
   const [isVisible, setIsVisible] = useState(null);
-
   const [projectsList, setProjectsList] = useState([]);
   const [selectedCategory, setCategory] = useState();
   const [activeItem, setActiveItem] = useState(filterOptions[0]);
@@ -54,6 +46,8 @@ const PersonalProjects = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('project-fade-in');
+      } else {
+        entry.target.classList.remove('project-fade-in');
       }
     });
   };

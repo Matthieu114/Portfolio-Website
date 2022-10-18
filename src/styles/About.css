@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   position: relative;
-  background-color: var(--lightestBlue);
+  background-color: var(--darkBlue);
   color: var(--white);
   align-items: center;
   padding: 100px 150px;
@@ -18,7 +18,7 @@
 }
 
 .hero-img-ctn {
-  background-color: var(--darkBlue);
+  background-color: var(--blue1);
   border-radius: 50%;
   margin-right: 200px;
 }
@@ -111,11 +111,11 @@
   opacity: 0;
   filter: blur(10px);
   transform: translateX(75%);
-  transition: all 200ms;
+  transition: ease-out 200ms;
 }
 
 .slide-in {
-  transition: ease-out 500ms;
+  transition: ease-out 600ms;
   opacity: 1;
   filter: blur(0px);
   transform: translateX(0);
@@ -125,13 +125,8 @@
 
 @media (max-width: 1280px) {
   .about-root {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: var(--lightestBlue);
-    color: var(--white);
     padding: 100px 50px;
+    flex-direction: column;
   }
 
   .hero-img-ctn {
@@ -189,7 +184,6 @@
     line-height: 1.8rem;
     font-weight: 400;
     color: var(--softGrey);
-    /* font-size: clamp(10px, 1.1rem, 40px); */
     font-size: 15px;
     width: 100%;
     max-width: 700px;

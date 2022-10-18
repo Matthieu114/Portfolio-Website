@@ -4,6 +4,7 @@ import LandingPage from './LandingPage';
 import AboutMe from './AboutMe';
 import PersonalProjects from './PersonalProjects';
 import MyExperiences from './MyExperiences';
+import colors from '../config/colors';
 
 const MainPage = () => {
   return (

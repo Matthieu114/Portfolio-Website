@@ -3,7 +3,7 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
   color: var(--white);
-  background-color: rgba(15, 25, 34, 0.9);
+  background-color: rgba(10, 20, 24, 0.9);
   height: 72px;
   display: flex;
   align-items: center;
@@ -13,13 +13,13 @@
   top: 0;
 }
 
-.hidden {
+.header-hidden {
   width: 100%;
   transition: all 0.1s ease;
   box-shadow: 3px -2px 44px 1px rgba(105, 25, 255, 0.3);
   backdrop-filter: blur(5px);
   color: var(--white);
-  background-color: rgba(15, 25, 34, 0.9);
+  background-color: rgba(10, 20, 24, 0.9);
   height: 0px;
   overflow-y: hidden;
   display: flex;

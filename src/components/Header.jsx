@@ -62,7 +62,7 @@ const Header = () => {
   };
 
   return (
-    <div class={showHeader ? 'header-root' : 'hidden'}>
+    <div class={showHeader ? 'header-root' : 'header-hidden'}>
       <div class='header-content'>
         <a class='home-logo' href='#home' onClick={() => navigateTo('/')}>
           MD

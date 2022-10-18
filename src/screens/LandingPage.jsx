@@ -18,7 +18,7 @@ const LandingPage = () => {
         <div class={isLoaded ? 'text-container fade active' : 'text-container fade'}>
           <div>
             <h1 class='main-text'>
-              <span class='text-hi'>Hi! I am</span>
+              <span class='text-hi'>Hi, I am</span>
               <p class='landing-name'>Matthieu Denis</p>
             </h1>
             <h3 class='description'>
