@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { CgMenuRightAlt } from 'react-icons/cg';
 import { IoCloseOutline } from 'react-icons/io5';
 import colors from '../config/colors';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -83,9 +84,9 @@ const Header = () => {
             <p class='header-number'> 04. </p>
             Contact
           </a>
-          <a class='resume-button' href='/resume' target='_blank' rel='noopener noreferrer'>
+          <Link class='resume-button' to='/resume' target='_blank' rel='noopener noreferrer'>
             Resume
-          </a>
+          </Link>
         </div>
         <div class='open-header'>
           {!mobileOpen ? (
@@ -135,16 +136,9 @@ const Header = () => {
               <p class='header-number'> 04. </p>
               Contact
             </a>
-            <a
-              class='mobile-resume'
-              onClick={() => {
-                navigateTo('/resume');
-                closeNav();
-              }}
-              target='_blank'
-              rel='noopener noreferrer'>
+            <Link class='mobile-resume' to='/resume' target='_blank' rel='noopener noreferrer'>
               Resume
-            </a>
+            </Link>
           </aside>
         </div>
       </div>
