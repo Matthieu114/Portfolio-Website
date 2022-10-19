@@ -61,7 +61,7 @@
   align-items: center;
   margin-left: 3rem;
   color: var(--fandagoPink);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -76,19 +76,21 @@
 }
 
 .see-work-btn {
-  background-color: var(--fandagoPink);
-  color: var(--whit);
+  border: 1px solid var(--fandagoPink);
+  color: var(--cream);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   padding: 0.8rem 3rem;
-  font-size: 20px;
+  font-size: 18px;
   transition: transform 80ms ease-out 0ms;
 }
 
 .see-work-btn:hover {
-  transform: scale(1.05);
+  background-color: rgba(105, 25, 255, 0.2);
+  transition: all ease-in 50ms;
+  transform: scale(1.02);
   cursor: pointer;
 }
 .description-link-ece:hover {
@@ -174,24 +176,13 @@
   }
 
   .see-work-btn {
-    background-color: var(--fandagoPink);
-    color: var(--whit);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 5px;
     padding: 0.8rem 3rem;
     font-size: 15px;
-    transition: transform 80ms ease-out 0ms;
   }
 
   .hire-me-btn {
-    transition: transform 50ms ease-out 0ms;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
     margin-left: 3rem;
-    color: var(--fandagoPink);
     font-size: 15px;
     font-weight: 500;
   }
@@ -199,24 +190,12 @@
 
 @media (max-width: 1280px) {
   .see-work-btn {
-    background-color: var(--fandagoPink);
-    color: var(--whit);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
     padding: 0.8rem 2rem;
     font-size: 15px;
-    transition: transform 80ms ease-out 0ms;
   }
 
   .hire-me-btn {
-    transition: transform 50ms ease-out 0ms;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
     margin-left: 3rem;
-    color: var(--fandagoPink);
     font-size: 15px;
     font-weight: 500;
   }
@@ -232,24 +211,12 @@
 
 @media (max-width: 680px) {
   .see-work-btn {
-    background-color: var(--fandagoPink);
-    color: var(--whit);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
     padding: 0.8rem 2rem;
     font-size: 11px;
-    transition: transform 80ms ease-out 0ms;
   }
 
   .hire-me-btn {
-    transition: transform 50ms ease-out 0ms;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
     margin-left: 3rem;
-    color: var(--fandagoPink);
     font-size: 15px;
     font-weight: 500;
   }
@@ -271,7 +238,6 @@
 
   .main-text .text-hi {
     font-weight: 400;
-    font-family: Consolas, monospace;
     font-size: 25px;
   }
 }

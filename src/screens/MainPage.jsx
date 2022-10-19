@@ -5,7 +5,7 @@ import AboutMe from './AboutMe';
 import PersonalProjects from './PersonalProjects';
 import MyExperiences from './MyExperiences';
 import colors from '../config/colors';
-import Footer from './Footer';
+import Contact from './Contact';
 
 const MainPage = () => {
   return (
@@ -14,7 +14,7 @@ const MainPage = () => {
       <AboutMe />
       <PersonalProjects />
       <MyExperiences />
-      <Footer />
+      <Contact />
     </div>
   );
 };

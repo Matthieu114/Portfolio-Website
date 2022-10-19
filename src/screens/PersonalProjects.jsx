@@ -96,7 +96,9 @@ const PersonalProjects = () => {
     <div class='root-container' id='my-work'>
       <div class='projects-title-container'>
         <h1 class='projects-title'>A few things i've built</h1>
-        <div class='projects-about'>These are the projects I have worked on in school and in my own free time. They range from video games to chat apps to music player clones</div>
+        <div class='projects-about'>
+          These are the projects I have worked on in school and in my own free time. <br /> They range from video games to chat apps to music player clones
+        </div>
       </div>
       <section class='projects-section'>
         <div class='filter-projects-container'>

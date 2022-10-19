@@ -18,11 +18,12 @@
 
 .projects-about {
   margin: 0.5rem 0;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   max-width: 750px;
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   color: var(--cream);
+  font-family: Consolas, monaco, monospace;
 }
 
 .filter-projects-container {
