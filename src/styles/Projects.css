@@ -92,7 +92,7 @@
 
 .project-container {
   color: var(--cream);
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
   opacity: 0;

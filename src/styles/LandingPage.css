@@ -84,13 +84,12 @@
   border-radius: 5px;
   padding: 0.8rem 3rem;
   font-size: 18px;
-  transition: transform 150ms ease-out 0ms;
+  transition: background-color 150ms ease-out 0ms;
 }
 
 .see-work-btn:hover {
   background-color: rgba(105, 25, 255, 0.2);
   transition: all ease-in 50ms;
-  transform: scale(1.02);
   cursor: pointer;
 }
 .description-link-ece:hover {

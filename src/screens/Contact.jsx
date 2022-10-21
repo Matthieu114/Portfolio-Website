@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
+
 import { MdLocationPin } from 'react-icons/md';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
@@ -8,6 +11,38 @@ import github from '../assets/github.png';
 import instagram from '../assets/instagram.png';
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [mail, setMail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  // const SERVICE_ID = 'service_2rc40qm';
+  // const TEMPLATE_ID = 'template_uhh4c33';
+  // const PUBLIC_KEY = 'iVK-XICRK0Jb-W1xt';
+
+  const templateParams = {
+    from_name: name,
+    subject: subject,
+    message: message,
+    from_email: mail
+  };
+
+  const onSubmit = (e) => {
+    console.log(process.env);
+    e.preventDefault();
+    try {
+      emailjs
+        .send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
+        .then(() => {
+          Swal.fire({ icon: 'success', title: 'Your email has been sent', text: 'Thanks for visiting my website I hope you liked it!' });
+        })
+        .catch(() => {
+          Swal.fire({ icon: 'error', title: 'Oops...', text: 'Something went wrong!' });
+        });
+    } catch {
+      Swal.fire({ icon: 'error', title: 'Oops...', text: 'Something went wrong!' });
+    }
+  };
+
   return (
     <section class='contact-root'>
       <div class='title-ctn'>
@@ -21,38 +56,40 @@ const Contact = () => {
       <div className='contact-outer-ctn'>
         <div class='left-ctn'>
           <div className='text-ctn'></div>
-          <form action='' className='contact-form'>
+          <form action='' className='contact-form' onSubmit={onSubmit}>
             <div class='first-ctn'>
               <div class='input-ctn'>
-                <input type='text' name='name' className='input' />
+                <input value={name} type='text' name='name' className='input' onChange={(e) => setName(e.target.value)} />
                 <span className='focus-border'></span>
-                <label for='name' class='animated-label'>
+                <label htmlFor='name' class='animated-label'>
                   Name
                 </label>
               </div>
               <div class='input-ctn'>
-                <input type='text' name='email' className='input' />
-                <label for='email' class='animated-label'>
+                <input type='text' name='email' className='input' onChange={(e) => setMail(e.target.value)} value={mail} />
+                <label htmlFor='email' class='animated-label'>
                   Mail
                 </label>
                 <span className='focus-border'></span>
               </div>
             </div>
             <div class='input-ctn'>
-              <input type='text' className='input' name='subject' />
-              <label for='subject' class='animated-label'>
+              <input type='text' className='input' name='subject' onChange={(e) => setSubject(e.target.value)} value={subject} />
+              <label htmlFor='subject' class='animated-label'>
                 Subject
               </label>
               <span className='focus-border'></span>
             </div>
             <div class='input-ctn'>
-              <textarea type='text-area' className='input' rows={6} name='message' />
-              <label for='message' class='animated-label'>
+              <textarea type='text-area' className='input' rows={6} name='message' onChange={(e) => setMessage(e.target.value)} value={message} />
+              <label htmlFor='message' class='animated-label'>
                 Message
               </label>
               <span className='focus-border'></span>
             </div>
-            <div className='submit-btn'>Submit</div>
+            <button className='submit-btn' type='submit'>
+              Submit
+            </button>
           </form>
         </div>
         <div class='right-ctn'>

@@ -119,6 +119,7 @@
 
 .contact-form .submit-btn {
   border: 1px solid var(--fandagoPink);
+  background-color: transparent;
   color: var(--fandagoPink);
   padding: 0.8rem 3rem;
   text-align: center;
@@ -126,13 +127,12 @@
   font-size: 15px;
   margin: 10px;
   border-radius: 5px;
-  transition: transform 150ms ease-out 0ms;
+  transition: background-color 150ms ease-out 0ms;
 }
 
 .contact-form .submit-btn:hover {
   background-color: rgba(105, 25, 255, 0.2);
   transition: all ease-in 50ms;
-  transform: scale(1.01);
   cursor: pointer;
 }
 
@@ -157,7 +157,7 @@
   font-family: Consolas, monaco, monospace;
 }
 .icon-ctn > .icon {
-  color: rgba(25, 125, 255, 1);
+  color: var(--fandagoPink);
   margin-right: 1rem;
   height: 25px;
   width: 25px;
@@ -165,13 +165,13 @@
 
 .line {
   width: 100%;
-  border: 1px solid var(--blue);
+  border: 1px solid var(--fandagoPink);
 }
 
 .socials-ctn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .socials-ctn > .socials {
   height: 25px;
