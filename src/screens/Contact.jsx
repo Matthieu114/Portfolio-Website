@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 
@@ -12,12 +12,15 @@ import instagram from '../assets/instagram.png';
 
 const Contact = () => {
   const [name, setName] = useState('');
+  const [sending, setSending] = useState(false);
   const [mail, setMail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  // const SERVICE_ID = 'service_2rc40qm';
-  // const TEMPLATE_ID = 'template_uhh4c33';
-  // const PUBLIC_KEY = 'iVK-XICRK0Jb-W1xt';
+
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
+  const rightCtnRef = useRef(null);
+  const leftCtnRef = useRef(null);
 
   const templateParams = {
     from_name: name,
@@ -26,14 +29,42 @@ const Contact = () => {
     from_email: mail
   };
 
+  const options = useMemo(() => {
+    return {
+      root: null,
+      rootMargin: '0px 150px 0px 150px',
+      threshold: 0.3
+    };
+  }, []);
+
+  const clearValues = () => {
+    setName('');
+    setMail('');
+    setSubject('');
+    setMessage('');
+  };
+
+  const callbackFunction = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-up');
+      } else {
+        entry.target.classList.remove('fade-up');
+      }
+    });
+  };
+
   const onSubmit = (e) => {
-    console.log(process.env);
     e.preventDefault();
+
     try {
+      setSending(true);
       emailjs
         .send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
         .then(() => {
+          setSending(false);
           Swal.fire({ icon: 'success', title: 'Your email has been sent', text: 'Thanks for visiting my website I hope you liked it!' });
+          clearValues();
         })
         .catch(() => {
           Swal.fire({ icon: 'error', title: 'Oops...', text: 'Something went wrong!' });
@@ -43,34 +74,80 @@ const Contact = () => {
     }
   };
 
+  useEffect(() => {
+    const titleObserver = new IntersectionObserver(callbackFunction, options);
+    const title = titleRef.current;
+
+    if (title) titleObserver.observe(title);
+
+    return () => {
+      if (title) titleObserver.unobserve(title);
+    };
+  }, [titleRef.current, options]);
+
+  useEffect(() => {
+    const descObserver = new IntersectionObserver(callbackFunction, options);
+    const desc = descRef.current;
+
+    if (desc) descObserver.observe(desc);
+
+    return () => {
+      if (desc) descObserver.unobserve(desc);
+    };
+  }, [descRef.current, options]);
+
+  useEffect(() => {
+    const rightObserver = new IntersectionObserver(callbackFunction, options);
+    const right = rightCtnRef.current;
+
+    if (right) rightObserver.observe(right);
+
+    return () => {
+      if (right) rightObserver.unobserve(right);
+    };
+  }, [rightCtnRef.current, options]);
+
+  useEffect(() => {
+    const leftObserver = new IntersectionObserver(callbackFunction, options);
+    const left = leftCtnRef.current;
+
+    if (left) leftObserver.observe(left);
+
+    return () => {
+      if (left) leftObserver.unobserve(left);
+    };
+  }, [leftCtnRef.current, options]);
+
   return (
     <section class='contact-root'>
       <div class='title-ctn'>
-        <div className='title'>Get In Touch!</div>
-        <div className='desc'>
-          I am currently looking for an internship in the software engineering or data science field. You can contact me here
-          <br /> <br />
-          Or if you just want to say hi feel free to drop me a message!
+        <div className='title' ref={titleRef}>
+          Get In Touch!
+        </div>
+        <div className='desc' ref={descRef}>
+          I am currently looking for an internship in the software engineering or data science field. You can contact me here.
+          <br />
+          If you just want to say hi feel free to drop me a message!
         </div>
       </div>
       <div className='contact-outer-ctn'>
-        <div class='left-ctn'>
+        <div class='left-ctn' ref={leftCtnRef}>
           <div className='text-ctn'></div>
           <form action='' className='contact-form' onSubmit={onSubmit}>
             <div class='first-ctn'>
               <div class='input-ctn'>
                 <input value={name} type='text' name='name' className='input' onChange={(e) => setName(e.target.value)} />
-                <span className='focus-border'></span>
+                <span className='focus-border' />
                 <label htmlFor='name' class='animated-label'>
                   Name
                 </label>
               </div>
               <div class='input-ctn'>
-                <input type='text' name='email' className='input' onChange={(e) => setMail(e.target.value)} value={mail} />
+                <input type='text' name='email' className='input' onChange={(e) => setMail(e.target.value)} value={mail} required />
                 <label htmlFor='email' class='animated-label'>
                   Mail
                 </label>
-                <span className='focus-border'></span>
+                <span className='focus-border' />
               </div>
             </div>
             <div class='input-ctn'>
@@ -78,21 +155,21 @@ const Contact = () => {
               <label htmlFor='subject' class='animated-label'>
                 Subject
               </label>
-              <span className='focus-border'></span>
+              <span className='focus-border' />
             </div>
             <div class='input-ctn'>
-              <textarea type='text-area' className='input' rows={6} name='message' onChange={(e) => setMessage(e.target.value)} value={message} />
+              <textarea type='text-area' className='input' rows={6} name='message' onChange={(e) => setMessage(e.target.value)} value={message} required />
               <label htmlFor='message' class='animated-label'>
                 Message
               </label>
-              <span className='focus-border'></span>
+              <span className='focus-border' />
             </div>
             <button className='submit-btn' type='submit'>
-              Submit
+              {sending ? '... Sending' : 'Submit'}
             </button>
           </form>
         </div>
-        <div class='right-ctn'>
+        <div class='right-ctn' ref={rightCtnRef}>
           <div className='info-ctn'>
             <div className='icon-ctn'>
               <MdLocationPin class='icon' />
@@ -110,10 +187,18 @@ const Contact = () => {
           </div>
           <div className='socials-outer-ctn'>
             <div className='socials-ctn'>
-              <img src={linkedin} alt='linkedin' className='socials' />
-              <img src={github} alt='github' className='socials' />
-              <img src={instagram} alt='instagram' className='socials' />
-              <img src={msg} alt='messenger' className='socials' />
+              <a href='https://www.linkedin.com/in/matthieu-denis1141/' target='_blank'>
+                <img src={linkedin} alt='linkedin' className='socials' />
+              </a>
+              <a href='https://github.com/Matthieu114' target='_blank'>
+                <img src={github} alt='github' className='socials' />
+              </a>
+              <a href='https://www.instagram.com/matthieu114/' target='_blank'>
+                <img src={instagram} alt='instagram' className='socials' />
+              </a>
+              <a href='https://www.messenger.com/t/5398311623579890/' target='_blank'>
+                <img src={msg} alt='messenger' className='socials' />
+              </a>
             </div>
           </div>
         </div>

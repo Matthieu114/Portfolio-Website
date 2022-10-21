@@ -16,12 +16,20 @@
 .right-ctn {
   width: 35%;
   height: 100%;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(50px);
+  transition: all ease-out 500ms;
 }
 
 .left-ctn {
   width: 65%;
   height: 100%;
   margin-right: 2.5rem;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(50px);
+  transition: all ease-out 500ms;
 }
 
 .left-ctn .text-ctn {
@@ -39,6 +47,10 @@
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 1rem;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(50px);
+  transition: all ease-out 700ms;
 }
 
 .title-ctn > .desc {
@@ -46,6 +58,10 @@
   font-size: 17px;
   font-weight: 400;
   font-family: Consolas, monaco, monospace;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(50px);
+  transition: all ease-out 700ms;
 }
 
 .contact-form {
@@ -70,7 +86,7 @@
   background-color: var(--lightestBlue);
   border-radius: 5px;
   width: 100%;
-  padding: 1.2rem;
+  padding: 2rem 1.2rem 0.4rem 0.5rem;
   color: var(--cream);
   font-family: Consolas, monaco, monospace;
   border: none;
@@ -98,7 +114,7 @@
   margin: 0;
 }
 
-.input-ctn > span {
+.input-ctn > .focus-border {
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -108,8 +124,8 @@
   transition: ease-in 250ms;
 }
 
-.contact-form .input:hover ~ span,
-.contact-form .input:focus ~ span {
+.contact-form .input:hover ~ .focus-border,
+.contact-form .input:focus ~ .focus-border {
   width: calc(100% - 20px);
 }
 
@@ -121,7 +137,8 @@
   border: 1px solid var(--fandagoPink);
   background-color: transparent;
   color: var(--fandagoPink);
-  padding: 0.8rem 3rem;
+  padding: 0.8rem 0rem;
+  width: 145px;
   text-align: center;
   align-self: flex-end;
   font-size: 15px;
@@ -173,10 +190,21 @@
   align-items: center;
   justify-content: space-around;
 }
-.socials-ctn > .socials {
+.socials-ctn > a > .socials {
   height: 25px;
   width: 25px;
 }
+
+/* Animations */
+
+.fade-up {
+  opacity: 1 !important;
+  transform: translateY(0%) !important;
+  filter: blur(0px) !important;
+  transition: all ease-out 500ms;
+}
+
+/* Responsive Queries */
 
 @media (max-width: 1280px) {
   .contact-outer-ctn {
