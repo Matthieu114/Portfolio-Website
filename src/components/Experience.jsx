@@ -36,7 +36,7 @@ const Experience = ({ name, company, desc, location, img, skills, dur, refs, i }
         <section>
           <div className='work-left-ctn'>
             <div className='work-about'>
-              <MdLocationPin class='location' color='#197dff' />
+              <MdLocationPin class='location' />
               <div>{location}</div>
             </div>
             <div className='work-desc'>{desc}</div>

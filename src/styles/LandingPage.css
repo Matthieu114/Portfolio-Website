@@ -77,14 +77,14 @@
 
 .see-work-btn {
   border: 1px solid var(--fandagoPink);
-  color: var(--cream);
+  color: var(--fandagoPink);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   padding: 0.8rem 3rem;
   font-size: 18px;
-  transition: transform 80ms ease-out 0ms;
+  transition: transform 150ms ease-out 0ms;
 }
 
 .see-work-btn:hover {
@@ -237,7 +237,7 @@
   }
 
   .main-text .text-hi {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 25px;
   }
 }
