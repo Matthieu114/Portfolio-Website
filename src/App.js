@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom';
 import MainPage from './screens/MainPage';
 import PDFViewer from './components/PDFViewer';
 import Spotify from './screens/projects/Spotify';
+import ChatApp from './screens/projects/ChatApp';
+import DSPSE from './screens/projects/DSPSE';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path='/resume' element={<PDFViewer />} />
         <Route path='/projects'>
           <Route path='spotify-clone' element={<Spotify />} />
+          <Route path='chat-app' element={<ChatApp />} />
+          <Route path='dspse' element={<DSPSE />} />
         </Route>
       </Routes>
     </div>

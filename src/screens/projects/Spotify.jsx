@@ -1,11 +1,65 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TbArrowBackUp } from 'react-icons/tb';
 import video from '../../assets/spotify-clone/recording.mov';
 
+const skills = [
+  {
+    name: 'React'
+  },
+  { name: 'Javascript' },
+  { name: 'Tailwind CSS' },
+  { name: 'NodeJS / Express' },
+  { name: 'Spotify Web Api' },
+  { name: 'Web Playback SDK' }
+];
+
 const Spotify = () => {
   const navigate = useNavigate();
   const titleRef = useRef(null);
+  const skillRefs = useRef([]);
+
+  const options = useMemo(() => {
+    return {
+      root: null,
+      rootMargin: '0px 150px 0px 150px',
+      threshold: 0.3
+    };
+  }, []);
+
+  const callbackFunction = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-side');
+      } else {
+        entry.target.classList.remove('fade-side');
+      }
+    });
+  };
+
+  useEffect(() => {
+    const titleObserver = new IntersectionObserver(callbackFunction, options);
+    const title = titleRef.current;
+
+    if (title) titleObserver.observe(title);
+
+    return () => {
+      if (title) titleObserver.unobserve(title);
+    };
+  }, [titleRef.current, options]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction, options);
+    skillRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      skillRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, [options, skillRefs.current.length]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,7 +70,7 @@ const Spotify = () => {
       <TbArrowBackUp className='back-arrow' onClick={() => navigate(-1)} />
 
       <section>
-        <div className='category'>Web development</div>
+        <div className='category'>Web Development</div>
         <div className='title' ref={titleRef}>
           Spotify Clone
         </div>
@@ -30,24 +84,29 @@ const Spotify = () => {
           library Web Playback SDK .
         </div>
         <div className='project-skills'>
-          <div className='skill'>React</div>
-          <div className='skill'>Javascript</div>
-          <div className='skill'>Tailwind CSS</div>
-          <div className='skill'>NodeJS / Express</div>
-          <div className='skill'>Spotify Web Api</div>
-          <div className='skill'>Web Playback SDK</div>
+          <div>
+            {skills.map((skill, index) => {
+              return (
+                <div
+                  className='skill'
+                  ref={(element) => {
+                    skillRefs.current[index] = element;
+                  }}>
+                  {skill.name}
+                </div>
+              );
+            })}
+          </div>
+
+          <a href='https://github.com/Matthieu114/Spotify-Clone' target={'_blank'} rel='noreferrer'>
+            {' '}
+            <span>→</span>see the code
+          </a>
         </div>
       </section>
       <section>
         <div className='project-img-ctn'>
-          <video src={video} className='video' type='video/mov' controls muted preload='metadata' />
-          <p>
-            Want to take a deeper look ?{' '}
-            <a href='https://github.com/Matthieu114/Spotify-Clone' target={'_blank'} rel='noreferrer'>
-              {' '}
-              see the code
-            </a>
-          </p>
+          <video src={video} className='video' type='video/mov' controls muted />
         </div>
       </section>
     </div>

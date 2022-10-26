@@ -29,8 +29,23 @@
   margin-bottom: 10px;
 }
 
+/* for mobiles images that cannot fit the whole screen */
+
+.project-img-ctn-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-img-ctn-mobile > img {
+  width: 35%;
+  margin-bottom: 10px;
+}
+/* for mobiles images that cannot fit the whole screen */
+
 .project-img-ctn > video {
   width: 100%;
+  min-width: 100%;
   margin-bottom: 10px;
 }
 
@@ -51,6 +66,9 @@
   font-size: 70px;
   font-weight: 600;
   margin-bottom: 2rem;
+  opacity: 0;
+  filter: blur(10px);
+  transition: all ease-out 700ms;
 }
 
 .spotify-root .about {
@@ -59,8 +77,8 @@
   font-weight: 500;
   max-width: 800px;
   font-size: 18px;
-  line-height: 1.5rem;
-  margin-bottom: 1.5rem;
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 .spotify-root .about > a:hover {
@@ -71,25 +89,140 @@
 .project-skills {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
-.project-skills > .skill {
-  margin-bottom: 1rem;
+.project-skills a {
+  color: var(--softGrey);
+  position: relative;
+  animation: bounce 2s ease-in infinite;
+}
+
+.project-skills a:hover {
+  color: var(--cream);
+  background-color: var(--fandagoPink);
+  transition: all 200ms ease-out;
+}
+
+.project-skills a > span {
   margin-right: 0.5rem;
+}
+
+.project-skills > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.project-skills .skill {
   min-width: max-content;
   background-color: var(--fandagoPink);
   font-family: Consolas, monaco, monospace;
   border-radius: 20px 20px 20px 20px;
   padding: 0.5rem;
   color: var(--cream);
+  opacity: 0;
+  filter: blur(10px);
 }
 
-.project-img-ctn > p {
-  color: var(--softGrey);
+.project-skills .skill:nth-child(1) {
+  transition-delay: 150ms;
 }
 
-.project-img-ctn > p > a:hover {
-  background-color: var(--fandagoPink);
-  transition: all 200ms ease-out;
+.project-skills .skill:nth-child(2) {
+  transition-delay: 250ms;
+}
+
+.project-skills .skill:nth-child(3) {
+  transition-delay: 350ms;
+}
+
+.project-skills .skill:nth-child(4) {
+  transition-delay: 450ms;
+}
+
+.project-skills .skill:nth-child(5) {
+  transition-delay: 550ms;
+}
+
+.project-skills .skill:nth-child(6) {
+  transition-delay: 550ms;
+}
+
+.fade-side {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transition: all ease-out 500ms;
+}
+
+@keyframes bounce {
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1280px) {
+  .spotify-root {
+    padding: 200px 150px 10px 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .spotify-root {
+    padding: 200px 50px 10px 50px;
+  }
+
+  .back-arrow {
+    left: 50px;
+  }
+
+  .spotify-root .category {
+    font-size: 15px;
+  }
+
+  .spotify-root .title {
+    font-size: 50px;
+  }
+
+  .spotify-root .about {
+    font-size: 15px;
+  }
+
+  .project-skills .skill {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .spotify-root .title {
+    font-size: 40px;
+  }
+
+  .project-img-ctn-mobile > img {
+    width: 45%;
+    margin-bottom: 10px;
+  }
 }

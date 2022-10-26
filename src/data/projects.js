@@ -23,11 +23,11 @@ export const projects = [
   },
   {
     id: 3,
-    name: 'DSPE',
+    name: 'DSPSE',
     category: 'mobile',
     description: "React native app for kitesurfer's security. Uses weather and google maps API. Firebase for back-end",
     img: dspse,
-    path: '/projects/DSPE'
+    path: '/projects/dspse'
   },
   {
     id: 4,

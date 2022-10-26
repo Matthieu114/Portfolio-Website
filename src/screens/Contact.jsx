@@ -118,7 +118,7 @@ const Contact = () => {
   }, [leftCtnRef.current, options]);
 
   return (
-    <section class='contact-root'>
+    <section class='contact-root' id='contact'>
       <div class='title-ctn'>
         <div className='title' ref={titleRef}>
           Get In Touch!

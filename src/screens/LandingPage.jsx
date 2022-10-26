@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { BsArrowDownShort } from 'react-icons/bs';
 
 import Lottie from 'lottie-react';
 import codingAnimation from '../assets/animations/animOrange.json';
@@ -13,6 +14,15 @@ const LandingPage = () => {
 
   return (
     <div class='landing-root' id='home'>
+      <div class='scroll-down-left-ctn'>
+        <span>scroll down !</span>
+        <BsArrowDownShort class='down-icon' />
+      </div>
+
+      <div class='scroll-down-right-ctn'>
+        <span>scroll down !</span>
+        <BsArrowDownShort class='down-icon' />
+      </div>
       <div class='main-container'>
         <div class={isLoaded ? 'text-container fade active' : 'text-container fade'}>
           <div>

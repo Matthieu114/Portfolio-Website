@@ -80,7 +80,7 @@ const Header = () => {
             <p class='header-number'> 03. </p>
             Experience
           </a>
-          <a class='header-link' onClick={() => navigateTo('/')}>
+          <a class='header-link' onClick={() => navigateTo('/')} href='#contact'>
             <p class='header-number'> 04. </p>
             Contact
           </a>
@@ -114,7 +114,7 @@ const Header = () => {
                 navigateTo('/');
                 closeNav();
               }}>
-              <p class='header-number'> 03. </p>
+              <p class='header-number'> 02. </p>
               My Work
             </a>
             <a
@@ -124,11 +124,12 @@ const Header = () => {
                 navigateTo('/');
                 closeNav();
               }}>
-              <p class='header-number'> 02. </p>
+              <p class='header-number'> 03. </p>
               Experience
             </a>
             <a
               class='mobile-link'
+              href='#contact'
               onClick={() => {
                 navigateTo('/');
                 closeNav();
