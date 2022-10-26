@@ -52,6 +52,7 @@
 
 .header-link:hover {
   color: var(--fandagoPink);
+  transition: all 100ms ease-out;
   cursor: pointer;
 }
 

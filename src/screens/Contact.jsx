@@ -56,7 +56,6 @@ const Contact = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-
     try {
       setSending(true);
       emailjs

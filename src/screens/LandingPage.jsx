@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import colors from '../config/colors';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 import Lottie from 'lottie-react';
-import codingAnimation from '../assets/animOrange.json';
+import codingAnimation from '../assets/animations/animOrange.json';
 
 const LandingPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,7 +23,7 @@ const LandingPage = () => {
             <h3 class='description'>
               <p class='description-text-me'> I am a student passionate about Web and Game Development.</p>
               Currently, I am in my last year of studies at{' '}
-              <a href='https://www.ece.fr/en/program/engineering-degree-bac4-big-data-analytics-major/' class='description-link-ece' target='_blank'>
+              <a href='https://www.ece.fr/en/program/engineering-degree-bac4-big-data-analytics-major/' class='description-link-ece' target='_blank' rel='noreferrer'>
                 ECE paris engineering school
               </a>{' '}
               where I am learning about data science and machine learning.
