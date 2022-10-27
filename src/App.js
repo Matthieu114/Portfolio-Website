@@ -7,6 +7,8 @@ import PDFViewer from './components/PDFViewer';
 import Spotify from './screens/projects/Spotify';
 import ChatApp from './screens/projects/ChatApp';
 import DSPSE from './screens/projects/DSPSE';
+import SpaceRace from './screens/projects/SpaceRace';
+import ECommerce from './screens/projects/Ecommerce';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path='spotify-clone' element={<Spotify />} />
           <Route path='chat-app' element={<ChatApp />} />
           <Route path='dspse' element={<DSPSE />} />
+          <Route path='space-race' element={<SpaceRace />} />
+          <Route path='e-commerce' element={<ECommerce />} />
         </Route>
       </Routes>
     </div>
