@@ -81,6 +81,13 @@
   padding: 10px;
 }
 
+.required {
+  color: red !important;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 1;
+}
+
 .contact-form .input {
   position: relative;
   background-color: var(--lightestBlue);

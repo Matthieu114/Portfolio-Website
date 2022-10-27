@@ -11,6 +11,7 @@ import github from '../assets/github.png';
 import instagram from '../assets/instagram.png';
 
 const Contact = () => {
+  const [required, setRequired] = useState(false);
   const [name, setName] = useState('');
   const [sending, setSending] = useState(false);
   const [mail, setMail] = useState('');
@@ -56,7 +57,12 @@ const Contact = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (mail.length === 0 || message.length === 0) {
+      setRequired(true);
+      return;
+    }
     try {
+      setRequired(false);
       setSending(true);
       emailjs
         .send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
@@ -142,9 +148,9 @@ const Contact = () => {
                 </label>
               </div>
               <div class='input-ctn'>
-                <input type='text' name='email' className='input' onChange={(e) => setMail(e.target.value)} value={mail} required />
+                <input type='text' name='email' className='input' onChange={(e) => setMail(e.target.value)} value={mail} />
                 <label htmlFor='email' class='animated-label'>
-                  Mail
+                  {!required ? 'Mail' : <span class='required'>Mail is Required</span>}
                 </label>
                 <span className='focus-border' />
               </div>
@@ -157,9 +163,9 @@ const Contact = () => {
               <span className='focus-border' />
             </div>
             <div class='input-ctn'>
-              <textarea type='text-area' className='input' rows={6} name='message' onChange={(e) => setMessage(e.target.value)} value={message} required />
+              <textarea type='text-area' className='input' rows={6} name='message' onChange={(e) => setMessage(e.target.value)} value={message} />
               <label htmlFor='message' class='animated-label'>
-                Message
+                {!required ? 'Message' : <span class='required'>Message is Required</span>}
               </label>
               <span className='focus-border' />
             </div>
