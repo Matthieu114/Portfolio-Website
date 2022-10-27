@@ -71,6 +71,16 @@
   color: var(--cream);
 }
 
+.landing-name > span {
+  display: inline-block;
+}
+
+.landing-name > span:hover {
+  animation: gelatine 0.7s linear;
+  color: var(--white);
+  transition: all 100ms ease-out 0ms;
+}
+
 .landing-root .buttons-container {
   display: flex;
   margin-top: 3rem;
@@ -179,6 +189,22 @@
   }
   60% {
     transform: translateY(-15px);
+  }
+}
+
+@keyframes gelatine {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.8, 1.2);
+  }
+  50% {
+    transform: scale(1.2, 0.8);
+  }
+  75% {
+    transform: scale(0.85, 1.15);
   }
 }
 

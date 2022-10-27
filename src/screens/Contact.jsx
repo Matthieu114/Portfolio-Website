@@ -129,7 +129,15 @@ const Contact = () => {
     <section class='contact-root' id='contact'>
       <div class='title-ctn'>
         <div className='title' ref={titleRef}>
-          Get In Touch!
+          <span>G</span>
+          <span>e</span>
+          <span>t</span> <span>I</span>
+          <span>n</span> <span>T</span>
+          <span>o</span>
+          <span>u</span>
+          <span>c</span>
+          <span>h</span>
+          <span>!</span>
         </div>
         <div className='desc' ref={descRef}>
           I am currently looking for an internship in the software engineering or data science field. You can contact me here.

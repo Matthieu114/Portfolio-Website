@@ -38,7 +38,29 @@ const MyExperiences = () => {
 
   return (
     <section class='work-root' id='experience'>
-      <div>Professional Experience</div>
+      <div>
+        <span>P</span>
+        <span>r</span>
+        <span>o</span>
+        <span>f</span>
+        <span>e</span>
+        <span>s</span>
+        <span>s</span>
+        <span>i</span>
+        <span>o</span>
+        <span>n</span>
+        <span>a</span>
+        <span>l</span> <span>E</span>
+        <span>x</span>
+        <span>p</span>
+        <span>e</span>
+        <span>r</span>
+        <span>i</span>
+        <span>e</span>
+        <span>n</span>
+        <span>c</span>
+        <span>e</span>
+      </div>
 
       <main class='experiences-ctn'>
         {experiences.map((el, key) => {

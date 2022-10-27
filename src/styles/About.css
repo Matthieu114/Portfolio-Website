@@ -40,6 +40,16 @@
   margin: 0 0 1rem 0;
 }
 
+.about-me-header > span {
+  display: inline-block;
+}
+
+.about-me-header > span:hover {
+  animation: gelatine 0.7s linear;
+  color: var(--white);
+  transition: all 100ms ease-out 0ms;
+}
+
 .typed-section {
   font-family: Consolas, monaco, monospace;
   color: var(--cream);

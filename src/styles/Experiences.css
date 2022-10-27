@@ -12,6 +12,16 @@
   color: var(--cream);
 }
 
+.work-root > div > span {
+  display: inline-block;
+}
+
+.work-root > div > span:hover {
+  animation: gelatine 0.7s linear;
+  color: var(--fandagoPink);
+  transition: all 100ms ease-out 0ms;
+}
+
 .experiences-ctn {
   display: flex;
   flex-direction: column;

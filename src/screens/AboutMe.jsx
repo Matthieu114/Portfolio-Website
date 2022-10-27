@@ -86,7 +86,12 @@ const AboutMe = () => {
       </div>
       <div class={`about-right-ctn ${!isDescVisible ? 'about-slide' : 'slide-in'}`} ref={targetRefDesc}>
         <h1 class='about-me-header ' data-about-me='heading'>
-          About Me
+          <span>A</span>
+          <span>b</span>
+          <span>o</span>
+          <span>u</span>
+          <span>t</span> <span>M</span>
+          <span>e</span>
         </h1>
         <div class='typed-container' data-about-me='typed'>
           <p class='typed-section'>

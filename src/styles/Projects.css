@@ -16,6 +16,16 @@
   color: var(--fandagoPink);
 }
 
+.projects-title > span {
+  display: inline-block;
+}
+
+.projects-title > span:hover {
+  animation: gelatine 0.7s linear;
+  color: var(--white);
+  transition: all 100ms ease-out 0ms;
+}
+
 .projects-about {
   margin: 0.5rem 0;
   font-weight: 500;

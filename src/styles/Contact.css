@@ -53,6 +53,16 @@
   transition: all ease-out 700ms;
 }
 
+.title-ctn > .title > span {
+  display: inline-block;
+}
+
+.title-ctn > .title > span:hover {
+  animation: gelatine 0.7s linear;
+  color: var(--cream);
+  transition: all 100ms ease-out 0ms;
+}
+
 .title-ctn > .desc {
   color: var(--cream);
   font-size: 18px;

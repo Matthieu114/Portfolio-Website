@@ -95,7 +95,23 @@ const PersonalProjects = () => {
   return (
     <div class='root-container' id='my-work'>
       <div class='projects-title-container'>
-        <h1 class='projects-title'>A few things i've built</h1>
+        <h1 class='projects-title'>
+          <span>A</span> <span>f</span>
+          <span>e</span>
+          <span>w</span> <span>t</span>
+          <span>h</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+          <span>s</span> <span>i</span>
+          <span>'</span>
+          <span>v</span>
+          <span>e</span> <span>b</span>
+          <span>u</span>
+          <span>i</span>
+          <span>l</span>
+          <span>t</span>
+        </h1>
         <div class='projects-about'>
           These are the projects I have worked on in school and in my own free time. <br /> They range from video games to chat apps to music player clones
         </div>

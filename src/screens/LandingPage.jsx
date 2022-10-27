@@ -28,7 +28,20 @@ const LandingPage = () => {
           <div>
             <h1 class='main-text'>
               <span class='text-hi'>Hi, I am</span>
-              <p class='landing-name'>Matthieu Denis</p>
+              <p class='landing-name'>
+                <span>M</span>
+                <span>a</span>
+                <span>t</span>
+                <span>t</span>
+                <span>h</span>
+                <span>i</span>
+                <span>e</span>
+                <span>u</span> <span>D</span>
+                <span>e</span>
+                <span>n</span>
+                <span>i</span>
+                <span>s</span>
+              </p>
             </h1>
             <h3 class='description'>
               <p class='description-text-me'> I am a student passionate about Web and Game Development.</p>
