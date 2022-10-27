@@ -44,7 +44,9 @@ const LandingPage = () => {
               See my work
             </a>
             <div class='hire-me-btn'>
-              <AiOutlineSearch style={{ marginRight: '0.5rem', width: 25, height: 25 }} /> Hire me
+              <a href='#contact' style={{ display: 'flex', alignItems: 'center' }}>
+                <AiOutlineSearch style={{ marginRight: '0.5rem', width: 25, height: 25 }} /> Hire me
+              </a>
             </div>
           </div>
         </div>

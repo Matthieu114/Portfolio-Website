@@ -90,8 +90,8 @@
   display: flex;
   align-items: center;
   margin-left: 3rem;
-  color: var(--fandagoPink);
-  font-size: 18px;
+  color: var(--cream);
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -106,22 +106,24 @@
 }
 
 .see-work-btn {
-  border: 1px solid var(--fandagoPink);
-  color: var(--fandagoPink);
+  border: 2px solid var(--fandagoPink);
+  color: var(--cream);
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   padding: 0.8rem 3rem;
-  font-size: 18px;
+  font-size: 15px;
   transition: background-color 150ms ease-out 0ms;
 }
 
 .see-work-btn:hover {
-  background-color: rgba(105, 25, 255, 0.2);
-  transition: all ease-in 50ms;
+  background-color: rgba(105, 25, 255, 0.3);
+  transition: all ease-out 150ms;
   cursor: pointer;
 }
+
 .description-link-ece:hover {
   text-decoration: underline;
 }

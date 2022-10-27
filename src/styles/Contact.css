@@ -141,14 +141,15 @@
 }
 
 .contact-form .submit-btn {
-  border: 1px solid var(--fandagoPink);
+  border: 2px solid var(--fandagoPink);
   background-color: transparent;
-  color: var(--fandagoPink);
+  color: var(--cream);
   padding: 0.8rem 0rem;
   width: 145px;
   text-align: center;
   align-self: flex-end;
   font-size: 15px;
+  font-weight: 500;
   margin: 10px;
   border-radius: 5px;
   transition: background-color 150ms ease-out 0ms;
