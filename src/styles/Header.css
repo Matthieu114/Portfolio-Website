@@ -36,10 +36,15 @@
 
 .home-logo {
   color: var(--fandagoPink);
+  font-family: Consolas, monaco, monospace;
   font-size: 36px;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+}
+
+.home-logo:hover {
+  color: var(--cream);
 }
 
 .header-links {
@@ -87,7 +92,7 @@
   transition: color 80ms ease-in-out 0ms;
   color: var(--white);
   font-family: Consolas, monaco, monospace;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   border-radius: 2px;
   border: 2px solid var(--fandagoPink);
   font-size: 0.9rem;
@@ -110,7 +115,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-weight: '600';
   transform: translateX(100vw);
   visibility: hidden;
@@ -122,6 +127,20 @@
   right: 0px;
   padding: 3rem;
   transition: ease 0.6s;
+}
+
+.mobile-navbar > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: '600';
+  height: 100%;
+  width: 100%;
+}
+
+.header-socials {
+  margin-top: 2rem;
 }
 
 @media (max-width: 1024px) {
@@ -184,7 +203,7 @@
     transition: color 80ms ease-in-out 0ms;
     color: var(--white);
     font-family: Consolas, monaco, monospace;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     border-radius: 5px;
     border: 2px solid var(--fandagoPink);
     font-size: 0.9rem;

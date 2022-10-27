@@ -2,7 +2,7 @@
   padding: 100px 150px;
   height: max-content;
   width: 100%;
-  background-color: black;
+  background-color: var(--blue1);
   color: var(--cream);
 }
 

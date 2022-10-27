@@ -46,7 +46,7 @@ const Spotify = () => {
     return () => {
       if (title) titleObserver.unobserve(title);
     };
-  }, [titleRef.current, options]);
+  }, [options]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options);
@@ -106,7 +106,7 @@ const Spotify = () => {
       </section>
       <section>
         <div className='project-img-ctn'>
-          <video src={video} className='video' type='video/mov' controls muted />
+          <video src={video} className='video' type='video/mov' controls muted loading='lazy' />
         </div>
       </section>
     </div>

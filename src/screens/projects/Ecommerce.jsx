@@ -105,11 +105,11 @@ const ECommerce = () => {
       </section>
       <section>
         <div className='project-img-ctn'>
-          <img src={main} alt='game-home' />
-          <img src={browse} alt='game-home' />
-          <img src={seemore} alt='game-home' />
-          <img src={addauction} alt='game-home' />
-          <img src={admin} alt='game-home' />
+          <img loading='lazy' src={main} alt='game-home' />
+          <img loading='lazy' src={browse} alt='game-home' />
+          <img loading='lazy' src={seemore} alt='game-home' />
+          <img loading='lazy' src={addauction} alt='game-home' />
+          <img loading='lazy' src={admin} alt='game-home' />
         </div>
       </section>
     </div>

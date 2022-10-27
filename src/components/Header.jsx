@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CgMenuRightAlt } from 'react-icons/cg';
 import { IoCloseOutline } from 'react-icons/io5';
-import colors from '../config/colors';
 import { Link } from 'react-router-dom';
+import colors from '../config/colors';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookMessenger, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -85,7 +88,7 @@ const Header = () => {
             Contact
           </a>
           <Link class='resume-button' to='/resume' target='_blank' rel='noopener noreferrer'>
-            Resume
+            CV
           </Link>
         </div>
         <div class='open-header'>
@@ -97,49 +100,69 @@ const Header = () => {
             </div>
           )}
           <aside class='mobile-navbar' id='mobile-navbar'>
-            <a
-              href='#about'
-              class='mobile-link'
-              onClick={() => {
-                navigateTo('/');
-                closeNav();
-              }}>
-              <p class='header-number'> 01. </p>
-              About Me
-            </a>
-            <a
-              class='mobile-link'
-              href='#my-work'
-              onClick={() => {
-                navigateTo('/');
-                closeNav();
-              }}>
-              <p class='header-number'> 02. </p>
-              My Work
-            </a>
-            <a
-              class='mobile-link'
-              href='#experience'
-              onClick={() => {
-                navigateTo('/');
-                closeNav();
-              }}>
-              <p class='header-number'> 03. </p>
-              Experience
-            </a>
-            <a
-              class='mobile-link'
-              href='#contact'
-              onClick={() => {
-                navigateTo('/');
-                closeNav();
-              }}>
-              <p class='header-number'> 04. </p>
-              Contact
-            </a>
-            <Link class='mobile-resume' to='/resume' target='_blank' rel='noopener noreferrer'>
-              Resume
-            </Link>
+            <div>
+              <a
+                href='#about'
+                class='mobile-link'
+                onClick={() => {
+                  navigateTo('/');
+                  closeNav();
+                }}>
+                <p class='header-number'> 01. </p>
+                About Me
+              </a>
+              <a
+                class='mobile-link'
+                href='#my-work'
+                onClick={() => {
+                  navigateTo('/');
+                  closeNav();
+                }}>
+                <p class='header-number'> 02. </p>
+                My Work
+              </a>
+              <a
+                class='mobile-link'
+                href='#experience'
+                onClick={() => {
+                  navigateTo('/');
+                  closeNav();
+                }}>
+                <p class='header-number'> 03. </p>
+                Experience
+              </a>
+              <a
+                class='mobile-link'
+                href='#contact'
+                onClick={() => {
+                  navigateTo('/');
+                  closeNav();
+                }}>
+                <p class='header-number'> 04. </p>
+                Contact
+              </a>
+              <Link class='mobile-resume' to='/resume' target='_blank' rel='noopener noreferrer'>
+                CV
+              </Link>
+            </div>
+            <div class='header-socials'>
+              <div className='socials-outer-ctn'>
+                <div className='socials-ctn'>
+                  <a href='https://www.linkedin.com/in/matthieu-denis1141/' target='_blank'>
+                    <FontAwesomeIcon icon={faLinkedin} class='icon' />
+                  </a>
+                  <a href='https://github.com/Matthieu114' target='_blank'>
+                    <FontAwesomeIcon icon={faGithub} class='icon' />
+                  </a>
+                  <a href='https://www.instagram.com/matthieu114/' target='_blank'>
+                    <FontAwesomeIcon icon={faInstagram} class='icon' />
+                  </a>
+                  <a href='https://www.messenger.com/t/5398311623579890/' target='_blank'>
+                    <FontAwesomeIcon icon={faFacebookMessenger} class='icon' />
+                  </a>
+                </div>
+              </div>
+            </div>
           </aside>
         </div>
       </div>

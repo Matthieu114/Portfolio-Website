@@ -104,10 +104,10 @@ const SpaceRace = () => {
       </section>
       <section>
         <div className='project-img-ctn'>
-          <img src={home} alt='game-home' />
-          <img src={game1} alt='game-0' />
-          <img src={game2} alt='game-1' />
-          <img src={game3} alt='game-3' />
+          <img src={home} alt='game-home' loading="lazy"/>
+          <img src={game1} alt='game-0' loading="lazy"/>
+          <img src={game2} alt='game-1' loading="lazy"/>
+          <img src={game3} alt='game-3' loading="lazy"/>
         </div>
       </section>
     </div>

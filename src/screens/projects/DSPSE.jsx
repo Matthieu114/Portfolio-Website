@@ -110,11 +110,11 @@ const DSPSE = () => {
       </section>
       <section>
         <div className='project-img-ctn-mobile'>
-          <img src={landing} className='mobile' />
-          <img src={signup} className='mobile' />
-          <img src={home} className='mobile' />
-          <img src={weather} className='mobile' />
-          <img src={profile} className='mobile' />
+          <img loading='lazy' src={landing} className='mobile' />
+          <img loading='lazy' src={signup} className='mobile' />
+          <img loading='lazy' src={home} className='mobile' />
+          <img loading='lazy' src={weather} className='mobile' />
+          <img loading='lazy' src={profile} className='mobile' />
         </div>
       </section>
     </div>

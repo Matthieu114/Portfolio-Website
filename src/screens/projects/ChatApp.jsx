@@ -105,10 +105,10 @@ const ChatApp = () => {
       </section>
       <section>
         <div className='project-img-ctn'>
-          <img src={home} alt='channel-home' />
-          <img src={createChannel} alt='create-channel' />
-          <img src={channelInfo} alt='channel-info' />
-          <img src={addUser} alt='add-user' />
+          <img src={home} alt='channel-home' loading="lazy"/>
+          <img src={createChannel} alt='create-channel' loading="lazy"/>
+          <img src={channelInfo} alt='channel-info' loading="lazy"/>
+          <img src={addUser} alt='add-user' loading="lazy"/>
         </div>
       </section>
     </div>

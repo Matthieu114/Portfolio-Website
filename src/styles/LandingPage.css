@@ -19,6 +19,7 @@
 .scroll-down-left-ctn > span {
   writing-mode: vertical-rl;
   animation: bounce2 2s infinite;
+  font-family: Consolas, monaco, monospace;
 }
 
 .scroll-down-right-ctn {
@@ -34,6 +35,7 @@
 .scroll-down-right-ctn > span {
   writing-mode: vertical-rl;
   animation: bounce2 2s infinite;
+  font-family: Consolas, monaco, monospace;
 }
 
 .main-container {
@@ -285,12 +287,12 @@
 @media (max-width: 680px) {
   .see-work-btn {
     padding: 0.8rem 2rem;
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .hire-me-btn {
     margin-left: 3rem;
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .description {

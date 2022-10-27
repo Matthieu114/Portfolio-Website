@@ -8,9 +8,6 @@ import { MdEmail } from 'react-icons/md';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookMessenger, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import msg from '../assets/messenger.png';
-import github from '../assets/github.png';
-import instagram from '../assets/instagram.png';
 
 const Contact = () => {
   const [required, setRequired] = useState(false);
