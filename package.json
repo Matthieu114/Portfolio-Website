@@ -5,6 +5,12 @@
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@emotion/react": "^11.10.4",
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "dotenv": "^16.0.3",
     "lottie-react": "^2.3.1",
     "react": "^18.0.0",

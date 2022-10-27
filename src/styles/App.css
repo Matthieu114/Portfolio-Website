@@ -36,6 +36,11 @@
   --blue: #197dff;
   --blue1: #0a1418;
   --blue2: #dbf4ff;
+
+  --social-icon1: #0077b5;
+  --social-icon2: #6e5494;
+  --social-icon3: #e4405f;
+  --social-icon4: #3b5999;
 }
 
 #root {

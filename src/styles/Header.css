@@ -88,7 +88,7 @@
   color: var(--white);
   font-family: Consolas, monaco, monospace;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 2px;
   border: 2px solid var(--fandagoPink);
   font-size: 0.9rem;
   font-weight: 400;

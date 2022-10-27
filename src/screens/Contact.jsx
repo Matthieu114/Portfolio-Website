@@ -5,7 +5,9 @@ import Swal from 'sweetalert2';
 import { MdLocationPin } from 'react-icons/md';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
-import linkedin from '../assets/linkedin.png';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookMessenger, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import msg from '../assets/messenger.png';
 import github from '../assets/github.png';
 import instagram from '../assets/instagram.png';
@@ -193,16 +195,16 @@ const Contact = () => {
           <div className='socials-outer-ctn'>
             <div className='socials-ctn'>
               <a href='https://www.linkedin.com/in/matthieu-denis1141/' target='_blank'>
-                <img src={linkedin} alt='linkedin' className='socials' />
+                <FontAwesomeIcon icon={faLinkedin} class='icon' />
               </a>
               <a href='https://github.com/Matthieu114' target='_blank'>
-                <img src={github} alt='github' className='socials' />
+                <FontAwesomeIcon icon={faGithub} class='icon' />
               </a>
               <a href='https://www.instagram.com/matthieu114/' target='_blank'>
-                <img src={instagram} alt='instagram' className='socials' />
+                <FontAwesomeIcon icon={faInstagram} class='icon' />
               </a>
               <a href='https://www.messenger.com/t/5398311623579890/' target='_blank'>
-                <img src={msg} alt='messenger' className='socials' />
+                <FontAwesomeIcon icon={faFacebookMessenger} class='icon' />
               </a>
             </div>
           </div>
