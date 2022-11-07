@@ -1,6 +1,7 @@
 .root-container {
   width: 100%;
   height: max-content;
+  min-height: 100vh;
   position: relative;
   padding: 100px 150px;
   background-color: var(--blue1);

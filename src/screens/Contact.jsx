@@ -185,7 +185,7 @@ const Contact = () => {
           <div className='info-ctn'>
             <div className='icon-ctn'>
               <MdLocationPin class='icon' />
-              <p>25 rue Montrosier, Paris, France, 92200</p>
+              <p>25 rue Montrosier, Neuilly, France, 92200</p>
             </div>
             <div className='icon-ctn'>
               <BsFillTelephoneFill class='icon' />

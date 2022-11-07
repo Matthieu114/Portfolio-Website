@@ -1,8 +1,8 @@
 import spotifyImg from '../assets/spotify.jpg';
 import chatApp from '../assets/chat-app.png';
-import dspse from '../assets/dspse.png';
-import spacerace from '../assets/spacerace.png';
-import ecomm from '../assets/e-commerce.png';
+import dspse from '../assets/dspse.jpg';
+import spacerace from '../assets/games.jpg';
+import ecomm from '../assets/e-commerce.jpg';
 
 export const projects = [
   {
