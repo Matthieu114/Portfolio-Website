@@ -15,7 +15,7 @@ const Project = ({ img, desc, path, name, categ, isvisible, refs, i }) => {
       }}
       class='project-container'
       onClick={() => navigateTo(path)}>
-      <img src={img} loading='lazy' />
+      <img src={img} loading='lazy' alt=''/>
       <div class='content'>
         <div class='about-button'>{name}</div>
         <div class='about-desc'>{desc}</div>

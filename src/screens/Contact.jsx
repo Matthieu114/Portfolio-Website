@@ -48,8 +48,6 @@ const Contact = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fade-up');
-      } else {
-        entry.target.classList.remove('fade-up');
       }
     });
   };
@@ -137,9 +135,12 @@ const Contact = () => {
           <span>!</span>
         </div>
         <div className='desc' ref={descRef}>
-          I am currently looking for an internship in the software engineering or data science field. You can contact me here.
-          <br />
-          If you just want to say hi feel free to drop me a message!
+          Looking to collaborate on a project or discuss an opportunity? Let’s connect! <br />
+          Reach out via this form or find me on{' '}
+          <a href='https://www.linkedin.com/in/matthieu-denis1141/' target='_blank'>
+            LinkedIn
+          </a>
+          .
         </div>
       </div>
       <div className='contact-outer-ctn'>
@@ -185,7 +186,7 @@ const Contact = () => {
           <div className='info-ctn'>
             <div className='icon-ctn'>
               <MdLocationPin class='icon' />
-              <p>25 rue Montrosier, Neuilly, France, 92200</p>
+              <p>28 rue Diderot, Vincennes, France, 94300</p>
             </div>
             <div className='icon-ctn'>
               <BsFillTelephoneFill class='icon' />

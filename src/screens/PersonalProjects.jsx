@@ -46,8 +46,6 @@ const PersonalProjects = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('project-fade-in');
-      } else {
-        entry.target.classList.remove('project-fade-in');
       }
     });
   };
@@ -113,7 +111,7 @@ const PersonalProjects = () => {
           <span>t</span>
         </h1>
         <div class='projects-about'>
-          These are the projects I have worked on in school and in my own free time. <br /> They range from video games to chat apps to music player clones
+          These are the projects I have worked on in my own free time. <br /> They range from video games to chat apps to music player clones
         </div>
       </div>
       <section class='projects-section'>

@@ -27,7 +27,7 @@ const LandingPage = () => {
         <div class={isLoaded ? 'text-container fade active' : 'text-container fade'}>
           <div>
             <h1 class='main-text'>
-              <span class='text-hi'>Hi, I am</span>
+              <span class='text-hi'>Hi! I'm</span>
               <p class='landing-name'>
                 <span>M</span>
                 <span>a</span>
@@ -43,18 +43,13 @@ const LandingPage = () => {
                 <span>s</span>
               </p>
             </h1>
-            <h3 class='description'>
-              <p class='description-text-me'> I am a student passionate about Web and Game Development.</p>
-              Currently, I am in my last year of studies at{' '}
-              <a href='https://www.ece.fr/en/program/engineering-degree-bac4-big-data-analytics-major/' class='description-link-ece' target='_blank' rel='noreferrer'>
-                ECE paris engineering school
-              </a>{' '}
-              where I am learning about data science and machine learning.
-            </h3>
+            <h2 class='description'>
+              <p class='description-text-me'> A backend developer who loves solving problems, optimizing performance, and bringing ideas to life — one line of code at a time!</p>
+            </h2>
           </div>
           <div class='buttons-container'>
             <a href='#my-work' class='see-work-btn'>
-              See my work
+              Explore My Projects.
             </a>
             <div class='hire-me-btn'>
               <a href='#contact' style={{ display: 'flex', alignItems: 'center' }}>

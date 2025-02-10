@@ -13,9 +13,7 @@ const AboutMe = () => {
   const imageCbObserver = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setIsImgVisible(entry.isIntersecting);
-      } else {
-        setIsImgVisible(entry.isIntersecting);
+        setIsImgVisible((prev) => prev ?? true);
       }
     });
   };
@@ -23,9 +21,7 @@ const AboutMe = () => {
   const descCbObserver = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setIsDescVisible(entry.isIntersecting);
-      } else {
-        setIsDescVisible(entry.isIntersecting);
+        setIsDescVisible((prev) => prev ?? true);
       }
     });
   };
@@ -99,8 +95,8 @@ const AboutMe = () => {
           </p>
         </div>
         <div class='about-description' data-about-me='description'>
-          Hi! I’m Matthieu , a French engineering student with a love of programming that enjoys creating functional web and mobile apps! Currently, I am having fun learning game development on the
-          side of my data science and machine learning classes that I follow in school. <br />
+          Hi! I’m Matthieu , a French software engineer that enjoys creating functional web and mobile apps! Currently, I am having fun learning game development on the side of my job as a Salesforce
+          commerce cloud backend software engineer <br />
           <br /> I grew up and studied in <span style={{ color: colors.fandagoPink, fontWeight: 500 }}> 5 different countries</span> ( USA, France, UK, Poland , Russia ) where I grew accustomed to
           evolving in multicultural environments. <br />
           <br />
@@ -112,9 +108,9 @@ const AboutMe = () => {
             <li>Javascript (ES6+)</li>
             <li>React </li>
             <li>React Native </li>
-            <li>Ember.js</li>
+            <li>SFCC</li>
             <li>Node.Js</li>
-            <li>Git</li>
+            <li>CSS3</li>
             <li>C#</li>
             <li>Cypress</li>
           </ul>

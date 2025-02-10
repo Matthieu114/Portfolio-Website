@@ -9,8 +9,6 @@ const MyExperiences = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('exp-fade-in');
-      } else {
-        entry.target.classList.remove('exp-fade-in');
       }
     });
   };
