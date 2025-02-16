@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import emailjs from '@emailjs/browser';
+
 import Swal from 'sweetalert2';
 
 import { MdLocationPin } from 'react-icons/md';
@@ -44,23 +45,26 @@ const Contact = () => {
     setMessage('');
   };
 
-  const callbackFunction = (entries) => {
+  const callbackFunction = useCallback((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fade-up');
       }
     });
-  };
+  }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
     if (mail.length === 0 || message.length === 0) {
       setRequired(true);
       return;
-    }
-    try {
+    } else {
       setRequired(false);
+    }
+
+    try {
       setSending(true);
+
       emailjs
         .send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
         .then(() => {
@@ -69,56 +73,32 @@ const Contact = () => {
           clearValues();
         })
         .catch(() => {
+          setSending(false);
           Swal.fire({ icon: 'error', title: 'Oops...', text: 'Something went wrong!' });
+          clearValues();
         });
     } catch {
+      setSending(false);
       Swal.fire({ icon: 'error', title: 'Oops...', text: 'Something went wrong!' });
+      clearValues();
     }
   };
 
   useEffect(() => {
-    const titleObserver = new IntersectionObserver(callbackFunction, options);
-    const title = titleRef.current;
+    const observer = new IntersectionObserver(callbackFunction, options);
 
-    if (title) titleObserver.observe(title);
+    const refs = [titleRef, descRef, rightCtnRef, leftCtnRef];
 
-    return () => {
-      if (title) titleObserver.unobserve(title);
-    };
-  }, [titleRef.current, options]);
-
-  useEffect(() => {
-    const descObserver = new IntersectionObserver(callbackFunction, options);
-    const desc = descRef.current;
-
-    if (desc) descObserver.observe(desc);
+    refs.forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
 
     return () => {
-      if (desc) descObserver.unobserve(desc);
+      refs.forEach((ref) => {
+        if (ref.current) observer.unobserve(ref.current);
+      });
     };
-  }, [descRef.current, options]);
-
-  useEffect(() => {
-    const rightObserver = new IntersectionObserver(callbackFunction, options);
-    const right = rightCtnRef.current;
-
-    if (right) rightObserver.observe(right);
-
-    return () => {
-      if (right) rightObserver.unobserve(right);
-    };
-  }, [rightCtnRef.current, options]);
-
-  useEffect(() => {
-    const leftObserver = new IntersectionObserver(callbackFunction, options);
-    const left = leftCtnRef.current;
-
-    if (left) leftObserver.observe(left);
-
-    return () => {
-      if (left) leftObserver.unobserve(left);
-    };
-  }, [leftCtnRef.current, options]);
+  }, [titleRef, descRef, rightCtnRef, leftCtnRef, callbackFunction, options]);
 
   return (
     <section class='contact-root' id='contact'>
