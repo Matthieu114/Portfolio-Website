@@ -8,7 +8,7 @@ body {
   background-color: #fffefa;
 }
 
-code {
+.code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
@@ -38,6 +38,7 @@ a {
 .align-center {
   align-items: center;
 }
+
 .just-center {
   justify-content: center;
 }

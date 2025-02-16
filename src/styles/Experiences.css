@@ -79,10 +79,6 @@
   font-family: Consolas, monaco, monospace;
 }
 
-.exp-date>.plus-minus:hover {
-  color: var(--blue);
-}
-
 .exp-date {
   display: flex;
   align-items: center;
