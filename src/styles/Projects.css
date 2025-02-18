@@ -17,11 +17,11 @@
   color: var(--fandagoPink);
 }
 
-.projects-title > span {
+.projects-title>span {
   display: inline-block;
 }
 
-.projects-title > span:hover {
+.projects-title>span:hover {
   animation: gelatine 0.7s linear;
   color: var(--white);
   transition: all 100ms ease-out 0ms;
@@ -88,6 +88,9 @@
   grid-template-columns: repeat(auto-fit, 330px);
   gap: 1rem;
   min-height: 330px;
+  /* remove ul css */
+  padding-inline-start: 0px;
+
 }
 
 @keyframes slide-in {
@@ -110,14 +113,14 @@
   transform: translateX(-10%);
 }
 
-.project-fade-in {
+.project-container.fade-in {
   opacity: 1;
   transform: translateX(0%);
-  transition: ease 1s;
   filter: blur(0px);
+  transition: ease 1s;
 }
 
-.project-container > img {
+.project-container>img {
   border-radius: 5px 5px 0 0;
   display: block;
   width: 100%;
@@ -127,12 +130,12 @@
   filter: brightness(0.4);
 }
 
-.project-container:hover > img {
+.project-container:hover>img {
   filter: brightness(1);
   transform: scale(1.1);
 }
 
-.project-container > .content {
+.project-container>.content {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
@@ -162,21 +165,21 @@
   text-align: center;
 }
 
-.project-container > img,
-.project-container > .content,
-.project-container > .about-button {
+.project-container>img,
+.project-container>.content,
+.project-container>.about-button {
   transition: 150ms ease-in-out;
 }
 
-.project-container:hover > .content {
+.project-container:hover>.content {
   opacity: 1;
 }
 
-.content:hover > .about-button {
+.content:hover>.about-button {
   transform: translateY(115px);
 }
 
-.content:hover > .about-desc {
+.content:hover>.about-desc {
   transform: translateY(125px);
 }
 
@@ -184,6 +187,7 @@
   .root-container {
     padding: 100px 50px;
   }
+
   .projects-container {
     margin-top: 3rem;
     width: 100%;
@@ -234,7 +238,7 @@
 }
 
 @media (max-width: 801px) {
-  .project-container > img {
+  .project-container>img {
     filter: brightness(1);
   }
 
@@ -244,9 +248,11 @@
     justify-content: center;
     align-items: center;
   }
+
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .filter-projects-list {
     font-size: 12px;
   }
@@ -259,15 +265,15 @@
     transform: translateY(100px);
   }
 
-  .project-container > .content {
+  .project-container>.content {
     opacity: 1;
   }
 
-  .content:hover > .about-button {
+  .content:hover>.about-button {
     transform: translateY(95px);
   }
 
-  .content:hover > .about-desc {
+  .content:hover>.about-desc {
     transform: translateY(100px);
   }
 }
@@ -277,6 +283,7 @@
     margin-right: 0.5rem;
     font-weight: 500;
   }
+
   .filter-projects-list {
     font-size: 10px;
     list-style: none;

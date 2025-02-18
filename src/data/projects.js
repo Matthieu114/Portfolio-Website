@@ -2,7 +2,7 @@ import spotifyImg from '../assets/projects-page/spotify.jpg';
 import chatApp from '../assets/projects-page/chat-app.png';
 import dspse from '../assets/projects-page/dspse.jpg';
 import spacerace from '../assets/projects-page/games.jpg';
-import ecomm from '../assets/projects-page/e-commerce.jpg';
+// import ecomm from '../assets/projects-page/e-commerce.jpg';
 
 export const projects = [
   {

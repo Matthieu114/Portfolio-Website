@@ -66,99 +66,103 @@ const Header = () => {
   };
 
   return (
-    <div class={showHeader ? 'header-root' : 'header-hidden'}>
-      <div class='header-content'>
-        <a class='home-logo' href='#home' onClick={() => navigateTo('/')}>
+    <div className={showHeader ? 'header-root' : 'header-hidden'}>
+      <div className='header-content'>
+        <a className='home-logo' href='#home' onClick={() => navigateTo('/')}>
           MD
         </a>
-        <div class='header-links'>
-          <a href='#about' class='header-link' onClick={() => navigateTo('/')}>
-            <p class='header-number'> 01. </p>
+        <div className='header-links'>
+          <a href='#about' className='header-link' onClick={() => navigateTo('/')}>
+            <p className='header-number'> 01. </p>
             About Me
           </a>
-          <a class='header-link' href='#my-work' onClick={() => navigateTo('/')}>
-            <p class='header-number'> 02. </p> My Work
+          <a className='header-link' href='#my-work' onClick={() => navigateTo('/')}>
+            <p className='header-number'> 02. </p> My Work
           </a>
-          <a class='header-link' href='#experience' onClick={() => navigateTo('/')}>
-            <p class='header-number'> 03. </p>
+          <a className='header-link' href='#experience' onClick={() => navigateTo('/')}>
+            <p className='header-number'> 03. </p>
             Experience
           </a>
-          <a class='header-link' onClick={() => navigateTo('/')} href='#contact'>
-            <p class='header-number'> 04. </p>
+          <a className='header-link' onClick={() => navigateTo('/')} href='#contact'>
+            <p className='header-number'> 04. </p>
             Contact
           </a>
-          <Link class='resume-button' to='/resume' target='_blank' rel='noopener noreferrer'>
+          <Link className='resume-button' to='/resume' target='_blank' rel='noopener noreferrer'>
             CV
           </Link>
         </div>
-        <div class='open-header'>
+        <div className='open-header'>
           {!mobileOpen ? (
-            <CgMenuRightAlt class='hamburger-menu' onClick={openNav} color={colors.cream} height='25px' width={25} />
+            <CgMenuRightAlt className='hamburger-menu' onClick={openNav} color={colors.cream} height='25px' width={25} />
           ) : (
             <div>
-              <IoCloseOutline onClick={closeNav} class='close-mobile' color={colors.cream} />
+              <IoCloseOutline onClick={closeNav} className='close-mobile' color={colors.cream} />
             </div>
           )}
-          <aside class='mobile-navbar' id='mobile-navbar'>
+          <aside className='mobile-navbar' id='mobile-navbar'>
             <div>
               <a
                 href='#about'
-                class='mobile-link'
+                className='mobile-link'
                 onClick={() => {
                   navigateTo('/');
                   closeNav();
-                }}>
-                <p class='header-number'> 01. </p>
+                }}
+              >
+                <p className='header-number'> 01. </p>
                 About Me
               </a>
               <a
-                class='mobile-link'
+                className='mobile-link'
                 href='#my-work'
                 onClick={() => {
                   navigateTo('/');
                   closeNav();
-                }}>
-                <p class='header-number'> 02. </p>
+                }}
+              >
+                <p className='header-number'> 02. </p>
                 My Work
               </a>
               <a
-                class='mobile-link'
+                className='mobile-link'
                 href='#experience'
                 onClick={() => {
                   navigateTo('/');
                   closeNav();
-                }}>
-                <p class='header-number'> 03. </p>
+                }}
+              >
+                <p className='header-number'> 03. </p>
                 Experience
               </a>
               <a
-                class='mobile-link'
+                className='mobile-link'
                 href='#contact'
                 onClick={() => {
                   navigateTo('/');
                   closeNav();
-                }}>
-                <p class='header-number'> 04. </p>
+                }}
+              >
+                <p className='header-number'> 04. </p>
                 Contact
               </a>
-              <Link class='mobile-resume' to='/resume' target='_blank' rel='noopener noreferrer'>
+              <Link className='mobile-resume' to='/resume' target='_blank' rel='noopener noreferrer'>
                 CV
               </Link>
             </div>
-            <div class='header-socials'>
+            <div className='header-socials'>
               <div className='socials-outer-ctn'>
                 <div className='socials-ctn'>
-                  <a href='https://www.linkedin.com/in/matthieu-denis1141/' target='_blank'>
-                    <FontAwesomeIcon icon={faLinkedin} class='icon' />
+                  <a href='https://www.linkedin.com/in/matthieu-denis1141/' target='_blank' rel='noreferrer'>
+                    <FontAwesomeIcon icon={faLinkedin} className='icon' />
                   </a>
-                  <a href='https://github.com/Matthieu114' target='_blank'>
-                    <FontAwesomeIcon icon={faGithub} class='icon' />
+                  <a href='https://github.com/Matthieu114' target='_blank' rel='noreferrer'>
+                    <FontAwesomeIcon icon={faGithub} className='icon' />
                   </a>
-                  <a href='https://www.instagram.com/matthieu114/' target='_blank'>
-                    <FontAwesomeIcon icon={faInstagram} class='icon' />
+                  <a href='https://www.instagram.com/matthieu114/' target='_blank' rel='noreferrer'>
+                    <FontAwesomeIcon icon={faInstagram} className='icon' />
                   </a>
-                  <a href='https://www.messenger.com/t/5398311623579890/' target='_blank'>
-                    <FontAwesomeIcon icon={faFacebookMessenger} class='icon' />
+                  <a href='https://www.messenger.com/t/5398311623579890/' target='_blank' rel='noreferrer'>
+                    <FontAwesomeIcon icon={faFacebookMessenger} className='icon' />
                   </a>
                 </div>
               </div>
