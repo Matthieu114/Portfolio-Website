@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Matthieu Denis - Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio! This project showcases my work, skills, and experience as a software developer. The portfolio is designed to be both a personal brand and a platform to attract potential employers and freelance clients.
 
-## Available Scripts
+## 🚀 Technologies Used
 
-In the project directory, you can run:
+- **Frontend**: React, TypeScript, Vite, Tailwind CSS
+- **Other Tools**: Git, CI/CD, Accessibility best practices
 
-### `npm start`
+## 📌 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- - Dark and light mode toggle -->
+- Responsive design for mobile and desktop
+- Showcases my projects with filtering options
+- SEO and accessibility optimizations
+- Interactive animations for a dynamic experience
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📷 Preview
 
-### `npm test`
+[Insert a screenshot or a GIF of the website]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Installation & Setup
 
-### `npm run build`
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/MatthieuDenis/your-portfolio.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd your-portfolio
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run start
+   ```
+5. Open the project in your browser at `http://localhost:3000`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✅ TODOs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [ ] Update theme colors for a more professional look
+- [ ] Add light and dark mode
+- [ ] change personnal photo
+- [ ] Add accessibility improvements for better SEO
+- [ ] Extract animation logic into helper functions
+- [ ] Change domain to `MatthieuDenis.dev`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💡 Future Enhancements
 
-### `npm run eject`
+- Implement a blog section
+- Add a contact form with backend integration
+- Improve performance with lazy loading and caching strategies
+- Add more interactive elements to enhance user engagement
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📬 Contact
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you're interested in working with me or have any feedback, feel free to reach out!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Email**: [mdenis300@gmail.com](mailto:mdenis300@gmail.com)
+- **LinkedIn**: [linkedin.com/in/matthieudenis](https://linkedin.com/in/matthieudenis)
+- **GitHub**: [github.com/MatthieuDenis](https://github.com/MatthieuDenis)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+© 2025 Matthieu Denis. All rights reserved.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
