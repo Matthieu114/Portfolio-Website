@@ -50,16 +50,17 @@ const DSPSE = () => {
     return () => {
       if (title) titleObserver.unobserve(title);
     };
-  }, [titleRef.current, options]);
+  }, [options]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options);
-    skillRefs.current.forEach((ref) => {
+    const currentRefs = skillRefs.current;
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      skillRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
@@ -70,7 +71,7 @@ const DSPSE = () => {
   }, []);
 
   return (
-    <div class='spotify-root'>
+    <div className='spotify-root'>
       <TbArrowBackUp className='back-arrow' onClick={() => navigate(-1)} />
 
       <section>
@@ -79,13 +80,16 @@ const DSPSE = () => {
           Kitesurfer Tracking App (DSPSE)
         </div>
         <div className='about'>
-          I developed this mobile app for a school project idea that we had with friends. It is intended to be used by kitesurfers to track their position and record their session statistics. <br />
-          <br /> A user can signup or can sign in with an existing account and will have his position displayed on google maps. He can choose between displaying satellite or nomal mode. The weather
-          portion of the app will display the current weather around him in real time for the next 24 hours. In the profile tab, a user can logout and ask to reset his password. He will receive a
-          password reset confirmation by mail
+          I developed this mobile app for a school project idea that we had with friends. It is intended to be used by
+          kitesurfers to track their position and record their session statistics. <br />
+          <br /> A user can signup or can sign in with an existing account and will have his position displayed on google
+          maps. He can choose between displaying satellite or nomal mode. The weather portion of the app will display the
+          current weather around him in real time for the next 24 hours. In the profile tab, a user can logout and ask to
+          reset his password. He will receive a password reset confirmation by mail
           <br />
           <br />
-          The entire frontend of this app has been made using React Native, the backend is connected to Google Firebase which regulates all the signup , signin and password reset features
+          The entire frontend of this app has been made using React Native, the backend is connected to Google Firebase which
+          regulates all the signup , signin and password reset features
         </div>
         <div className='project-skills'>
           <div>
@@ -95,7 +99,8 @@ const DSPSE = () => {
                   className='skill'
                   ref={(element) => {
                     skillRefs.current[index] = element;
-                  }}>
+                  }}
+                >
                   {skill.name}
                 </div>
               );
@@ -110,11 +115,11 @@ const DSPSE = () => {
       </section>
       <section>
         <div className='project-img-ctn-mobile'>
-          <img loading='lazy' src={landing} className='mobile' />
-          <img loading='lazy' src={signup} className='mobile' />
-          <img loading='lazy' src={home} className='mobile' />
-          <img loading='lazy' src={weather} className='mobile' />
-          <img loading='lazy' src={profile} className='mobile' />
+          <img loading='lazy' src={landing} className='mobile' alt='mobile project landing page' />
+          <img loading='lazy' src={signup} className='mobile' alt='mobile project signup page' />
+          <img loading='lazy' src={home} className='mobile' alt='mobile project home page' />
+          <img loading='lazy' src={weather} className='mobile' alt='mobile weather dashboard' />
+          <img loading='lazy' src={profile} className='mobile' alt='mobile project profile page' />
         </div>
       </section>
     </div>

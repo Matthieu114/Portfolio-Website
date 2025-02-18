@@ -49,16 +49,17 @@ const ChatApp = () => {
     return () => {
       if (title) titleObserver.unobserve(title);
     };
-  }, [titleRef.current, options]);
+  }, [options]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options);
-    skillRefs.current.forEach((ref) => {
+    const currentRefs = skillRefs.current;
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      skillRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
@@ -69,7 +70,7 @@ const ChatApp = () => {
   }, []);
 
   return (
-    <div class='spotify-root'>
+    <div className='spotify-root'>
       <TbArrowBackUp className='back-arrow' onClick={() => navigate(-1)} />
 
       <section>
@@ -78,9 +79,11 @@ const ChatApp = () => {
           Chat App
         </div>
         <div className='about'>
-          This chat app was a school project developed in pairs. It integrated OAuth2 authentication with Dex and used ExpressJS and NodeJs as a backend. The frontend was fully done using React and
-          the Material Icons library. <br /> <br /> A user can create an account or log in through OAuth with Github. He then has access to channels that he can create delete or modify the users
-          inside. Messages can be sent only (but not received so far) and they will display in the selected chanel. A user can also search for Channels and modify his avatar and user information.
+          This chat app was a school project developed in pairs. It integrated OAuth2 authentication with Dex and used
+          ExpressJS and NodeJs as a backend. The frontend was fully done using React and the Material Icons library. <br />{' '}
+          <br /> A user can create an account or log in through OAuth with Github. He then has access to channels that he can
+          create delete or modify the users inside. Messages can be sent only (but not received so far) and they will display
+          in the selected chanel. A user can also search for Channels and modify his avatar and user information.
         </div>
         <div className='project-skills'>
           <div>
@@ -90,7 +93,8 @@ const ChatApp = () => {
                   className='skill'
                   ref={(element) => {
                     skillRefs.current[index] = element;
-                  }}>
+                  }}
+                >
                   {skill.name}
                 </div>
               );
@@ -105,10 +109,10 @@ const ChatApp = () => {
       </section>
       <section>
         <div className='project-img-ctn'>
-          <img src={home} alt='channel-home' loading="lazy"/>
-          <img src={createChannel} alt='create-channel' loading="lazy"/>
-          <img src={channelInfo} alt='channel-info' loading="lazy"/>
-          <img src={addUser} alt='add-user' loading="lazy"/>
+          <img src={home} alt='channel-home' loading='lazy' />
+          <img src={createChannel} alt='create-channel' loading='lazy' />
+          <img src={channelInfo} alt='channel-info' loading='lazy' />
+          <img src={addUser} alt='add-user' loading='lazy' />
         </div>
       </section>
     </div>

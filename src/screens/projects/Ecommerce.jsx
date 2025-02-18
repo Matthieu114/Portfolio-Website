@@ -48,16 +48,17 @@ const ECommerce = () => {
     return () => {
       if (title) titleObserver.unobserve(title);
     };
-  }, [titleRef.current, options]);
+  }, [options]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options);
-    skillRefs.current.forEach((ref) => {
+    const currentRefs = skillRefs.current;
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      skillRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
@@ -68,7 +69,7 @@ const ECommerce = () => {
   }, []);
 
   return (
-    <div class='spotify-root'>
+    <div className='spotify-root'>
       <TbArrowBackUp className='back-arrow' onClick={() => navigate(-1)} />
 
       <section>
@@ -77,10 +78,13 @@ const ECommerce = () => {
           E-Commerce App
         </div>
         <div className='about'>
-          The aim of this project was to build an application where users could buy or sell items across an auction. A user can create an account (Buyer or Seller) and then log in. He can browse the
-          items for sale and/or put up items for sale. A user can bid on an item or buy it instatly if there is a buy now option. A seller can also edit his items for sale. Admins can manage all items
-          and offers in the store. A User will have access to his bids , items for sale and information in the profile section. <br /> <br />
-          The frontend of this application was donne with HTML CSS and Javascript and the server side logic was done in PHP. The backend logic was entirely made in SQL
+          The aim of this project was to build an application where users could buy or sell items across an auction. A user
+          can create an account (Buyer or Seller) and then log in. He can browse the items for sale and/or put up items for
+          sale. A user can bid on an item or buy it instatly if there is a buy now option. A seller can also edit his items
+          for sale. Admins can manage all items and offers in the store. A User will have access to his bids , items for sale
+          and information in the profile section. <br /> <br />
+          The frontend of this application was donne with HTML CSS and Javascript and the server side logic was done in PHP.
+          The backend logic was entirely made in SQL
         </div>
         <div className='project-skills'>
           <div>
@@ -90,7 +94,8 @@ const ECommerce = () => {
                   className='skill'
                   ref={(element) => {
                     skillRefs.current[index] = element;
-                  }}>
+                  }}
+                >
                   {skill.name}
                 </div>
               );

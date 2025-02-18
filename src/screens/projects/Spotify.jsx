@@ -31,8 +31,6 @@ const Spotify = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fade-side');
-      } else {
-        entry.target.classList.remove('fade-side');
       }
     });
   };
@@ -50,12 +48,13 @@ const Spotify = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options);
-    skillRefs.current.forEach((ref) => {
+    const currentRefs = skillRefs.current;
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      skillRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
@@ -66,7 +65,7 @@ const Spotify = () => {
   }, []);
 
   return (
-    <div class='spotify-root'>
+    <div className='spotify-root'>
       <TbArrowBackUp className='back-arrow' onClick={() => navigate(-1)} />
 
       <section>
@@ -79,9 +78,10 @@ const Spotify = () => {
           <a href='https://open.spotify.com/search' target={'_blank'} rel='noreferrer'>
             Spotify web player
           </a>
-          . It allows a user to authenticate through OAuth2 using the Spotify Web Api. The users songs, playlists, albums and more are then dynamically fetched and displayed in a fully responsive
-          interface. A user can <span>play</span>, <span>pause</span>, <span>skip forwards</span>, or <span>skip backwards</span>, to a song in a playlist or an album thanks to the client side JS
-          library Web Playback SDK .
+          . It allows a user to authenticate through OAuth2 using the Spotify Web Api. The users songs, playlists, albums and
+          more are then dynamically fetched and displayed in a fully responsive interface. A user can <span>play</span>,{' '}
+          <span>pause</span>, <span>skip forwards</span>, or <span>skip backwards</span>, to a song in a playlist or an album
+          thanks to the client side JS library Web Playback SDK .
         </div>
         <div className='project-skills'>
           <div>
@@ -91,7 +91,8 @@ const Spotify = () => {
                   className='skill'
                   ref={(element) => {
                     skillRefs.current[index] = element;
-                  }}>
+                  }}
+                >
                   {skill.name}
                 </div>
               );

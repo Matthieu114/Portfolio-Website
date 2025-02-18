@@ -13,22 +13,22 @@ const LandingPage = () => {
   }, 600);
 
   return (
-    <div class='landing-root' id='home'>
-      <div class='scroll-down-left-ctn'>
+    <div className='landing-root' id='home'>
+      <div className='scroll-down-left-ctn'>
         <span>scroll down !</span>
-        <BsArrowDownShort class='down-icon' />
+        <BsArrowDownShort className='down-icon' />
       </div>
 
-      <div class='scroll-down-right-ctn'>
+      <div className='scroll-down-right-ctn'>
         <span>scroll down !</span>
-        <BsArrowDownShort class='down-icon' />
+        <BsArrowDownShort className='down-icon' />
       </div>
-      <div class='main-container'>
-        <div class={isLoaded ? 'text-container fade active' : 'text-container fade'}>
+      <div className='main-container'>
+        <div className={isLoaded ? 'text-container fade active' : 'text-container fade'}>
           <div>
-            <h1 class='main-text'>
-              <span class='text-hi'>Hi! I'm</span>
-              <p class='landing-name'>
+            <h1 className='main-text'>
+              <span className='text-hi'>Hi! I'm</span>
+              <p className='landing-name'>
                 <span>M</span>
                 <span>a</span>
                 <span>t</span>
@@ -43,15 +43,19 @@ const LandingPage = () => {
                 <span>s</span>
               </p>
             </h1>
-            <h2 class='description'>
-              <p class='description-text-me'> A backend developer who loves solving problems, optimizing performance, and bringing ideas to life — one line of code at a time!</p>
+            <h2 className='description'>
+              <p className='description-text-me'>
+                {' '}
+                A backend developer who loves solving problems, optimizing performance, and bringing ideas to life — one line
+                of code at a time!
+              </p>
             </h2>
           </div>
-          <div class='buttons-container'>
-            <a href='#my-work' class='see-work-btn'>
+          <div className='buttons-container'>
+            <a href='#my-work' className='see-work-btn'>
               Explore My Projects.
             </a>
-            <div class='hire-me-btn'>
+            <div className='hire-me-btn'>
               <a href='#contact' style={{ display: 'flex', alignItems: 'center' }}>
                 <AiOutlineSearch style={{ marginRight: '0.5rem', width: 25, height: 25 }} /> Hire me
               </a>
@@ -60,7 +64,7 @@ const LandingPage = () => {
         </div>
         <div></div>
         <div>
-          <Lottie animationData={codingAnimation} class='landing-page-svg fade-2' />;
+          <Lottie animationData={codingAnimation} className='landing-page-svg fade-2' />;
         </div>
       </div>
     </div>

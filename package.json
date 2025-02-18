@@ -12,6 +12,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "dotenv": "^16.0.3",
+    "lint-staged": "^15.4.3",
     "lottie-react": "^2.3.1",
     "react": "^18.0.0",
     "react-animated-cursor": "^2.5.2",
@@ -27,7 +28,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "eslint --fix"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +53,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "husky": "^9.1.7"
   }
 }

@@ -46,16 +46,17 @@ const SpaceRace = () => {
     return () => {
       if (title) titleObserver.unobserve(title);
     };
-  }, [titleRef.current, options]);
+  }, [options]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options);
-    skillRefs.current.forEach((ref) => {
+    const currentRefs = skillRefs.current;
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      skillRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
@@ -66,7 +67,7 @@ const SpaceRace = () => {
   }, []);
 
   return (
-    <div class='spotify-root'>
+    <div className='spotify-root'>
       <TbArrowBackUp className='back-arrow' onClick={() => navigate(-1)} />
 
       <section>
@@ -75,9 +76,10 @@ const SpaceRace = () => {
           Space Race Game
         </div>
         <div className='about'>
-          This game is a small reproduction of the classic space race game developped by ATARI. It supports two players and randomly generates asteroids that go at varying speeds. A player must avoid
-          the asteroids to not get destroyed and manage to cross the map. Everytime a player manages to go to the end of the map while dodging the asteroids he gets a point. The player with the most
-          points at the end of the countdown wins. <br />
+          This game is a small reproduction of the classic space race game developped by ATARI. It supports two players and
+          randomly generates asteroids that go at varying speeds. A player must avoid the asteroids to not get destroyed and
+          manage to cross the map. Everytime a player manages to go to the end of the map while dodging the asteroids he gets
+          a point. The player with the most points at the end of the countdown wins. <br />
           <br />
           The game logic and objects were developed in Lua and use the Love2d framework for the display.
         </div>
@@ -89,7 +91,8 @@ const SpaceRace = () => {
                   className='skill'
                   ref={(element) => {
                     skillRefs.current[index] = element;
-                  }}>
+                  }}
+                >
                   {skill.name}
                 </div>
               );
@@ -104,10 +107,10 @@ const SpaceRace = () => {
       </section>
       <section>
         <div className='project-img-ctn'>
-          <img src={home} alt='game-home' loading="lazy"/>
-          <img src={game1} alt='game-0' loading="lazy"/>
-          <img src={game2} alt='game-1' loading="lazy"/>
-          <img src={game3} alt='game-3' loading="lazy"/>
+          <img src={home} alt='game-home' loading='lazy' />
+          <img src={game1} alt='game-0' loading='lazy' />
+          <img src={game2} alt='game-1' loading='lazy' />
+          <img src={game3} alt='game-3' loading='lazy' />
         </div>
       </section>
     </div>
