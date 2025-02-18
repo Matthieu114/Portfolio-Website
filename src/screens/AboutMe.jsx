@@ -30,7 +30,7 @@ const AboutMe = () => {
     return {
       root: null,
       rootMargin: '0px 150px 0px 150px',
-      threshold: 0.1
+      threshold: 0.1,
     };
   }, []);
 
@@ -43,7 +43,7 @@ const AboutMe = () => {
       backSpeed: 100,
       showCursor: false,
       smartBackspace: true,
-      loop: true
+      loop: true,
     });
     return () => {
       typed.destroy();
@@ -74,37 +74,39 @@ const AboutMe = () => {
   }, [targetRefDesc, options]);
 
   return (
-    <section className='about-root' id='about'>
+    <section className="about-root" id="about">
       <div className={`about-left-ctn ${!isImgVisible ? 'about-hidden' : 'fade-in'}`} ref={targetRefImg}>
-        <div className='hero-img-ctn'>
-          <img src={img} alt='myself' />
+        <div className="hero-img-ctn">
+          <img src={img} alt="myself" />
         </div>
       </div>
       <div className={`about-right-ctn ${!isDescVisible ? 'about-slide' : 'slide-in'}`} ref={targetRefDesc}>
-        <h1 className='about-me-header ' data-about-me='heading'>
+        <h1 className="about-me-header " data-about-me="heading">
           {'About Me'.split('').map((char, index) => (
             <span key={index}>{char === ' ' ? '\u00A0' : char}</span>
           ))}
         </h1>
-        <div className='typed-container' data-about-me='typed'>
-          <p className='typed-section'>
+        <div className="typed-container" data-about-me="typed">
+          <p className="typed-section">
             {'>'} <span ref={el}></span>
           </p>
         </div>
-        <div className='about-description' data-about-me='description'>
-          Hi! I’m Matthieu , a French software engineer that enjoys creating functional web and mobile apps! Currently, I am
-          having fun learning game development on the side of my job as a Salesforce commerce cloud backend software engineer{' '}
-          <br />
-          <br /> I grew up and studied in{' '}
-          <span style={{ color: colors.fandagoPink, fontWeight: 500 }}> 5 different countries</span> ( USA, France, UK,
-          Poland , Russia ) where I grew accustomed to evolving in multicultural environments. <br />
-          <br />
-          Well organised , independent , curious with high attention to detail I am avid to learn more about the tech domain
-          in general and work on ambitious projects with positive people!
+        <div className="about-description" data-about-me="description">
+          Hi! I’m Matthieu , a French software engineer that enjoys creating functional web and mobile apps! Currently,
+          I am having fun learning game development on the side of my job as a Salesforce commerce cloud backend
+          software engineer <br />
+          <br /> By now, I’ve lived and studied in{' '}
+          <span style={{ color: colors.fandagoPink, fontWeight: 500 }}>5 different countries</span> (USA, France, UK,
+          Poland, and Russia), which has shaped me into someone who thrives in diverse, multicultural environments.{' '}
           <br />
           <br />
-          Here are some of the technologies I've worked with:
-          <ul className='skills-list' data-about-me='skills'>
+          I’m naturally curious, detail-oriented, and always excited to learn something new. Whether it’s tackling
+          ambitious projects, solving complex problems, or just geeking out over the latest tech, I enjoy collaborating
+          with passionate people who bring fresh ideas to the table.
+          <br />
+          <br />
+          Some of the technologies I’ve worked with:
+          <ul className="skills-list" data-about-me="skills">
             <li>Javascript (ES6+)</li>
             <li>React </li>
             <li>React Native </li>

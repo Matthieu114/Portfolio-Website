@@ -1,6 +1,6 @@
 import React, { useRef, useMemo, useEffect } from 'react';
-import Experience from '../components/Experience';
-import { experiences } from '../data/experiences';
+import Experience from './components/Experience';
+import { experiences } from '../../data/experiences';
 
 const MyExperiences = () => {
   const refs = useRef([]);
@@ -17,7 +17,7 @@ const MyExperiences = () => {
     return {
       root: null,
       rootMargin: '0px 150px 0px 150px',
-      threshold: 0.2
+      threshold: 0.2,
     };
   }, []);
 
@@ -36,7 +36,7 @@ const MyExperiences = () => {
   }, [options, refs.current.length]);
 
   return (
-    <section className='work-root' id='experience'>
+    <section className="work-root" id="experience">
       <div>
         {'Professional Experience'.split('').map((char, index) => (
           // preserve the space that is lost when splitting
@@ -44,7 +44,7 @@ const MyExperiences = () => {
         ))}
       </div>
 
-      <main className='experiences-ctn'>
+      <main className="experiences-ctn">
         {experiences.map((el, i) => {
           return (
             <Experience

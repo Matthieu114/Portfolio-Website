@@ -32,7 +32,7 @@ const PersonalProjects = () => {
       name: category.charAt(0).toUpperCase() + category.slice(1), // capitalise
       quantity,
       category,
-      selected: false
+      selected: false,
     }));
     return [allFiltersObject, ...otherCalculatedFiltersObject];
   }, []);
@@ -49,25 +49,25 @@ const PersonalProjects = () => {
   };
 
   return (
-    <div className='root-container' id='my-work'>
-      <div className='projects-title-container'>
-        <h1 className='projects-title'>
+    <div className="root-container" id="my-work">
+      <div className="projects-title-container">
+        <h1 className="projects-title">
           {"A few things I've built".split('').map((char, i) => (
             <span key={'perso-projects-title-span-' + i}>{char === ' ' ? '\u00A0' : char}</span>
           ))}
         </h1>
-        <div className='projects-about'>
-          These are the projects I have worked on in my own free time. <br /> They range from video games to chat apps to
-          music player clones
+        <div className="projects-about">
+          These are the projects I have worked on in my own free time. <br /> They range from video games to chat apps
+          to music player clones
         </div>
       </div>
-      <section className='projects-section'>
-        <div className='filter-projects-container'>
-          <ul className='filter-projects-list'>
-            <li className='list-item'>Filter By</li>
+      <section className="projects-section">
+        <div className="filter-projects-container">
+          <ul className="filter-projects-list">
+            <li className="list-item">Filter By</li>
             {filterOptions.map((filter, index) => {
               return (
-                <li className='list-item' key={'filter-' + filter.id}>
+                <li className="list-item" key={'filter-' + filter.id}>
                   <button
                     className={`list-link btn-as-link ${selectedCategory === filter.category ? 'active' : ''}`}
                     id={filter.id}
@@ -85,7 +85,7 @@ const PersonalProjects = () => {
             })}
           </ul>
         </div>
-        <ul className='projects-container' id='project-container'>
+        <ul className="projects-container" id="project-container">
           {filteredList.map((project, index) => {
             return (
               <Project
@@ -110,7 +110,7 @@ export default PersonalProjects;
 // TODO change theme + rename all color variables
 // TODO change personnal photo
 
-// TODO FIX filtesr not woerking professional experiences
+// TODO FIX prof exp animations not working
 
 // TODO EXTRACT ANIMATION CODE INTO HELPERS AND HAVE HELPERS IN GENERAL ==> create a helper for all the observers
 
