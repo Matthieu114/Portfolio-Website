@@ -117,7 +117,7 @@
   opacity: 1;
   transform: translateX(0%);
   filter: blur(0px);
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 
 .project-container>img {

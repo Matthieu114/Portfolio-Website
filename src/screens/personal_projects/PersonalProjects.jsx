@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import Project from './components/Project';
 import { projects } from '../../data/projects';
 
 const PersonalProjects = () => {
   const [projectsList, setProjectsList] = useState([]);
   const [selectedCategory, setCategory] = useState('All');
+  const refs = useRef([]);
   const filteredList = useMemo(getFilteredList, [selectedCategory, projectsList]);
 
   function getFilteredList() {
@@ -22,6 +23,7 @@ const PersonalProjects = () => {
     }, {});
   }
 
+  // create filter bar values
   const filterOptions = useMemo(() => {
     // object containing the count of each category {key: count}
     const categoryCounts = calculateCategoriesInProjects();
@@ -38,8 +40,20 @@ const PersonalProjects = () => {
   }, []);
 
   useEffect(() => {
+    // set initial projects list
     setProjectsList(projects);
   }, []);
+
+  useEffect(() => {
+    refs.current.forEach((el) => el?.classList.remove('fade-in'));
+    refs.current.forEach((el, index) => {
+      if (el) {
+        setTimeout(() => {
+          el.classList.add('fade-in');
+        }, 200 * index);
+      }
+    });
+  }, [filteredList]);
 
   const handleCategoryChange = (filter) => {
     if (selectedCategory === filter.category) {
@@ -96,6 +110,7 @@ const PersonalProjects = () => {
                 path={project.path}
                 name={project.name}
                 alt={project.alt}
+                ref={(el) => (refs.current[index] = el)}
               />
             );
           })}
