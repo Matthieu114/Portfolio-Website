@@ -4,7 +4,7 @@ Welcome to my personal portfolio! This project showcases my work, skills, and ex
 
 ## 🚀 Technologies Used
 
-- **Frontend**: React, TypeScript, Vite, Tailwind CSS
+- **Frontend**: React, TypeScript, Tailwind CSS
 - **Other Tools**: Git, CI/CD, Accessibility best practices
 
 ## 📌 Features
@@ -17,17 +17,18 @@ Welcome to my personal portfolio! This project showcases my work, skills, and ex
 
 ## 📷 Preview
 
-[Insert a screenshot or a GIF of the website]
+![website home page](<Screenshot 2025-02-21 at 11.58.26.png>)
+// need to change to gif
 
 ## 🛠️ Installation & Setup
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/MatthieuDenis/your-portfolio.git
+   git clone https://github.com/MatthieuDenis/portfolio-website.git
    ```
 2. Navigate to the project folder:
    ```sh
-   cd your-portfolio
+   cd portfolio-website
    ```
 3. Install dependencies:
    ```sh
