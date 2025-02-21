@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import LandingPage from './LandingPage';
-import AboutMe from './AboutMe';
+import LandingPage from './landing_page/LandingPage';
+import AboutMe from './about_me/AboutMe';
 import PersonalProjects from './personal_projects/PersonalProjects';
 import MyExperiences from './professional_experiences/MyExperiences';
 import Contact from './contact_me/Contact';

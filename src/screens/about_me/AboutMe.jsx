@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import colors from '../config/colors';
-import img from '../assets/pixelart2.png';
+import colors from '../../config/colors';
+import img from '../../assets/pixelart2.png';
 import Typed from 'typed.js';
 
 const AboutMe = () => {
@@ -77,7 +77,7 @@ const AboutMe = () => {
     <section className="about-root" id="about">
       <div className={`about-left-ctn ${!isImgVisible ? 'about-hidden' : 'fade-in'}`} ref={targetRefImg}>
         <div className="hero-img-ctn">
-          <img src={img} alt="myself" />
+          <img src={img} alt="myself" loading="lazy" />
         </div>
       </div>
       <div className={`about-right-ctn ${!isDescVisible ? 'about-slide' : 'slide-in'}`} ref={targetRefDesc}>

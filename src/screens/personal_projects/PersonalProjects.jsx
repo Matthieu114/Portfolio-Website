@@ -122,16 +122,15 @@ const PersonalProjects = () => {
 
 export default PersonalProjects;
 
-// TODO change theme + rename all color variables
-// TODO change personnal photo
-
-// TODO FIX prof exp animations not working
-
 // TODO EXTRACT ANIMATION CODE INTO HELPERS AND HAVE HELPERS IN GENERAL ==> create a helper for all the observers
 
-// TODO fix console errors
-// TODO less important fix linter errors
+// TODO IMPROVE WEB PERFORMANCE THAT IS TERRIBLE
+ // images to webp
+ // properyl sized images
+ // use memo
 
+// TODO change theme + rename all color variables
+// TODO change personnal photo
 // TODO Change domain to my name MatthieuDenis.dev
 
 // TODO fix accessibility and use semantics

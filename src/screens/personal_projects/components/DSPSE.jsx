@@ -1,21 +1,21 @@
 import React, { useRef, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TbArrowBackUp } from 'react-icons/tb';
-import home from '../../assets/dspse/home.png';
-import signup from '../../assets/dspse/signup.png';
-import weather from '../../assets/dspse/weather.png';
-import landing from '../../assets/dspse/landing.png';
-import profile from '../../assets/dspse/profile.png';
+import home from '../../../assets/dspse/home.png';
+import signup from '../../../assets/dspse/signup.png';
+import weather from '../../../assets/dspse/weather.png';
+import landing from '../../../assets/dspse/landing.png';
+import profile from '../../../assets/dspse/profile.png';
 
 const skills = [
   {
-    name: 'React Native'
+    name: 'React Native',
   },
   { name: 'Javascript' },
   { name: 'Expo' },
   { name: 'Firebase' },
   { name: 'Weather API' },
-  { name: 'Google Maps API' }
+  { name: 'Google Maps API' },
 ];
 
 const DSPSE = () => {
@@ -27,7 +27,7 @@ const DSPSE = () => {
     return {
       root: null,
       rootMargin: '0px 150px 0px 150px',
-      threshold: 0.3
+      threshold: 0.3,
     };
   }, []);
 
@@ -71,32 +71,32 @@ const DSPSE = () => {
   }, []);
 
   return (
-    <div className='spotify-root'>
-      <TbArrowBackUp className='back-arrow' onClick={() => navigate(-1)} />
+    <div className="spotify-root">
+      <TbArrowBackUp className="back-arrow" onClick={() => navigate(-1)} />
 
       <section>
-        <div className='category'>Mobile Development</div>
-        <div className='title' ref={titleRef}>
+        <div className="category">Mobile Development</div>
+        <div className="title" ref={titleRef}>
           Kitesurfer Tracking App (DSPSE)
         </div>
-        <div className='about'>
+        <div className="about">
           I developed this mobile app for a school project idea that we had with friends. It is intended to be used by
           kitesurfers to track their position and record their session statistics. <br />
-          <br /> A user can signup or can sign in with an existing account and will have his position displayed on google
-          maps. He can choose between displaying satellite or nomal mode. The weather portion of the app will display the
-          current weather around him in real time for the next 24 hours. In the profile tab, a user can logout and ask to
-          reset his password. He will receive a password reset confirmation by mail
+          <br /> A user can signup or can sign in with an existing account and will have his position displayed on
+          google maps. He can choose between displaying satellite or nomal mode. The weather portion of the app will
+          display the current weather around him in real time for the next 24 hours. In the profile tab, a user can
+          logout and ask to reset his password. He will receive a password reset confirmation by mail
           <br />
           <br />
-          The entire frontend of this app has been made using React Native, the backend is connected to Google Firebase which
-          regulates all the signup , signin and password reset features
+          The entire frontend of this app has been made using React Native, the backend is connected to Google Firebase
+          which regulates all the signup , signin and password reset features
         </div>
-        <div className='project-skills'>
+        <div className="project-skills">
           <div>
             {skills.map((skill, index) => {
               return (
                 <div
-                  className='skill'
+                  className="skill"
                   ref={(element) => {
                     skillRefs.current[index] = element;
                   }}
@@ -107,19 +107,19 @@ const DSPSE = () => {
             })}
           </div>
 
-          <a href='https://github.com/Matthieu114/DSPSE-APP' target={'_blank'} rel='noreferrer'>
+          <a href="https://github.com/Matthieu114/DSPSE-APP" target={'_blank'} rel="noreferrer">
             {' '}
             <span>→</span> see the code
           </a>
         </div>
       </section>
       <section>
-        <div className='project-img-ctn-mobile'>
-          <img loading='lazy' src={landing} className='mobile' alt='mobile project landing page' />
-          <img loading='lazy' src={signup} className='mobile' alt='mobile project signup page' />
-          <img loading='lazy' src={home} className='mobile' alt='mobile project home page' />
-          <img loading='lazy' src={weather} className='mobile' alt='mobile weather dashboard' />
-          <img loading='lazy' src={profile} className='mobile' alt='mobile project profile page' />
+        <div className="project-img-ctn-mobile">
+          <img loading="lazy" src={landing} className="mobile" alt="mobile project landing page" />
+          <img loading="lazy" src={signup} className="mobile" alt="mobile project signup page" />
+          <img loading="lazy" src={home} className="mobile" alt="mobile project home page" />
+          <img loading="lazy" src={weather} className="mobile" alt="mobile weather dashboard" />
+          <img loading="lazy" src={profile} className="mobile" alt="mobile project profile page" />
         </div>
       </section>
     </div>

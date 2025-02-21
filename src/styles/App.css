@@ -41,6 +41,26 @@
   --social-icon4: #3b5999;
 }
 
+
+:root2 {
+  --primary-color: #1B2B38;
+  /* Main background color */
+  --secondary-color: #2C3E50;
+  /* Secondary background */
+  --text-color-1: #ECEFF4;
+  /* Primary text color */
+  --text-color-2: #9AA5B1;
+  /* Secondary text color */
+  --highlight-color: #2BA3A3;
+  /* Accent highlight */
+  --cta-color: #D97742;
+  /* Call-to-action buttons */
+  --cta-hover-color: #BF5E30;
+  /* CTA hover state */
+  --border-color: #3C4A57;
+  /* Borders and dividers */
+}
+
 #root {
   height: 100%;
 }
