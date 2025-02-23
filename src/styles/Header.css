@@ -96,6 +96,7 @@
   border: 2px solid var(--primary-color);
   font-size: 0.9rem;
   font-weight: 550;
+  margin-right: 2.5rem;
 }
 
 .resume-button:hover {

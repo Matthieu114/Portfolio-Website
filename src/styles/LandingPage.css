@@ -3,41 +3,30 @@
   width: 100%;
   height: 100vh;
   padding: 0 150px;
-  /* background-color: var(--primary-color); */
-  background: linear-gradient(135deg, var(--background-color) 40%, var(--primary-color) 100%);
-
+  background: linear-gradient(135deg,
+      var(--background-color) 40%,
+      var(--primary-color) 100%);
 }
 
-.scroll-down-left-ctn {
+/* Unified scroll indicator styles */
+.scroll-indicator {
   z-index: 100;
   color: var(--text-primary-color);
   position: absolute;
   bottom: 20px;
+  font-family: Consolas, monaco, monospace;
+  animation: bounce2 2s infinite;
+  writing-mode: vertical-rl;
+}
+
+
+
+.scroll-indicator-left {
   left: 20px;
-  display: flex;
-  flex-direction: column;
 }
 
-.scroll-down-left-ctn>span {
-  writing-mode: vertical-rl;
-  animation: bounce2 2s infinite;
-  font-family: Consolas, monaco, monospace;
-}
-
-.scroll-down-right-ctn {
-  z-index: 100;
-  color: var(--text-primary-color);
-  position: absolute;
-  bottom: 20px;
+.scroll-indicator-right {
   right: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.scroll-down-right-ctn>span {
-  writing-mode: vertical-rl;
-  animation: bounce2 2s infinite;
-  font-family: Consolas, monaco, monospace;
 }
 
 .main-container {
@@ -51,18 +40,23 @@
 
 .text-container {
   margin-bottom: 5rem;
+  margin-right: 5rem;
   z-index: 50;
   color: var(--text-primary-color);
-  margin-right: 5rem;
 }
 
-.main-text .text-hi {
+
+/* Replacing .main-text with .main-heading */
+.main-heading {
   font-weight: 600;
   font-size: max(4vw, 30px);
   color: var(--text-primary-color);
 }
 
-.text-container .landing-name {
+
+
+/* landing-name styling remains the same */
+.landing-name {
   font-size: max(4vw, 45px);
   font-weight: 600;
   margin: 0;
@@ -70,10 +64,12 @@
   color: var(--primary-color);
 }
 
-.text-container .landing-name::after {
+.landing-name::after {
   content: '.';
   color: var(--text-primary-color);
 }
+
+
 
 .landing-name>span {
   display: inline-block;
@@ -82,14 +78,12 @@
 .landing-name>span:hover {
   animation: gelatine 0.7s linear;
   color: var(--secondary-color);
-  transition: all 100ms ease-out 0ms;
+  transition: all 100ms ease-out;
 }
 
-.landing-root .buttons-container {
-  display: flex;
-  margin-top: 3rem;
-}
 
+
+/* Description text */
 .description {
   line-height: 1.8rem;
   font-size: 20px;
@@ -98,26 +92,10 @@
   max-width: 750px;
 }
 
-.hire-me-btn {
-  transition: transform 50ms ease-out 0ms;
-  text-decoration: none;
+/* Buttons container */
+.buttons-container {
   display: flex;
-  align-items: center;
-  margin-left: 3rem;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.hire-me-btn>a {
-  display: flex;
-  align-items: center;
-  color: var(--text-primary-color);
-}
-
-
-.hire-me-btn:hover {
-  transform: scale(1.02);
-  cursor: pointer;
+  margin-top: 3rem;
 }
 
 .see-work-btn {
@@ -130,19 +108,40 @@
   border-radius: 2px;
   padding: 0.8rem 2.5rem;
   font-size: 15px;
-  transition: background-color 150ms ease-out 0ms;
+  transition: background-color 150ms ease-out;
+  cursor: pointer;
 }
 
 .see-work-btn:hover {
   background-color: rgba(0, 123, 255, 0.3);
   transition: all ease-out 150ms;
+}
+
+
+/* Hire me button container */
+.hire-me-btn {
+  transition: transform 50ms ease-out 0ms;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
 }
 
-.description-link-ece:hover {
-  text-decoration: underline;
+.hire-me-btn>a {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary-color);
 }
 
+
+.hire-me-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Lottie animation */
 .landing-page-svg {
   width: 100%;
   height: auto;
@@ -151,8 +150,7 @@
   min-width: 325px;
 }
 
-/* Landing Page: On page load animation */
-
+/* Fade animations */
 .fade {
   opacity: 0;
   transition: 2s all ease;
@@ -167,8 +165,7 @@
   animation: fade-left 1.5s ease-out;
 }
 
-/* media queries responsive */
-
+/* Keyframes */
 @keyframes fade-up {
   0% {
     padding-top: 150px;
@@ -221,12 +218,8 @@
   }
 }
 
+/* ===== Responsive Media Queries ===== */
 @media (max-width: 1024px) {
-  .landing-root .buttons-container {
-    display: flex;
-    margin-top: 3rem;
-  }
-
   .landing-root {
     position: relative;
     width: 100%;
@@ -240,13 +233,11 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    opacity: 1;
   }
 
   .text-container {
     margin-bottom: 0;
     margin-right: 0;
-    z-index: 50;
   }
 
   .landing-page-svg {
@@ -289,7 +280,6 @@
     line-height: 1.5rem;
     font-size: 15px;
     font-weight: 500;
-    color: var(--text-primary-color);
     max-width: 600px;
   }
 }
@@ -309,11 +299,10 @@
     line-height: 1.5rem;
     font-size: 15px;
     font-weight: 400;
-    color: var(--text-primary-color);
     max-width: 600px;
   }
 
-  .text-container .main-text {
+  .text-container .main-heading {
     margin-bottom: 2rem;
   }
 
@@ -321,8 +310,16 @@
     font-size: 35px;
   }
 
-  .main-text .text-hi {
+  .main-heading .text-hi {
     font-weight: 600;
     font-size: 25px;
   }
+}
+
+.landing-root,
+.text-container,
+.main-container,
+.see-work-btn,
+.hire-me-btn {
+  transition: background-color 1s ease-in-out, color 1s ease-in-out, border-color 0.3s ease-in-out;
 }
