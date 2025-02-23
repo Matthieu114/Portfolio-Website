@@ -18,14 +18,21 @@
 }
 
 .hero-img-ctn {
-  background-color: var(--surface-color);
+  /* background-color: var(--surface-color); */
   border-radius: 50%;
   margin-right: 200px;
 }
 
+
 .hero-img-ctn>img {
   width: 100%;
   min-width: 400px;
+  clip-path: circle(50% at 50% 50%);
+  transition: clip-path 0.3s;
+}
+
+.hero-img-ctn>img:hover {
+  clip-path: circle(70% at 50% 50%);
 }
 
 .about-right-ctn {
@@ -36,9 +43,10 @@
 
 .about-me-header {
   color: var(--primary-color);
-  font-size: clamp(20px, 1.8vw, 60px);
+  font-size: clamp(60px, 1.8vw, 60px);
   padding: 0;
   margin: 0 0 1rem 0;
+  font-weight: 600;
 }
 
 .about-me-header>span {
@@ -70,6 +78,11 @@
   max-width: 700px;
 }
 
+.about-description>.countries-span {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
 .skills-list {
   color: var(--text-primary-color);
   display: grid;
@@ -89,7 +102,7 @@
   color: var(--accent-color);
   font-size: 1.2rem;
   line-height: 12px;
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .skills-list>li {
@@ -100,6 +113,7 @@
   padding-left: 25px;
   font-family: Consolas, monaco, monospace;
 }
+
 
 /* ANIMATIONS */
 .about-hidden {

@@ -1,0 +1,17 @@
+.divider {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Adjust z-index if needed, 
+       e.g. z-index: 10; */
+}
+
+.divider-line {
+    width: 250px;
+    height: 0;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    /* You can add more styling, e.g. dashed, 
+       or even a gradient with background-image */
+}

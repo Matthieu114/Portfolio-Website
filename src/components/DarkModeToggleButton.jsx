@@ -1,3 +1,4 @@
+import '../styles/components/DarkModeToggle.css';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { FaMoon } from 'react-icons/fa';

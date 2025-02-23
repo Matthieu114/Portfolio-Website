@@ -1,13 +1,13 @@
 @import url('https://rsms.me/inter/inter.css');
-@import 'LandingPage.css';
-@import 'Projects.css';
+@import './screens/LandingPage.css';
+@import './screens/Projects.css';
 @import 'index.css';
-@import 'About.css';
-@import 'Header.css';
-@import 'Experiences.css';
-@import 'Contact.css';
-@import 'Spotify.css';
-@import 'DarkModeToggle.css';
+@import './screens/About.css';
+@import './components/Header.css';
+@import './screens/Experiences.css';
+@import './screens/Contact.css';
+@import './screens/Spotify.css';
+
 
 .App {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

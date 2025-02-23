@@ -94,21 +94,23 @@ const Header = () => {
           <DarkModeToggle />
         </div>
         <div className="open-header">
-          <DarkModeToggle />
+          <div className="mobile-icons">
+            <DarkModeToggle />
 
-          {!mobileOpen ? (
-            <CgMenuRightAlt
-              className="hamburger-menu"
-              onClick={openNav}
-              color={colors.primary}
-              height="25px"
-              width={25}
-            />
-          ) : (
-            <div>
-              <IoCloseOutline onClick={closeNav} className="close-mobile" color={colors.primary} />
-            </div>
-          )}
+            {!mobileOpen ? (
+              <CgMenuRightAlt
+                className="hamburger-menu"
+                onClick={openNav}
+                color={colors.primary}
+                height="25px"
+                width={25}
+              />
+            ) : (
+              <div>
+                <IoCloseOutline onClick={closeNav} className="close-mobile" color={colors.primary} />
+              </div>
+            )}
+          </div>
           <aside className="mobile-navbar" id="mobile-navbar">
             <div>
               <a

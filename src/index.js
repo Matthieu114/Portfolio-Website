@@ -10,8 +10,8 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
       <BrowserRouter>
+        <Header />              
         <App />
-        <Header />
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
