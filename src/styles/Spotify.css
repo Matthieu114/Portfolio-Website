@@ -1,10 +1,10 @@
 .spotify-root {
   position: relative;
-  background-color: var(--blue1);
+  background-color: var(--background-color);
   height: fit-content;
   width: 100%;
   padding: 200px 300px 10px 300px;
-  color: var(--cream);
+  color: var(--text-primary-color);
 }
 
 .back-arrow {
@@ -15,16 +15,16 @@
   height: 50px;
   width: 50px;
   padding: 15px;
-  background-color: var(--lightestBlue);
+  background-color: var(--surface-color);
   border-radius: 50%;
 }
 
 .back-arrow:hover {
-  background-color: var(--fandagoPink);
+  background-color: var(--primary-color);
   transition: all 200ms ease-out;
 }
 
-.project-img-ctn > img {
+.project-img-ctn>img {
   width: 100%;
   margin-bottom: 10px;
 }
@@ -37,32 +37,33 @@
   gap: 20px;
 }
 
-.project-img-ctn-mobile > img {
+.project-img-ctn-mobile>img {
   width: 35%;
   margin-bottom: 10px;
 }
+
 /* for mobiles images that cannot fit the whole screen */
 
-.project-img-ctn > video {
+.project-img-ctn>video {
   width: 100%;
   min-width: 100%;
   margin-bottom: 10px;
 }
 
 .spotify-root .category {
-  color: var(--softGrey);
+  color: var(--text-secondary-color);
   font-size: 18px;
   font-weight: 500;
 }
 
 .spotify-root .category::after {
   content: '‹';
-  color: var(--white);
+  color: var(--accent-color);
   margin-left: 0.5rem;
 }
 
 .spotify-root .title {
-  color: var(--cream);
+  color: var(--text-primary-color);
   font-size: 70px;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -72,7 +73,7 @@
 }
 
 .spotify-root .about {
-  color: var(--cream);
+  color: var(--text-secondary-color);
   opacity: 0.9;
   font-weight: 500;
   max-width: 800px;
@@ -81,8 +82,13 @@
   margin-bottom: 2rem;
 }
 
-.spotify-root .about > a:hover {
-  background-color: var(--fandagoPink);
+.spotify-root .about>a {
+  color: var(--text-primary-color);
+}
+
+.spotify-root .about>a:hover {
+  background-color: var(--primary-color);
+  color: var(--cream);
   transition: all 200ms ease-out;
 }
 
@@ -95,22 +101,23 @@
 }
 
 .project-skills a {
-  color: var(--softGrey);
+  color: var(--text-primary-color);
+  font-weight: 600;
   position: relative;
   animation: bounce 2s ease-in infinite;
 }
 
 .project-skills a:hover {
   color: var(--cream);
-  background-color: var(--fandagoPink);
+  background-color: var(--primary-color);
   transition: all 200ms ease-out;
 }
 
-.project-skills a > span {
+.project-skills a>span {
   margin-right: 0.5rem;
 }
 
-.project-skills > div {
+.project-skills>div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,8 +128,9 @@
 
 .project-skills .skill {
   min-width: max-content;
-  background-color: var(--fandagoPink);
+  background-color: var(--accent-color);
   font-family: Consolas, monaco, monospace;
+  font-weight: 500;
   border-radius: 20px 20px 20px 20px;
   padding: 0.5rem;
   color: var(--cream);
@@ -164,21 +172,27 @@
   70% {
     transform: translateY(0%);
   }
+
   80% {
     transform: translateY(-15%);
   }
+
   90% {
     transform: translateY(0%);
   }
+
   95% {
     transform: translateY(-7%);
   }
+
   97% {
     transform: translateY(0%);
   }
+
   99% {
     transform: translateY(-3%);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -221,7 +235,7 @@
     font-size: 40px;
   }
 
-  .project-img-ctn-mobile > img {
+  .project-img-ctn-mobile>img {
     width: 45%;
     margin-bottom: 10px;
   }

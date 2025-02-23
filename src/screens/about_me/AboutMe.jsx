@@ -96,7 +96,7 @@ const AboutMe = () => {
           I am having fun learning game development on the side of my job as a Salesforce commerce cloud backend
           software engineer <br />
           <br /> By now, I’ve lived and studied in{' '}
-          <span style={{ color: colors.fandagoPink, fontWeight: 500 }}>5 different countries</span> (USA, France, UK,
+          <span style={{ color: colors.primary, fontWeight: 500 }}>5 different countries</span> (USA, France, UK,
           Poland, and Russia), which has shaped me into someone who thrives in diverse, multicultural environments.{' '}
           <br />
           <br />

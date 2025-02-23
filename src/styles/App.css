@@ -7,6 +7,7 @@
 @import 'Experiences.css';
 @import 'Contact.css';
 @import 'Spotify.css';
+@import 'DarkModeToggle.css';
 
 .App {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -23,47 +24,76 @@
 }
 
 :root {
-  --darkBlue: #0f1922;
-  --lightBlue: #0f192266;
-  --lightestBlue: #1f2731;
-  --blue1: #0a1418;
-  --black: #000000;
-  --softGrey: #fffefa99;
-  --fandagoPink: #6919ff;
   --white: #ffffff;
   --cream: #fffefa;
-  --inv: #fff;
-  --orange: #ff5919;
+  --warm-yellow: #FFD166;
+  /* Light Mode Colors */
+  --primary-color: #007BFF;
+  --secondary-color: #0056b3;
+  --background-color: #F8F9FA;
+  --surface-color: #FFFFFF;
+  --text-primary-color: #212529;
+  --text-secondary-color: #6C757D;
+  --accent-color: #FF4081;
 
   --social-icon1: #0077b5;
   --social-icon2: #6e5494;
   --social-icon3: #e4405f;
   --social-icon4: #3b5999;
+
 }
 
-
-:root2 {
-  --primary-color: #1B2B38;
-  /* Main background color */
-  --secondary-color: #2C3E50;
-  /* Secondary background */
-  --text-color-1: #ECEFF4;
-  /* Primary text color */
-  --text-color-2: #9AA5B1;
-  /* Secondary text color */
-  --highlight-color: #2BA3A3;
-  /* Accent highlight */
-  --cta-color: #D97742;
-  /* Call-to-action buttons */
-  --cta-hover-color: #BF5E30;
-  /* CTA hover state */
-  --border-color: #3C4A57;
-  /* Borders and dividers */
-}
-
-#root {
+body {
+  margin: 0;
   height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  /* Light Mode */
+  background-color: var(--background-color);
+  color: var(--text-primary-color);
+  transition: background-color 1s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
+
+
+.dark-mode {
+  /* Dark Mode Colors */
+  --primary-color: #339AFF;
+  --secondary-color: #1A73E8;
+  --background-color: #121212;
+  --surface-color: #1E1E1E;
+  --text-primary-color: #EAEAEA;
+  --text-secondary-color: #A0A0A0;
+  --accent-color: #FF4081;
+}
+
+
+
+button {
+  all: unset;
+  /* Removes all inherited & browser default styles */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Remove default box-shadow */
+  box-shadow: none;
+  outline: none;
+}
+
+button:focus {
+  /* remove or customize focus outline */
+  outline: none;
+  box-shadow: none;
+}
+
 
 
 .btn-as-link {
@@ -76,4 +106,13 @@
   line-height: inherit;
   padding: 0;
 
+}
+
+.code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
 }
