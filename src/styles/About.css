@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   position: relative;
-  background-color: var(--darkBlue);
+  background-color: var(--background-color);
   color: var(--white);
   align-items: center;
   padding: 100px 150px;
@@ -18,15 +18,16 @@
 }
 
 .hero-img-ctn {
-  background-color: var(--blue1);
+  background-color: var(--surface-color);
   border-radius: 50%;
   margin-right: 200px;
 }
 
-.hero-img-ctn > img {
+.hero-img-ctn>img {
   width: 100%;
   min-width: 400px;
 }
+
 .about-right-ctn {
   display: flex;
   flex-direction: column;
@@ -34,25 +35,25 @@
 }
 
 .about-me-header {
-  color: var(--fandagoPink);
+  color: var(--primary-color);
   font-size: clamp(20px, 1.8vw, 60px);
   padding: 0;
   margin: 0 0 1rem 0;
 }
 
-.about-me-header > span {
+.about-me-header>span {
   display: inline-block;
 }
 
-.about-me-header > span:hover {
+.about-me-header>span:hover {
   animation: gelatine 0.7s linear;
-  color: var(--white);
+  color: var(--secondary-color);
   transition: all 100ms ease-out 0ms;
 }
 
 .typed-section {
   font-family: Consolas, monaco, monospace;
-  color: var(--cream);
+  color: var(--text-primary-color);
   font-size: clamp(20px, 2.5vw, 50px);
   font-weight: 500;
   margin: 0;
@@ -62,15 +63,15 @@
 
 .about-description {
   line-height: 1.8rem;
-  font-weight: 400;
-  color: var(--softGrey);
+  font-weight: 500;
+  color: var(--text-secondary-color);
   font-size: clamp(10px, 1.1rem, 40px);
   width: 100%;
   max-width: 700px;
 }
 
 .skills-list {
-  color: var(--cream);
+  color: var(--text-primary-color);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 100px));
   font-size: 0.9rem;
@@ -78,18 +79,20 @@
   padding: 0px;
   margin: 20px 0px 0px;
   list-style: none;
+
 }
 
-.skills-list > li::before {
+.skills-list>li::before {
   content: '▹ ';
   position: absolute;
   left: 0px;
-  color: var(--fandagoPink);
+  color: var(--accent-color);
   font-size: 1.2rem;
   line-height: 12px;
+  font-weight: 550;
 }
 
-.skills-list > li {
+.skills-list>li {
   display: flex;
   align-items: center;
   position: relative;
@@ -140,13 +143,12 @@
   }
 
   .hero-img-ctn {
-    background-color: var(--darkBlue);
     border-radius: 50%;
     margin-right: 0;
     margin-bottom: 3rem;
   }
 
-  .hero-img-ctn > img {
+  .hero-img-ctn>img {
     width: 200px;
     min-width: 200px;
   }
@@ -167,7 +169,6 @@
   }
 
   .about-me-header {
-    color: var(--fandagoPink);
     padding: 0;
     margin: 0 0 1rem 0;
   }
@@ -175,7 +176,6 @@
   .typed-section {
     align-self: flex-start;
     font-family: Consolas, monaco, monospace;
-    color: var(--cream);
     font-size: 30px;
     font-weight: 500;
     margin: 0;
@@ -184,7 +184,6 @@
   }
 
   .about-me-header {
-    color: var(--fandagoPink);
     font-size: clamp(20px, 2vw, 60px);
     padding: 0;
     margin: 0 0 1rem 0;
@@ -193,7 +192,6 @@
   .about-description {
     line-height: 1.8rem;
     font-weight: 400;
-    color: var(--softGrey);
     font-size: 15px;
     width: 100%;
     max-width: 700px;
@@ -204,7 +202,6 @@
   .typed-section {
     align-self: flex-start;
     font-family: Consolas, monaco, monospace;
-    color: var(--cream);
     font-size: 25px;
     font-weight: 500;
     margin: 0;
@@ -215,23 +212,20 @@
   .about-description {
     line-height: 1.8rem;
     font-weight: 400;
-    color: var(--softGrey);
     font-size: 17px;
     width: 100%;
     max-width: 700px;
   }
 
-  .skills-list > li::before {
+  .skills-list>li::before {
     content: '▹ ';
     position: absolute;
     left: 0px;
-    color: var(--fandagoPink);
     font-size: 1rem;
     line-height: 12px;
   }
 
   .skills-list {
-    color: var(--cream);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 100px));
     font-size: 0.8rem;

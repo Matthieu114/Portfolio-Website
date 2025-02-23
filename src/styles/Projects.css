@@ -4,7 +4,7 @@
   min-height: 100vh;
   position: relative;
   padding: 100px 150px;
-  background-color: var(--blue1);
+  background-color: var(--background-color);
 }
 
 .projects-title-container {
@@ -14,7 +14,7 @@
 }
 
 .projects-title {
-  color: var(--fandagoPink);
+  color: var(--primary-color);
 }
 
 .projects-title>span {
@@ -23,7 +23,7 @@
 
 .projects-title>span:hover {
   animation: gelatine 0.7s linear;
-  color: var(--white);
+  color: var(--secondary-color);
   transition: all 100ms ease-out 0ms;
 }
 
@@ -33,11 +33,11 @@
   font-size: 18px;
   max-width: 750px;
   line-height: 1.5rem;
-  color: var(--cream);
+  color: var(--text-primary-color);
 }
 
 .filter-projects-container {
-  color: var(--cream);
+  color: var(--text-primary-color);
   margin-top: 4rem;
 }
 
@@ -53,17 +53,17 @@
 }
 
 .list-link.active {
-  color: var(--fandagoPink);
+  color: var(--accent-color);
 }
 
 .list-link:hover {
-  color: var(--fandagoPink);
+  color: var(--accent-color);
 }
 
 .list-link {
   position: relative;
   text-decoration: none;
-  color: var(--softGrey);
+  color: var(--text-primary-color);
 }
 
 .filter-badge {
@@ -74,11 +74,10 @@
   font-size: 12px;
   border-radius: 50%;
   font-family: Consolas, monaco, monospace;
-  color: var(--softGrey);
 }
 
 .filter-badge.active {
-  color: var(--fandagoPink);
+  color: var(--accent-color);
 }
 
 .projects-container {
@@ -104,7 +103,6 @@
 /* Project */
 
 .project-container {
-  color: var(--cream);
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -151,14 +149,13 @@
   transform: translateY(230px);
   color: var(--cream);
   font-weight: 500;
-  font-family: Consolas, monaco, monospace;
   font-size: 20px;
   transition: 100ms ease-in-out 75ms;
 }
 
 .project-container .about-desc {
   transform: translateY(200px);
-  color: var(--softGrey);
+  color: var(--text-secondary-color);
   font-weight: 500;
   font-size: 14px;
   transition: 250ms ease-in-out 100ms;
@@ -206,7 +203,6 @@
   }
 
   .projects-title {
-    color: var(--fandagoPink);
     font-size: 25px;
   }
 }
@@ -228,7 +224,6 @@
   }
 
   .projects-title {
-    color: var(--fandagoPink);
     font-size: 20px;
   }
 

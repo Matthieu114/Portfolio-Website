@@ -3,7 +3,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { BsArrowDownShort } from 'react-icons/bs';
 
 import Lottie from 'lottie-react';
-import codingAnimation from '../../assets/animations/animOrange.json';
+import codingAnimation from '../../assets/animations/landing-page-anim.json';
 
 const LandingPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -44,7 +44,7 @@ const LandingPage = () => {
               </p>
             </h1>
             <h2 className="description">
-              <p className="description-text-me">
+              <p className="">
                 {' '}
                 A backend developer who loves solving problems, optimizing performance, and bringing ideas to life — one
                 line of code at a time!
@@ -56,15 +56,16 @@ const LandingPage = () => {
               Explore My Projects.
             </a>
             <div className="hire-me-btn">
-              <a href="#contact" style={{ display: 'flex', alignItems: 'center' }}>
-                <AiOutlineSearch style={{ marginRight: '0.5rem', width: 25, height: 25 }} /> Hire me
+              <a href="#contact">
+                <AiOutlineSearch className="search-icon" style={{ marginRight: '0.5rem', width: 25, height: 25 }} />{' '}
+                Hire me
               </a>
             </div>
           </div>
         </div>
         <div></div>
         <div>
-          <Lottie animationData={codingAnimation} className="landing-page-svg fade-2" />;
+          <Lottie animationData={codingAnimation} className="landing-page-svg fade-2" />
         </div>
       </div>
     </div>

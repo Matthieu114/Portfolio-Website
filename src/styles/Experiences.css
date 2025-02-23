@@ -1,5 +1,4 @@
 .work-root {
-  background-color: var(--darkBlue);
   padding: 150px 150px 200px 150px;
   text-align: center;
   height: max-content;
@@ -9,7 +8,7 @@
   margin: 0 0 4rem 0;
   font-size: 37px;
   font-weight: 600;
-  color: var(--cream);
+  color: var(--primary-color);
 }
 
 .work-root>div>span {
@@ -18,7 +17,7 @@
 
 .work-root>div>span:hover {
   animation: gelatine 0.7s linear;
-  color: var(--fandagoPink);
+  color: var(--secondary-color);
   transition: all 100ms ease-out 0ms;
 }
 
@@ -64,11 +63,11 @@
 
 .exp-inner-ctn:hover {
   transition: all ease-out 400ms;
-  background-color: var(--fandagoPink);
+  background-color: var(--secondary-color);
 }
 
 .exp-inner-ctn {
-  background-color: rgba(105, 25, 255, 0.3);
+  background-color: var(--primary-color);
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -94,12 +93,12 @@
 }
 
 .work-active {
-  background-color: var(--fandagoPink);
+  background-color: var(--primary-color);
 }
 
 .accordion-wrap {
   margin: 0.25rem 0;
-  background-color: rgba(105, 25, 255, 0.3);
+  background-color: var(--primary-color);
   border-radius: 5px;
   height: max-content;
   overflow-y: hidden;
@@ -143,11 +142,10 @@
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 17px;
-  font-family: Consolas, monaco, monospace;
 }
 
 .work-about>.location {
-  color: rgba(25, 125, 255, 1);
+  color: var(--accent-color);
   margin-right: 0.5rem;
   height: 25px;
   width: 25px;
@@ -168,7 +166,7 @@
 
 .work-skills>.skill {
   margin-right: 0.5rem;
-  background-color: rgba(25, 125, 255, 0.7);
+  background-color: var(--accent-color);
   font-family: Consolas, monaco, monospace;
   border-radius: 20px 20px 20px 20px;
   padding: 0.5rem;
@@ -191,7 +189,6 @@
     width: 100%;
     min-width: auto;
     text-align: left;
-    color: var(--cream);
   }
 
   .exp-inner-ctn {
@@ -237,7 +234,6 @@
 
   .accordion-wrap {
     margin: 0.25rem 0;
-    background-color: rgba(105, 25, 255, 0.3);
     border-radius: 5px;
     height: max-content;
     overflow-y: hidden;
