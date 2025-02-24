@@ -26,15 +26,26 @@
 .hero-img-ctn>img {
   width: 100%;
   min-width: 400px;
-  clip-path: circle(50% at 50% 50%);
-  filter: blur(25px);
-  transition: all 0.3s
+  border-radius: 50%;
 }
 
-.hero-img-ctn>img:hover {
-  clip-path: circle(70% at 50% 50%);
-  filter: blur(0px);
+@media (min-width: 1024px) {
+  .hero-img-ctn>img {
+    clip-path: circle(50% at 50% 50%);
+    filter: blur(25px);
+    transition: all 0.3s
+  }
+
+  .hero-img-ctn>img:hover {
+    clip-path: circle(70% at 50% 50%);
+    filter: blur(0px);
+  }
 }
+
+
+
+
+
 
 .about-right-ctn {
   display: flex;
@@ -163,7 +174,7 @@
 
 @media (max-width: 1280px) {
   .about-root {
-    padding: 100px 50px;
+    padding: 100px 100px;
     flex-direction: column;
   }
 
@@ -209,7 +220,7 @@
   }
 
   .about-me-header {
-    font-size: clamp(20px, 2vw, 60px);
+    /* font-size: clamp(35px, 2vw, 60px); */
     padding: 0;
     margin: 0 0 1rem 0;
   }
@@ -223,7 +234,24 @@
   }
 }
 
+@media (max-width: 1024px) {
+
+  .about-root {
+    padding: 100px 50px;
+  }
+
+  .about-me-header {
+    font-size: clamp(35px, 2vw, 60px);
+  }
+
+}
+
 @media (max-width: 640px) {
+  .about-root {
+    padding: 100px 25px 0px 25px;
+    flex-direction: column;
+  }
+
   .typed-section {
     align-self: flex-start;
     font-family: Consolas, monaco, monospace;
@@ -231,7 +259,13 @@
     font-weight: 500;
     margin: 0;
     padding: 0;
-    height: 90px;
+    height: 45px;
+  }
+
+  .about-me-header {
+    font-size: 20px;
+
+
   }
 
   .about-description {

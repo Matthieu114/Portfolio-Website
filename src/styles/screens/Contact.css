@@ -3,6 +3,7 @@
   height: max-content;
   width: 100%;
   color: var(--text-primary-color);
+  background: linear-gradient(-130deg, var(--background-color) 0%, #1f2731 200%);
 }
 
 .contact-outer-ctn {
@@ -308,6 +309,10 @@
 }
 
 @media (max-width: 640px) {
+  .contact-root {
+    padding: 100px 25px;
+  }
+
   .title-ctn>.title {
     font-size: 20px;
   }
