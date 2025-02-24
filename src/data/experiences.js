@@ -1,6 +1,6 @@
 import qonto from '../assets/professionnal-experiences/Qonto.png';
 import meDirect from '../assets/professionnal-experiences/MeDirect.png';
-import ecocea from '../assets/professionnal-experiences/ecocea_la_fabrique_logo.jpeg';
+import ecocea from '../assets/professionnal-experiences/ecocea.webp';
 
 export const experiences = [
   {
@@ -18,9 +18,9 @@ export const experiences = [
       { id: 3, name: 'Javascript' },
       { id: 4, name: 'Git' },
       { id: 5, name: 'ISML' },
-      { id: 6, name: 'Business Manager' }
+      { id: 6, name: 'Business Manager' },
     ],
-    duration: 'Feb 2023 - Present'
+    duration: 'Feb 2023 - Present',
   },
   {
     id: 2,
@@ -35,9 +35,9 @@ export const experiences = [
       { id: 1, name: 'Ember.js' },
       { id: 2, name: 'Javascript' },
       { id: 3, name: 'Git' },
-      { id: 4, name: 'Cypress' }
+      { id: 4, name: 'Cypress' },
     ],
-    duration: 'Apr 2022 - Sept 2022'
+    duration: 'Apr 2022 - Sept 2022',
   },
   {
     id: 3,
@@ -53,8 +53,8 @@ export const experiences = [
       { id: 2, name: 'Cypress' },
       { id: 3, name: 'Jest' },
       { id: 4, name: 'Javascript' },
-      { id: 5, name: 'Git' }
+      { id: 5, name: 'Git' },
     ],
-    duration: 'Jun 2021 - Aug 2021'
-  }
+    duration: 'Jun 2021 - Aug 2021',
+  },
 ];

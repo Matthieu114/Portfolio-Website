@@ -27,11 +27,13 @@
   width: 100%;
   min-width: 400px;
   clip-path: circle(50% at 50% 50%);
-  transition: clip-path 0.3s;
+  filter: blur(25px);
+  transition: all 0.3s
 }
 
 .hero-img-ctn>img:hover {
   clip-path: circle(70% at 50% 50%);
+  filter: blur(0px);
 }
 
 .about-right-ctn {
@@ -57,7 +59,12 @@
   display: inline-block;
 }
 
-.about-me-header>span:hover {
+
+.about-me-header-normal {
+  color: var(--text-primary-color);
+}
+
+.about-me-header-animate:hover {
   animation: gelatine 0.7s linear;
   color: var(--secondary-color);
   transition: all 100ms ease-out 0ms;

@@ -14,7 +14,6 @@
   margin: 0;
   height: 100%;
   width: 100%;
-  user-select: none;
 }
 
 *,
@@ -35,12 +34,11 @@
   --text-primary-color: #212529;
   --text-secondary-color: #6C757D;
   --accent-color: #FF4081;
-
+  --box-shadow-color: rgba(0, 0, 0, 0.15);
   --social-icon1: #0077b5;
   --social-icon2: #6e5494;
   --social-icon3: #e4405f;
   --social-icon4: #3b5999;
-
 }
 
 body {
@@ -63,6 +61,7 @@ body {
   --secondary-color: #1A73E8;
   --background-color: #121212;
   --surface-color: #1E1E1E;
+  --box-shadow-color: rgba(0, 123, 255, 0.1);
   --text-primary-color: #EAEAEA;
   --text-secondary-color: #A0A0A0;
   --accent-color: #FF4081;

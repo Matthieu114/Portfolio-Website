@@ -66,8 +66,11 @@ const PersonalProjects = () => {
     <div className="root-container" id="my-work">
       <div className="projects-title-container">
         <h1 className="projects-title">
-          {"A few things I've built".split('').map((char, i) => (
-            <span key={'perso-projects-title-span-' + i}>{char === ' ' ? '\u00A0' : char}</span>
+          <span className="projects-title-normal">Projects </span>
+          {" I've built".split('').map((char, i) => (
+            <span className="projects-title-animate" key={'perso-projects-title-span-' + i}>
+              {char === ' ' ? '\u00A0' : char}
+            </span>
           ))}
         </h1>
         <div className="projects-about">
@@ -125,9 +128,9 @@ export default PersonalProjects;
 // TODO EXTRACT ANIMATION CODE INTO HELPERS AND HAVE HELPERS IN GENERAL ==> create a helper for all the observers
 
 // TODO IMPROVE WEB PERFORMANCE THAT IS TERRIBLE
- // images to webp
- // properyl sized images
- // use memo
+// images to webp
+// properyl sized images
+// use memo
 
 // TODO change theme + rename all color variables
 // TODO change personnal photo

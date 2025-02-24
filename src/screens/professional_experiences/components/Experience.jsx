@@ -1,63 +1,34 @@
-import React, { useRef, useState } from 'react';
-import { MdLocationPin } from 'react-icons/md';
+import React, { forwardRef } from 'react';
 
-const Experience = ({ name, company, desc, location, img, skills, dur, refs, index, alt }) => {
-  const myRef = useRef(null);
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsActive(!isActive);
-    if (myRef) {
-      myRef.current.classList.toggle('project-slide-in');
-      myRef.current.classList.toggle('accordion-margin');
-    }
-    setIsActive(!isActive);
-  };
-
+const Experience = forwardRef(({ exp, index }, ref) => {
   return (
-    <section
-      className="exp-outer-ctn"
-      ref={(element) => {
-        refs.current[index] = element;
-      }}
-    >
-      <div className={`exp-inner-ctn ${isActive && 'work-active'}`} onClick={toggleAccordion}>
-        <div className="exp-title">
-          {' '}
-          {name} {' // '}
-          <b>{company}</b>
-        </div>
-        <div className="exp-date">
-          <span>{dur}</span>
-          <div className="plus-minus"> {!isActive ? '+' : '-'} </div>
+    <div className="experience-card" key={index} ref={ref}>
+      <div className="experience-image">
+        <img src={exp.img} alt={exp.alt} loading="lazy" />
+      </div>
+      <div className="experience-content">
+        <h2 className="experience-position">
+          {exp.name}{' '}
+          <span>
+            {' '}
+            <br />
+            {'//'} {exp.company}
+          </span>
+        </h2>
+        <p className="experience-duration">
+          {exp.duration} - {exp.location}
+        </p>
+        <p className="experience-description">{exp.description}</p>
+        <div className="experience-skills">
+          {exp.skills.map((skill, i) => (
+            <span className="skill-tag" key={i}>
+              {skill.name}
+            </span>
+          ))}
         </div>
       </div>
-
-      <div className="accordion-wrap project-slide-in" ref={myRef}>
-        <section>
-          <div className="work-left-ctn">
-            <div className="work-about">
-              <MdLocationPin className="location" />
-              <div>{location}</div>
-            </div>
-            <div className="work-desc">{desc}</div>
-            <div className="work-skills">
-              {skills?.map((skill) => {
-                return (
-                  <div className="skill" key={skill.id}>
-                    {skill.name}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="work-right-ctn">
-            <img src={img} alt={alt} loading="lazy" />
-          </div>
-        </section>
-      </div>
-    </section>
+    </div>
   );
-};
+});
 
 export default Experience;

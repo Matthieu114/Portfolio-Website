@@ -43,7 +43,7 @@
 
 .title-ctn>.title {
   color: var(--primary-color);
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 600;
   margin-bottom: 1rem;
   opacity: 0;
@@ -56,7 +56,7 @@
   display: inline-block;
 }
 
-.title-ctn>.title>span:hover {
+.title>span:hover {
   animation: gelatine 0.7s linear;
   color: var(--secondary-color);
   transition: all 100ms ease-out 0ms;
@@ -64,13 +64,17 @@
 
 .title-ctn>.desc {
   color: var(--text-primary-color);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   opacity: 0;
   filter: blur(10px);
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   transform: translateY(50px);
   transition: all ease-out 700ms;
+}
+
+.title-ctn>.desc>a {
+  color: var(--accent-color);
 }
 
 .contact-form {
@@ -187,7 +191,7 @@
 }
 
 .icon-ctn>.icon {
-  color: var(--accent-color);
+  color: var(--primary-color);
   margin-right: 1rem;
   height: 20px;
   width: 20px;
@@ -195,7 +199,7 @@
 
 .line {
   width: 100%;
-  border: 1px solid var(--text-secondary-color);
+  border: 1px solid var(--primary-color);
 }
 
 .socials-ctn {

@@ -27,14 +27,14 @@ const Contact = () => {
     from_name: name,
     subject: subject,
     message: message,
-    from_email: mail
+    from_email: mail,
   };
 
   const options = useMemo(() => {
     return {
       root: null,
       rootMargin: '0px 150px 0px 150px',
-      threshold: 0.3
+      threshold: 0.3,
     };
   }, []);
 
@@ -77,7 +77,7 @@ const Contact = () => {
           Swal.fire({
             icon: 'success',
             title: 'Your email has been sent',
-            text: 'Thanks for visiting my website I hope you liked it!'
+            text: 'Thanks for visiting my website I hope you liked it!',
           });
           clearValues();
         })
@@ -107,12 +107,12 @@ const Contact = () => {
         if (ref.current) observer.unobserve(ref.current);
       });
     };
-  }, [titleRef, descRef, rightCtnRef, leftCtnRef, callbackFunction, options]);
+  }, [callbackFunction, options]);
 
   return (
-    <section className='contact-root' id='contact'>
-      <div className='title-ctn'>
-        <div className='title' ref={titleRef}>
+    <section className="contact-root" id="contact">
+      <div className="title-ctn">
+        <div className="title" ref={titleRef}>
           <span>G</span>
           <span>e</span>
           <span>t</span> <span>I</span>
@@ -123,96 +123,108 @@ const Contact = () => {
           <span>h</span>
           <span>!</span>
         </div>
-        <div className='desc' ref={descRef}>
+        <div className="desc" ref={descRef}>
           Looking to collaborate on a project or discuss an opportunity? Let’s connect! <br />
           Reach out via this form or find me on{' '}
-          <a href='https://www.linkedin.com/in/matthieu-denis1141/' target='_blank' rel='noreferrer'>
+          <a href="https://www.linkedin.com/in/matthieu-denis1141/" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
           .
         </div>
       </div>
-      <div className='contact-outer-ctn'>
-        <div className='left-ctn' ref={leftCtnRef}>
-          <div className='text-ctn'></div>
-          <form action='' className='contact-form' onSubmit={onSubmit}>
-            <div className='first-ctn'>
-              <div className='input-ctn'>
-                <input value={name} type='text' name='name' className='input' onChange={(e) => setName(e.target.value)} />
-                <span className='focus-border' />
-                <label htmlFor='name' className='animated-label'>
+      <div className="contact-outer-ctn">
+        <div className="left-ctn" ref={leftCtnRef}>
+          <div className="text-ctn"></div>
+          <form action="" className="contact-form" onSubmit={onSubmit}>
+            <div className="first-ctn">
+              <div className="input-ctn">
+                <input
+                  value={name}
+                  type="text"
+                  name="name"
+                  className="input"
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <span className="focus-border" />
+                <label htmlFor="name" className="animated-label">
                   Name
                 </label>
               </div>
-              <div className='input-ctn'>
-                <input type='text' name='email' className='input' onChange={(e) => setMail(e.target.value)} value={mail} />
-                <label htmlFor='email' className='animated-label'>
-                  {!required ? 'Mail' : <span className='required'>Mail is Required</span>}
+              <div className="input-ctn">
+                <input
+                  type="text"
+                  name="email"
+                  className="input"
+                  onChange={(e) => setMail(e.target.value)}
+                  value={mail}
+                />
+                <label htmlFor="email" className="animated-label">
+                  {!required ? 'Mail' : <span className="required">Mail is Required</span>}
                 </label>
-                <span className='focus-border' />
+                <span className="focus-border" />
               </div>
             </div>
-            <div className='input-ctn'>
+            <div className="input-ctn">
               <input
-                type='text'
-                className='input'
-                name='subject'
+                type="text"
+                className="input"
+                name="subject"
                 onChange={(e) => setSubject(e.target.value)}
                 value={subject}
               />
-              <label htmlFor='subject' className='animated-label'>
+              <label htmlFor="subject" className="animated-label">
                 Subject
               </label>
-              <span className='focus-border' />
+              <span className="focus-border" />
             </div>
-            <div className='input-ctn'>
+            <div className="input-ctn">
               <textarea
-                type='text-area'
-                className='input'
+                type="text-area"
+                className="input"
                 rows={6}
-                name='message'
+                name="message"
                 onChange={(e) => setMessage(e.target.value)}
                 value={message}
               />
-              <label htmlFor='message' className='animated-label'>
-                {!required ? 'Message' : <span className='required'>Message is Required</span>}
+              <label htmlFor="message" className="animated-label">
+                {!required ? 'Message' : <span className="required">Message is Required</span>}
               </label>
-              <span className='focus-border' />
+              <span className="focus-border" />
             </div>
-            <button className='submit-btn' type='submit'>
+            <button className="submit-btn" type="submit">
               {sending ? '... Sending' : 'Submit'}
             </button>
           </form>
         </div>
-        <div className='right-ctn' ref={rightCtnRef}>
-          <div className='info-ctn'>
-            <div className='icon-ctn'>
-              <MdLocationPin className='icon' />
+        <div className="right-ctn" ref={rightCtnRef}>
+          <div className="info-ctn">
+            <div className="icon-ctn">
+              <MdLocationPin className="icon" />
               <p>28 rue Diderot, Vincennes, France, 94300</p>
             </div>
-            <div className='icon-ctn'>
-              <BsFillTelephoneFill className='icon' />
+            <div className="icon-ctn">
+              <BsFillTelephoneFill className="icon" />
               <p>+33 06 58 76 96 53</p>
             </div>
-            <div className='icon-ctn'>
-              <MdEmail className='icon' />
+            <div className="icon-ctn">
+              <MdEmail className="icon" />
               <p>mdenis300@gmail.com</p>
             </div>
-            <hr className='line' />
+            <hr className="line" />
           </div>
-          <div className='socials-outer-ctn'>
-            <div className='socials-ctn'>
-              <a href='https://www.linkedin.com/in/matthieu-denis1141/' target='_blank' rel='noreferrer'>
-                <FontAwesomeIcon icon={faLinkedin} className='icon' />
+          <div className="socials-outer-ctn">
+            <div className="socials-ctn">
+              <a href="https://www.linkedin.com/in/matthieu-denis1141/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} className="icon" />
               </a>
-              <a href='https://github.com/Matthieu114' target='_blank' rel='noreferrer'>
-                <FontAwesomeIcon icon={faGithub} className='icon' />
+              <a href="https://github.com/Matthieu114" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faGithub} className="icon" />
               </a>
-              <a href='https://www.instagram.com/matthieu114/' target='_blank' rel='noreferrer'>
-                <FontAwesomeIcon icon={faInstagram} className='icon' />
+              <a href="https://www.instagram.com/matthieu114/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faInstagram} className="icon" />
               </a>
-              <a href='https://www.messenger.com/t/5398311623579890/' target='_blank' rel='noreferrer'>
-                <FontAwesomeIcon icon={faFacebookMessenger} className='icon' />
+              <a href="https://www.messenger.com/t/5398311623579890/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faFacebookMessenger} className="icon" />
               </a>
             </div>
           </div>

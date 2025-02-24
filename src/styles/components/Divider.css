@@ -9,7 +9,7 @@
 
 .divider-line {
     width: 250px;
-    height: 0;
+    height: 10px;
     border: 1px solid var(--primary-color);
     margin-bottom: 10px;
     /* You can add more styling, e.g. dashed, 

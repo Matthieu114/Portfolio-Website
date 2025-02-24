@@ -76,8 +76,11 @@ const AboutMe = () => {
       {/* Right Container (Text) */}
       <div ref={descRef} className={`about-right-ctn ${isDescVisible ? 'slide-in' : 'about-slide'}`}>
         <h1 className="about-me-header" data-about-me="heading">
-          {'About Me'.split('').map((char, index) => (
-            <span key={index}>{char === ' ' ? '\u00A0' : char}</span>
+          <span className="about-me-header-normal">A few things</span>
+          {' about me'.split('').map((char, index) => (
+            <span className="about-me-header-animate" key={index}>
+              {char === ' ' ? '\u00A0' : char}
+            </span>
           ))}
         </h1>
 
