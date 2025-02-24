@@ -1,26 +1,62 @@
+/* ==============================
+   Projects Page (Modernized UI)
+   ============================== */
+
+/* Root Container */
 .root-container {
   width: 100%;
-  height: max-content;
   min-height: 100vh;
   position: relative;
   padding: 100px 150px;
   background-color: var(--background-color);
+  /* Subtle pattern or gradient (optional):
+     background: linear-gradient(130deg, var(--background-color) 0%, #1f2731 100%);
+  */
 }
 
+@media (max-width: 1280px) {
+  .root-container {
+    padding: 100px 50px;
+  }
+}
+
+/* Title + Subtitle Container */
 .projects-title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 2rem;
+  /* Add spacing below title */
 }
 
 .projects-title {
   color: var(--primary-color);
+  font-size: 60px;
+  /* Larger default title */
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  transition: color 0.2s ease-out;
+}
+
+@media (max-width: 1280px) {
+  .projects-title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-title {
+    font-size: 20px;
+  }
 }
 
 .projects-title>span {
   display: inline-block;
+  transition: color 150ms ease-out;
 }
 
+/* Fun hover animation for letters */
 .projects-title>span:hover {
   animation: gelatine 0.7s linear;
   color: var(--secondary-color);
@@ -28,219 +64,134 @@
 }
 
 .projects-about {
-  margin: 0.5rem 0;
-  font-weight: 500;
+  margin: 01rem 0;
+  font-weight: 600;
   font-size: 18px;
   max-width: 750px;
   line-height: 1.5rem;
   color: var(--text-primary-color);
 }
 
+@media (max-width: 1280px) {
+  .projects-about {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-about {
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+
+/* Filter Bar + Projects Section */
+.projects-section {
+  margin-top: 2rem;
+  /* Extra spacing to separate from header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Filter Container */
 .filter-projects-container {
   color: var(--text-primary-color);
-  margin-top: 4rem;
+  margin-bottom: 2rem;
+  /* Spacing below filter bar */
+  width: 100%;
 }
 
 .filter-projects-list {
   display: flex;
   list-style-type: none;
   padding: 0;
+  flex-wrap: wrap;
+  /* Wrap if too many filters */
 }
 
 .list-item {
   margin-right: 1rem;
   font-weight: 500;
+  position: relative;
 }
 
+.list-item-label {
+  color: var(--primary-color);
+}
+
+/* Active Filter */
 .list-link.active {
   color: var(--accent-color);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  padding: 2px 1px;
+  transition: background 0.2s ease;
 }
 
+/* Hover Filter */
 .list-link:hover {
   color: var(--accent-color);
 }
 
+/* Filter Link */
 .list-link {
   position: relative;
   text-decoration: none;
-  color: var(--text-primary-color);
+  color: var(--text-secondary-color);
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
+/* Filter Count Badge */
 .filter-badge {
   position: absolute;
-  top: -10px;
+  top: -15px;
   right: -15px;
   padding: 2px 5px;
-  font-size: 12px;
+  font-size: 11px;
   border-radius: 50%;
   font-family: Consolas, monaco, monospace;
+  background: rgba(0, 0, 0, 0.1);
+  /* Subtle background */
 }
 
 .filter-badge.active {
-  color: var(--accent-color);
+  color: #fff;
+  background: var(--accent-color);
 }
 
+/* Projects Grid */
 .projects-container {
-  margin-top: 3rem;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, 330px);
   gap: 1rem;
   min-height: 330px;
-  /* remove ul css */
-  padding-inline-start: 0px;
-
+  padding-inline-start: 0;
+  /* remove ul default padding */
 }
 
-@keyframes slide-in {
-  0% {
-    width: 0;
-  }
-}
-
-/* media queries */
-
-/* Project */
-
-.project-container {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-10%);
-}
-
-.project-container.fade-in {
-  opacity: 1;
-  transform: translateX(0%);
-  filter: blur(0px);
-  transition: ease 0.5s;
-}
-
-.project-container>img {
-  border-radius: 5px 5px 0 0;
-  display: block;
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.4);
-}
-
-.project-container:hover>img {
-  filter: brightness(1);
-  transform: scale(1.1);
-}
-
-.project-container>.content {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  opacity: 0;
-}
-
-.project-container .about-button {
-  transform: translateY(230px);
-  color: var(--cream);
-  font-weight: 500;
-  font-size: 20px;
-  transition: 100ms ease-in-out 75ms;
-}
-
-.project-container .about-desc {
-  transform: translateY(200px);
-  color: var(--text-secondary-color);
-  font-weight: 500;
-  font-size: 14px;
-  transition: 250ms ease-in-out 100ms;
-  text-align: center;
-}
-
-.project-container>img,
-.project-container>.content,
-.project-container>.about-button {
-  transition: 150ms ease-in-out;
-}
-
-.project-container:hover>.content {
-  opacity: 1;
-}
-
-.content:hover>.about-button {
-  transform: translateY(115px);
-}
-
-.content:hover>.about-desc {
-  transform: translateY(125px);
-}
-
+/* Responsive: adjust columns */
 @media (max-width: 1280px) {
-  .root-container {
-    padding: 100px 50px;
-  }
-
   .projects-container {
-    margin-top: 3rem;
-    width: 100%;
-    display: grid;
     grid-template-columns: repeat(auto-fit, 335px);
-    gap: 1rem;
-  }
-
-  .projects-about {
-    font-weight: 400;
-    font-size: 16px;
-  }
-
-  .filter-projects-list {
-    font-size: 15px;
-  }
-
-  .projects-title {
-    font-size: 25px;
   }
 }
 
 @media (max-width: 1024px) {
+
+  /* Could remain the same or switch to 2 columns if you prefer */
   .projects-container {
     grid-template-columns: repeat(auto-fit, 335px);
-  }
-
-  .projects-about {
-    font-weight: 400;
-    font-size: 15px;
-  }
-
-  .projects-title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .projects-title {
-    font-size: 20px;
-  }
-
-  .filter-projects-list {
-    font-size: 15px;
   }
 }
 
 @media (max-width: 801px) {
-  .project-container>img {
-    filter: brightness(1);
-  }
-
   .projects-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
@@ -251,32 +202,11 @@
   .filter-projects-list {
     font-size: 12px;
   }
-
-  .project-container .about-button {
-    transform: translateY(95px);
-  }
-
-  .project-container .about-desc {
-    transform: translateY(100px);
-  }
-
-  .project-container>.content {
-    opacity: 1;
-  }
-
-  .content:hover>.about-button {
-    transform: translateY(95px);
-  }
-
-  .content:hover>.about-desc {
-    transform: translateY(100px);
-  }
 }
 
 @media (max-width: 540px) {
   .list-item {
     margin-right: 0.5rem;
-    font-weight: 500;
   }
 
   .filter-projects-list {
@@ -286,5 +216,120 @@
 
   .projects-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Individual Project Card */
+.project-container {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-10%);
+  background: var(--surface-color);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  /* Subtle box shadow */
+  transition: box-shadow 0.3s ease;
+  /* For hover effect */
+}
+
+/* Fade-in effect for staggered load */
+.project-container.fade-in {
+  opacity: 1;
+  transform: translateX(0%);
+  filter: blur(0px);
+  transition: all 0.5s ease;
+}
+
+/* Project Image */
+.project-container>img {
+  border-radius: 5px 5px 0 0;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.4);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-container:hover>img {
+  filter: brightness(1);
+  transform: scale(1.03);
+}
+
+/* Overlay Content */
+.project-container>.content {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Title in overlay */
+.project-container .about-button {
+  transform: translateY(230px);
+  color: var(--cream);
+  font-weight: 500;
+  font-size: 20px;
+  transition: transform 0.2s ease 0.07s;
+}
+
+/* Description in overlay */
+.project-container .about-desc {
+  transform: translateY(200px);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  transition: transform 0.25s ease 0.1s;
+}
+
+/* Fade-in overlay content on hover */
+.project-container:hover>.content {
+  opacity: 1;
+}
+
+/* Animate text sliding up on hover */
+.content:hover>.about-button {
+  transform: translateY(115px);
+}
+
+.content:hover>.about-desc {
+  transform: translateY(125px);
+}
+
+/* Additional Hover Effects for Container */
+.project-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Keyframes: letter wiggle, if used in .projects-title>span:hover */
+@keyframes gelatine {
+
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.8, 1.2);
+  }
+
+  50% {
+    transform: scale(1.2, 0.8);
+  }
+
+  75% {
+    transform: scale(0.85, 1.15);
   }
 }

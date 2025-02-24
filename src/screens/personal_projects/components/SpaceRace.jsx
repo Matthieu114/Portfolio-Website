@@ -31,8 +31,6 @@ const SpaceRace = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fade-side');
-      } else {
-        entry.target.classList.remove('fade-side');
       }
     });
   };

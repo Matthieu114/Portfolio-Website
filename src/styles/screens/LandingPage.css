@@ -87,7 +87,7 @@
 .description {
   line-height: 1.8rem;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-primary-color);
   max-width: 750px;
 }

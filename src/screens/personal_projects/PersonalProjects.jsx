@@ -78,7 +78,7 @@ const PersonalProjects = () => {
       <section className="projects-section">
         <div className="filter-projects-container">
           <ul className="filter-projects-list">
-            <li className="list-item">Filter By</li>
+            <li className="list-item list-item-label">Filter By</li>
             {filterOptions.map((filter, index) => {
               return (
                 <li className="list-item" key={'filter-' + filter.id}>
