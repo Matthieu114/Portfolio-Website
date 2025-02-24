@@ -43,5 +43,5 @@
 
 /* Move the knob to the right for dark mode */
 .toggle-dark .toggle-knob {
-    transform: translateX(30px);
+    transform: translateX(35px);
 }

@@ -23,7 +23,6 @@
   margin-right: 200px;
 }
 
-
 .hero-img-ctn>img {
   width: 100%;
   min-width: 400px;
@@ -39,6 +38,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  background: var(--surface-color);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 1.5rem;
+  /* rest of your existing styles */
 }
 
 .about-me-header {

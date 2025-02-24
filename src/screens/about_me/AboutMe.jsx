@@ -10,9 +10,6 @@ const AboutMe = () => {
   const [isImgVisible, setIsImgVisible] = useState(false);
   const [isDescVisible, setIsDescVisible] = useState(false);
 
-  // Scroll-based parallax offset
-  const [scrollY, setScrollY] = useState(0);
-
   // Intersection Observer callback for the description
   // Unified observer callback
   const handleIntersection = (entries) => {
@@ -67,28 +64,12 @@ const AboutMe = () => {
     });
   }, [observerOptions]);
 
-  // Listen for scroll to calculate parallax offset
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <section className="about-root" id="about">
       {/* Left Container (Image) */}
       <div ref={imgRef} className={`about-left-ctn ${isImgVisible ? 'fade-in' : 'about-hidden'}`}>
         <div className="hero-img-ctn">
-          <img
-            src={img}
-            alt="myself"
-            loading="lazy"
-            style={{
-              transform: `translateY(${Math.min(scrollY * 0.1, 100)}px)`,
-            }}
-          />
+          <img src={img} alt="myself" loading="lazy" />
         </div>
       </div>
 
