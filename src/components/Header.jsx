@@ -72,31 +72,31 @@ const Header = () => {
         <a className="home-logo" href="#home" onClick={() => navigateTo('/')}>
           MD
         </a>
-        <div className="header-links">
-          <a href="#about" className="header-link" onClick={() => navigateTo('/')}>
-            <p className="header-number"> 01. </p>
-            About Me
-          </a>
-          <a className="header-link" href="#my-work" onClick={() => navigateTo('/')}>
-            <p className="header-number"> 02. </p> My Work
-          </a>
-          <a className="header-link" href="#experience" onClick={() => navigateTo('/')}>
-            <p className="header-number"> 03. </p>
-            Experience
-          </a>
-          <a className="header-link" onClick={() => navigateTo('/')} href="#contact">
-            <p className="header-number"> 04. </p>
-            Contact
-          </a>
-          <Link className="resume-button" to="/resume" target="_blank" rel="noopener noreferrer">
-            CV
-          </Link>
-          <DarkModeToggle />
+        <div>
+          <div className="header-links">
+            <a href="#about" className="header-link" onClick={() => navigateTo('/')}>
+              <p className="header-number"> 01. </p>
+              About Me
+            </a>
+            <a className="header-link" href="#my-work" onClick={() => navigateTo('/')}>
+              <p className="header-number"> 02. </p> My Work
+            </a>
+            <a className="header-link" href="#experience" onClick={() => navigateTo('/')}>
+              <p className="header-number"> 03. </p>
+              Experience
+            </a>
+            <a className="header-link" onClick={() => navigateTo('/')} href="#contact">
+              <p className="header-number"> 04. </p>
+              Contact
+            </a>
+            <Link className="resume-button" to="/resume" target="_blank" rel="noopener noreferrer">
+              CV
+            </Link>
+          </div>
         </div>
+        <DarkModeToggle />
         <div className="open-header">
           <div className="mobile-icons">
-            <DarkModeToggle />
-
             {!mobileOpen ? (
               <CgMenuRightAlt
                 className="hamburger-menu"

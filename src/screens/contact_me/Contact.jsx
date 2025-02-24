@@ -113,15 +113,12 @@ const Contact = () => {
     <section className="contact-root" id="contact">
       <div className="title-ctn">
         <div className="title" ref={titleRef}>
-          <span>G</span>
-          <span>e</span>
-          <span>t</span> <span>I</span>
-          <span>n</span> <span>T</span>
-          <span>o</span>
-          <span>u</span>
-          <span>c</span>
-          <span>h</span>
-          <span>!</span>
+          <span>Get In </span>
+          {' Touch'.split('').map((char, index) => (
+            <span className="contact-me-title--animate" key={index}>
+              {char === ' ' ? '\u00A0' : char}
+            </span>
+          ))}
         </div>
         <div className="desc" ref={descRef}>
           Looking to collaborate on a project or discuss an opportunity? Let’s connect! <br />
