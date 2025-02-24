@@ -188,6 +188,24 @@
   .projects-container {
     grid-template-columns: repeat(auto-fit, 335px);
   }
+
+
+
+  /* Overlay Content */
+  .project-container>.content {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.9) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10px;
+    transition: opacity 0.3s ease;
+  }
+
 }
 
 @media (max-width: 801px) {
@@ -216,6 +234,61 @@
 
   .projects-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  /* Fade-in overlay content on hover */
+  .project-container:hover>.content {
+    opacity: 1;
+  }
+
+  /* Animate text sliding up on hover */
+  .content:hover>.about-button {
+    transform: translateY(115px);
+  }
+
+  .content:hover>.about-desc {
+    transform: translateY(125px);
+  }
+
+  /* Additional Hover Effects for Container */
+  .project-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Title in overlay */
+  .project-container .about-button {
+    transform: translateY(230px);
+    transition: transform 0.2s ease 0.07s;
+  }
+
+  /* Description in overlay */
+  .project-container .about-desc {
+    transform: translateY(200px);
+    transition: transform 0.25s ease 0.1s;
+  }
+
+  .project-container:hover>img {
+    filter: brightness(1);
+    transform: scale(1.03);
+  }
+
+
+  .project-container>.content {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.9) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 }
 
@@ -254,64 +327,26 @@
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.project-container:hover>img {
-  filter: brightness(1);
-  transform: scale(1.03);
-}
 
-/* Overlay Content */
-.project-container>.content {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.9) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+
 
 /* Title in overlay */
 .project-container .about-button {
-  transform: translateY(230px);
   color: var(--cream);
   font-weight: 500;
   font-size: 20px;
-  transition: transform 0.2s ease 0.07s;
 }
 
 /* Description in overlay */
 .project-container .about-desc {
-  transform: translateY(200px);
   color: var(--white);
   font-weight: 500;
   font-size: 14px;
   text-align: center;
-  transition: transform 0.25s ease 0.1s;
+
 }
 
-/* Fade-in overlay content on hover */
-.project-container:hover>.content {
-  opacity: 1;
-}
 
-/* Animate text sliding up on hover */
-.content:hover>.about-button {
-  transform: translateY(115px);
-}
-
-.content:hover>.about-desc {
-  transform: translateY(125px);
-}
-
-/* Additional Hover Effects for Container */
-.project-container:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-}
 
 /* Keyframes: letter wiggle, if used in .projects-title>span:hover */
 @keyframes gelatine {
